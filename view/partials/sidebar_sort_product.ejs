@@ -1,0 +1,106 @@
+<div
+class="hidden flex-col mb-2 font-sans text-sm text-gray-700 xl:flex">
+<sort-product data-catalyst="">
+    <p
+        class="flex items-start pr-2 m-0 mb-4 font-sans text-xl font-bold text-gray-800">
+        Trier
+    </p>
+    <form
+        action="https://www.onatera.com/FR/fr/aromatherapie/toutes-nos-huiles-vegetales"
+        data-action="submit:ajax-navigation#intercept">
+        <label data-target="sort-product.sortSelectInput"
+            data-action="change:sort-product#sortProduct"
+            class="flex relative items-center mb-2 cursor-pointer">
+            <input name="index" type="radio" value=""
+                class="bg-none sr-only peer" checked="">
+            <p
+                class="flex hidden absolute justify-center top-0.5 items-center w-4 h-4 bg-gray-100 rounded-full border border-brand-300 peer-checked:flex">
+                <span
+                    class="block w-2 h-2 rounded-full bg-brand-300"></span>
+            </p>
+            <p
+                class="m-0 w-4 h-4 rounded-full border border-black cursor-pointer">
+            </p>
+            <p class="my-0 ml-2 text-gray-800">
+                Recommandation Onatera
+            </p>
+        </label>
+        <label data-target="sort-product.sortSelectInput"
+            data-action="change:sort-product#sortProduct"
+            class="flex relative items-center mb-2 cursor-pointer">
+            <input name="index" type="radio"
+                value="price|asc"
+                class="bg-none sr-only peer">
+            <p
+                class="flex hidden absolute justify-center top-0.5 items-center w-4 h-4 bg-gray-100 rounded-full border border-brand-300 peer-checked:flex">
+                <span
+                    class="block w-2 h-2 rounded-full bg-brand-300"></span>
+            </p>
+            <p
+                class="m-0 w-4 h-4 rounded-full border border-black cursor-pointer">
+            </p>
+            <p class="my-0 ml-2 text-gray-800">
+                Prix croissant
+            </p>
+        </label>
+        <label data-target="sort-product.sortSelectInput"
+            data-action="change:sort-product#sortProduct"
+            class="flex relative items-center mb-2 cursor-pointer">
+            <input name="index" type="radio"
+                value="price|desc"
+                class="bg-none sr-only peer">
+            <p
+                class="flex hidden absolute justify-center top-0.5 items-center w-4 h-4 bg-gray-100 rounded-full border border-brand-300 peer-checked:flex">
+                <span
+                    class="block w-2 h-2 rounded-full bg-brand-300"></span>
+            </p>
+            <p
+                class="m-0 w-4 h-4 rounded-full border border-black cursor-pointer">
+            </p>
+            <p class="my-0 ml-2 text-gray-800">
+                Prix décroissant
+            </p>
+        </label>
+        <label data-target="sort-product.sortSelectInput"
+            data-action="change:sort-product#sortProduct"
+            class="flex relative items-center mb-2 cursor-pointer">
+            <input name="index" type="radio"
+                value="reviews_score|asc"
+                class="bg-none sr-only peer">
+            <p
+                class="flex hidden absolute justify-center top-0.5 items-center w-4 h-4 bg-gray-100 rounded-full border border-brand-300 peer-checked:flex">
+                <span
+                    class="block w-2 h-2 rounded-full bg-brand-300"></span>
+            </p>
+            <p
+                class="m-0 w-4 h-4 rounded-full border border-black cursor-pointer">
+            </p>
+            <p class="my-0 ml-2 text-gray-800">
+                Note croissante
+            </p>
+        </label>
+        <label data-target="sort-product.sortSelectInput"
+            data-action="change:sort-product#sortProduct"
+            class="flex relative items-center cursor-pointer">
+            <input name="index" value="reviews_score|desc"
+                type="radio" class="bg-none sr-only peer">
+            <p
+                class="flex hidden absolute justify-center top-0.5 items-center w-4 h-4 bg-gray-100 rounded-full border border-brand-300 peer-checked:flex">
+                <span
+                    class="block w-2 h-2 rounded-full bg-brand-300"></span>
+            </p>
+            <p
+                class="m-0 w-4 h-4 rounded-full border border-black cursor-pointer">
+            </p>
+            <p class="my-0 ml-2 text-gray-800">
+                Note décroissante
+            </p>
+        </label>
+        <div class="hidden">
+            <input type="submit"
+                data-target="sort-product.hiddenFormSubmit">
+        </div>
+    </form>
+</sort-product>
+<div class="my-5 border-b border-gray-300"></div>
+</div>

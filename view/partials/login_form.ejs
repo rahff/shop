@@ -1,0 +1,318 @@
+<main>
+    <div class="flex flex-col xl:flex-row">
+        <div class="hidden flex-1 xl:block"></div>
+
+        <div class="flex flex-col xl:flex-row xl:container xl:mx-auto">
+            <section
+                class="flex justify-center pt-6 pb-10 w-full xl:w-1/2 md:pt-10 md:pb-10 xl:pl-5 2xl:pl-10">
+                <div class="w-11/12 md:w-3/5">
+                    <h1 class="text-2xl font-bold">Vous avez déjà un compte ?</h1>
+
+
+
+
+                    <p class="mb-5">Connectez-vous avec votre email et votre mot de passe.</p>
+
+                    <throttle-button data-catalyst="">
+                        <form method="post"
+                            class="ui loadable form flex flex-col"
+                            data-action="submit:throttle-button#disable">
+
+                            <div class="mb-6"> <label
+                                    class="text-gray-800 flex items-center required"
+                                    for="_username">
+                                    Adresse email* </label><input type="email" id="_username"
+                                    name="_username" required="required"
+                                    data-qa="responsive_edtMail"
+                                    class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                    data-targets="js-validation-form-field.inputs input-button.inputs"
+                                    data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                <div data-qa="responsive_edtMail_error">
+                                    <ul class="hidden"
+                                        data-target="js-validation-form-field.errorList">
+                                        <li class="mt-2 flex items-center text-xs text-red-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                data-target="js-validation-form-field.errorMessage"
+                                                data-error-message="_username"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="mb-6"> <label
+                                    class="text-gray-800 flex items-center required"
+                                    for="_password">
+                                    Mot de passe* </label><password-input class="block relative"
+                                    data-catalyst="">
+                                    <input type="password" id="_password" name="_password"
+                                        required="required" data-qa="responsive_edtPassword"
+                                        data-target="password-input.input"
+                                        class="pr-24 mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                        data-targets="js-validation-form-field.inputs input-button.inputs"
+                                        data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"><button
+                                        type="button" data-target="password-input.toggleButton"
+                                        data-action="click:password-input#doToggle"
+                                        class="flex absolute top-0 right-0 items-center px-4 pt-2 h-full text-xs leading-none text-gray-800 bg-transparent border-none outline-none">
+                                        <span class="flex items-center"
+                                            data-target="password-input.onIcon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                                                fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                                </path>
+                                            </svg>
+                                            <span class="ml-1">Afficher</span>
+                                        </span>
+
+                                        <span class="flex hidden items-center"
+                                            data-target="password-input.offIcon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                                                fill="none" viewBox="0 0 24 24"
+                                                stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
+                                                </path>
+                                            </svg>
+                                            <span class="ml-1">Masquer</span>
+                                        </span>
+                                    </button>
+                                </password-input>
+                                <div data-qa="responsive_edtPassword_error">
+                                    <ul class="hidden"
+                                        data-target="js-validation-form-field.errorList">
+                                        <li class="mt-2 flex items-center text-xs text-red-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                </path>
+                                            </svg>
+                                            <span
+                                                data-target="js-validation-form-field.errorMessage"
+                                                data-error-message="_password"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+
+
+                            <a href="https://www.onatera.com/FR/fr/forgotten-password"
+                                class="mb-6 self-end text-sm text-gray-600 underline"
+                                data-qa="responsive_lnkForgotPassword">
+                                Mot de passe oublié ?
+                            </a>
+
+
+
+
+                            <button type="submit"
+                                class="leading-none flex items-center justify-center space-x-1 rounded-lg border-none outline-none transition disabled:ring-gray-200 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed xl:disabled:hover:ring-1 text-white bg-gray-900 ring-gray-900 xl:hover:bg-gray-700 xl:hover:ring-gray-700 self-start w-full md:w-1/2 xl:w-3/5 py-4 px-8"
+                                data-qa="responsive_btnConnexion"
+                                data-target="throttle-button.button">
+                                <div class="pt-1 hidden flex justify-center h-full absolute w-full bg-gray-700 rounded-lg"
+                                    data-target="ajax-navigation-login.load">
+                                    <p class="loader"></p>
+                                </div>
+
+
+
+                                <span class="font-semibold">Se connecter</span>
+
+                            </button>
+
+                            <input type="hidden" name="_csrf_shop_security_token"
+                                value="d7.gRD38WPrcBB1LjqaaBxH0K8uBFsnW3fe0HbL44ykHyo.uUW-lwycNFESenT8WkQN58NZSWpkHQC8sxK6pfrAWF7xSp_HCJkmYhZqYw">
+                        </form>
+                    </throttle-button>
+
+
+
+                </div>
+            </section>
+
+            <aside
+                class="flex relative flex-col justify-between items-center pt-6 w-full bg-gray-100 border-t border-gray-300 xl:w-1/2 md:pt-10 xl:border-t-0 xl:border-l xl:pr-5 2xl:pr-10">
+                <div class="mb-6 w-11/12 md:w-3/5 md:mb-10 xl:mb-16">
+
+
+                    <h2 class="mt-0 text-2xl font-bold">Vous êtes un nouveau client ?</h2>
+
+                    <p class="mb-6">Créez dès maintenant votre compte pour profiter des avantages
+                        membre.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center mb-4">
+                            <svg class="fill-current h-8 w-8 flex-shrink-0 text-brand-100" id="Icon"
+                                xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                <path id="Rectangle_370" data-name="Rectangle 370" style="fill:none"
+                                    d="M0 0h32v32H0z"></path>
+                                <g id="Groupe_1934" data-name="Groupe 1934"
+                                    transform="translate(6 6.001)">
+                                    <path id="Tracé_8525" data-name="Tracé 8525"
+                                        d="M8.61.913c6.364 3.5 8.61 3.855 8.61 8.61a8.61 8.61 0 1 1-17.22 0C0 4.768 2.247-2.586 8.61.913z"
+                                        transform="rotate(-149 9.5 9.433)"></path>
+                                    <path id="Tracé_8219" data-name="Tracé 8219" style="fill:none"
+                                        d="M-22800.289-12404.535h13.561v13.824l6.34-4.683-.221-13.88-14.217-.252z"
+                                        transform="translate(22801 12409.626)"></path>
+                                    <path id="Rectangle_460" data-name="Rectangle 460"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        transform="translate(.426 5.195)" d="M0 0h14.148v13.861H0z">
+                                    </path>
+                                    <path id="Tracé_8217" data-name="Tracé 8217"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="m13.461 13.7 6.225-5.324"
+                                        transform="translate(1 -8.374)"></path>
+                                    <path id="Tracé_8218" data-name="Tracé 8218"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="M13.623 13.431 19.688 7.5V-5.626H6.469L-.574-.476"
+                                        transform="translate(1 5.626)"></path>
+                                    <path id="Tracé_8220" data-name="Tracé 8220"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="M16.342 23.408h4" transform="translate(-13.342 -8.374)">
+                                    </path>
+                                    <path id="Tracé_8221" data-name="Tracé 8221"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="M16.342 23.408h4" transform="translate(-13.342 -6.665)">
+                                    </path>
+                                </g>
+                            </svg>
+                            <span class="ml-2">Suivez vos commandes</span>
+                        </li>
+                        <li class="flex items-center mb-4">
+                            <svg class="fill-current h-8 w-8 flex-shrink-0 text-brand-100"
+                                id="Icon_-_Cadeau" data-name="Icon - Cadeau"
+                                xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 32 32">
+                                <path id="Rectangle_370" data-name="Rectangle 370" style="fill:none"
+                                    d="M0 0h32v32H0z"></path>
+                                <g id="Groupe_1035" data-name="Groupe 1035"
+                                    transform="translate(-6 -2.835)">
+                                    <path id="Tracé_8940" data-name="Tracé 8940"
+                                        class="fill-current"
+                                        d="M9.5.265c7.019 3.859 9.5 4.252 9.5 9.5a9.5 9.5 0 1 1-19-.004C0 4.516 2.478-3.594 9.5.265z"
+                                        transform="translate(19 5.523)"></path>
+                                    <g id="Rectangle_460" data-name="Rectangle 460"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linejoin:round;stroke-linecap:round">
+                                        <path style="stroke:none" d="M0 0h17.466v4.9H0z"
+                                            transform="translate(13 14.096)"></path>
+                                        <path style="fill:none" d="M.5.5h16.466v3.9H.5z"
+                                            transform="translate(13 14.096)"></path>
+                                    </g>
+                                    <g id="Rectangle_469" data-name="Rectangle 469"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linejoin:round;stroke-linecap:round">
+                                        <path style="stroke:none" d="M0 0h15.81v12H0z"
+                                            transform="translate(13.828 18)"></path>
+                                        <path style="fill:none" d="M.5.5h14.81v11H.5z"
+                                            transform="translate(13.828 18)"></path>
+                                    </g>
+                                    <g id="Tracé_8228" data-name="Tracé 8228" style="fill:none">
+                                        <path style="stroke:none"
+                                            d="M2.911 0c1.608 0 2.911 3.488 2.911 5.1A2.911 2.911 0 0 1 0 5.1C0 3.488 1.3 0 2.911 0z"
+                                            transform="rotate(-150 14.64 4.748)"></path>
+                                        <path class="text-gray-600 fill-current" style="stroke:none"
+                                            d="M2.911 1c-.157 0-.647.339-1.16 1.386C1.257 3.389 1 4.508 1 5.096c0 1.053.857 1.91 1.911 1.91a1.913 1.913 0 0 0 1.911-1.91c0-.588-.258-1.707-.75-2.71C3.558 1.339 3.068 1 2.91 1m0-1c1.608 0 2.911 3.488 2.911 5.095a2.911 2.911 0 0 1-5.822 0C0 3.488 1.303 0 2.911 0z"
+                                            transform="rotate(-150 14.64 4.748)"></path>
+                                    </g>
+                                    <g id="Tracé_8229" data-name="Tracé 8229" style="fill:none">
+                                        <path style="stroke:none"
+                                            d="M2.911 8.007c1.608 0 2.911-3.488 2.911-5.1A2.911 2.911 0 1 0 0 2.911c0 1.608 1.3 5.096 2.911 5.096z"
+                                            transform="rotate(-30 24.877 -23.828)"></path>
+                                        <path class="text-gray-600 fill-current" style="stroke:none"
+                                            d="M2.91 7.007c.157 0 .647-.34 1.161-1.386.493-1.003.75-2.123.75-2.71 0-.51-.198-.99-.559-1.351-.36-.361-.84-.56-1.35-.56A1.913 1.913 0 0 0 1 2.911c0 .588.258 1.707.75 2.71.514 1.047 1.004 1.386 1.16 1.386m0 1C1.304 8.007 0 4.519 0 2.91a2.911 2.911 0 0 1 5.822 0c0 1.608-1.304 5.095-2.911 5.096z"
+                                            transform="rotate(-30 24.877 -23.828)"></path>
+                                    </g>
+                                    <g id="Tracé_8632" data-name="Tracé 8632"
+                                        style="stroke-linecap:round;fill:none">
+                                        <path style="stroke:none" d="M0 0h15.81v.981H0z"
+                                            transform="rotate(90 4.087 18.184)"></path>
+                                        <path class="text-gray-600 fill-current" style="stroke:none"
+                                            d="M0 0h15.81v.981H0V0z"
+                                            transform="rotate(90 4.087 18.184)"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="ml-2">Recevez un cadeau le jour de votre
+                                anniversaire</span>
+                        </li>
+                        <li class="flex items-center mb-4">
+                            <svg class="fill-current h-8 w-8 flex-shrink-0 text-brand-100"
+                                id="Icon_Étiquette" data-name="Icon / Étiquette"
+                                xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 32 32">
+                                <path id="Tracé_8939" data-name="Tracé 8939"
+                                    d="M9.5.265c7.019 3.859 9.5 4.252 9.5 9.5a9.5 9.5 0 1 1-19-.004C0 4.516 2.478-3.594 9.5.265z"
+                                    transform="translate(13 2.688)"></path>
+                                <path id="Rectangle_537" data-name="Rectangle 537" style="fill:none"
+                                    d="M0 0h32v32H0z"></path>
+                                <path id="Tracé_8144" data-name="Tracé 8144"
+                                    class="text-gray-600 stroke-current" style="fill:none"
+                                    d="M5.478.111c.926-.25 13.4 0 13.4 0a2.954 2.954 0 0 1 2.68 3.166v5.278a2.954 2.954 0 0 1-2.68 3.166s-12.306.4-13.4 0S.031 8.415 0 5.972 4.551.361 5.478.111z"
+                                    transform="rotate(144.99 12.015 11.899)"></path>
+                                <circle id="Ellipse_84" data-name="Ellipse 84"
+                                    class="text-gray-600 stroke-current" style="fill:none"
+                                    cx="1.702" cy="1.702" r="1.702"
+                                    transform="rotate(144.99 9.004 10.518)"></circle>
+                            </svg>
+                            <span class="ml-2">Bénéficiez de réductions et d'avantages
+                                fidélités</span>
+                        </li>
+                    </ul>
+
+                    <a href="https://www.onatera.com/FR/fr/register"
+                        class="self-start flex w-full md:w-1/2 xl:w-3/5"
+                        data-qa="responsive_btnCreateAccount">
+
+
+
+                        <button type="button"
+                            class="leading-none flex items-center justify-center space-x-1 rounded-lg border-none outline-none transition disabled:ring-gray-200 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed xl:disabled:hover:ring-1 text-white bg-gray-900 ring-gray-900 xl:hover:bg-gray-700 xl:hover:ring-gray-700 w-full py-4 px-8">
+                            <div class="pt-1 hidden flex justify-center h-full absolute w-full bg-gray-700 rounded-lg"
+                                data-target="ajax-navigation-login.load">
+                                <p class="loader"></p>
+                            </div>
+
+
+
+                            <span class="font-semibold">Créer un compte</span>
+
+                        </button>
+                    </a>
+
+
+
+                </div>
+
+                <img class="md:absolute md:bottom-0 md:right-36 xl:relative xl:inset-0"
+                    src="/static/bush-onatera.e7c4feed.svg"
+                    alt="Image décorative" loading="lazy">
+            </aside>
+        </div>
+
+        <div class="hidden flex-1 bg-gray-100 xl:block"></div>
+    </div>
+
+</main>

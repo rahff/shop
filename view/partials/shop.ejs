@@ -1,0 +1,22 @@
+
+<main>   
+    <div class="w-full h-full xl:bg-gradient-gray-50">
+        <div class="flex items-stretch mx-auto bg-white xl:container">
+            <%-include("sidebar")%>
+            <div class="pl-0 mb-16 w-full bg-white xl:mb-20 xl:w-9/12 xl:pl-4 xl:pr-5 2xl:pl-7 2xl:pr-10">
+                <%-include("product_list_nav")%>
+                <%-include("product_list_header")%>
+                <div>
+                    <%-include("sorter_product_mobile")%>
+                <div data-target="scroll-up-down.container">
+                    <div class="flex flex-wrap text-gray-900 px-4 mt-6 xl:mt-8 sm:px-0 sm:pl-11 sm:pr-7 xl:pl-0 lg:pr-3 xl:pr-0 xl:-mr-8 -mb-4 xl:-mb-8">
+                        <%-include("product_item")%>
+                    </div>
+                    <%-include("paginator")%>
+                </div>
+                <%-include("product_list_footer")%>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

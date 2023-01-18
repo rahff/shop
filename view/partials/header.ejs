@@ -1,0 +1,562 @@
+<header class="relative z-20 bg-white xl:bg-brand-500">
+    <div
+        class="flex justify-center items-center px-3 mx-auto h-14 shadow-md xl:px-5 2xl:px-10 xl:h-auto xl:pt-3 xl:pb-4 xl:container xl:shadow-none">
+        <div class="flex flex-1 2xl:flex-none items-center">
+            <div class="sm:flex-1 xl:flex-none xl:z-40 xl:max-w-full xl:w-[436px]">
+                <mobile-menu data-menu-display="hidden" class="flex items-center xl:block xl:max-w-full"
+                    data-catalyst="">
+
+                    <button data-action="click:mobile-menu#toggleMenu"
+                        class="relative mr-2 w-8 h-8 text-black bg-white focus:outline-none xl:hidden"
+                        aria-label="Menu de navigation" data-qa="mobileBtnDisplayMenu">
+                        <div
+                            class="block absolute top-1/2 left-1/2 w-5 transform -translate-x-1/2 -translate-y-1/2">
+                            <span data-target="mobile-menu.topStroke" aria-hidden="true"
+                                class="block absolute h-px w-5 bg-current transform transition duration-500 ease-in-out -translate-y-1.5"></span>
+                            <span data-target="mobile-menu.middleStroke" aria-hidden="true"
+                                class="block absolute w-5 h-px bg-current transition duration-500 ease-in-out transform"></span>
+                            <span data-target="mobile-menu.bottomStroke" aria-hidden="true"
+                                class="block absolute h-px w-5 bg-current transform transition duration-500 ease-in-out translate-y-1.5"></span>
+                        </div>
+                    </button>
+
+                    <div>
+                        <div data-target="mobile-menu.panel"
+                            class="flex overflow-hidden fixed left-0 top-14 z-40 flex-col w-full bg-white shadow-xl transition-transform duration-500 ease-in-out -translate-x-full xl:static xl:w-full xl:max-w-full xl:shadow-none xl:transform-none xl:pt-0 xl:bg-transparent z-4 xl:transition-none md:w-4/5 md:max-w-4xl">
+
+                            <div id="vue-mobile-menu">
+                                <div class="flex flex-col pt-4 xl:pt-1 xl:block xl:h-auto xl:max-w-full">
+                                    <div
+                                        class="overflow-auto h-full scrollbar-hidden xl:h-auto xl:max-w-full">
+                                        <div class="px-4 w-full xl:px-0">
+                                            <div class="xl:max-w-full">
+                                                <div class="ais-InstantSearch xl:max-w-full">
+                                                    <div class="ais-SearchBox xl:max-w-full">
+                                                        <div class="flex items-center xl:max-w-full">
+                                                            <div
+                                                                class="flex relative flex-1 items-center px-2 bg-white rounded-md border border-gray-200 xl:w-full xl:border-none xl:mx-0 xl:rounded-r-full xl:rounded-l-full">
+                                                                <input type="text" data-qa="inputSearchBar"
+                                                                    data-action="focus:mobile-menu#toggleMenuAndSearch"
+                                                                    data-default-search-url="/FR/fr/recherche/produits"
+                                                                    placeholder="Une envie, un bienfait, un produit ?"
+                                                                    class="flex-1 px-2 w-full text-base bg-transparent border-none appearance-none focus:outline-none focus:ring-0">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="flex-none w-8 h-8">
+                                                                    <g>
+                                                                        <path d="M0 0h32v32H0z"
+                                                                            style="fill: none;"></path>
+                                                                        <path
+                                                                            d="M8.759.929c6.474 3.559 8.759 3.922 8.759 8.759A8.759 8.759 0 1 1 0 9.688C0 4.85 2.285-2.63 8.759.929z"
+                                                                            transform="rotate(-149 14.632 11.938)"
+                                                                            style="fill: rgb(97, 139, 89); opacity: 0.3;">
+                                                                        </path>
+                                                                        <path
+                                                                            d="M13.12 22.22A8.675 8.675 0 0 1 6.986 7.411a8.675 8.675 0 1 1 12.268 12.268 8.6 8.6 0 0 1-6.109 2.541h-.025zm0-16.268a7.593 7.593 0 1 0 7.593 7.593 7.6 7.6 0 0 0-7.593-7.593z">
+                                                                        </path>
+                                                                        <path
+                                                                            d="m18.634 19.808 5.416 5.417a.542.542 0 1 0 .781-.752L19.4 19.042a.541.541 0 1 0-.765.766z">
+                                                                        </path>
+                                                                    </g>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div data-action="click:mobile-menu#toggleMenu" data-target="mobile-menu.layer"
+                            class="hidden fixed left-0 top-14 z-30 w-full h-full bg-black opacity-30 xl:hidden">
+                        </div>
+                    </div>
+
+                    <div data-action="click:mobile-menu#toggleMenuAndSearch"
+                        data-qa="mobileNavActiveSearch">
+                        <svg class="fill-current flex w-7 h-7 text-black xl:hidden"
+                            mlns="http://www.w3.org/2000/svg">
+                            <path data-name="Rectangle 523" style="fill:none" d="M0 0h28v28H0z"></path>
+                            <path data-name="Tracé 42"
+                                d="M11.846 21.69A9.276 9.276 0 0 1 5.287 5.854a9.277 9.277 0 1 1 13.119 13.119 9.191 9.191 0 0 1-6.536 2.717h-.024zm0-17.4a8.119 8.119 0 1 0 8.124 8.123 8.128 8.128 0 0 0-8.124-8.119z">
+                            </path>
+                            <path data-name="Tracé 43"
+                                d="m17.522 18.926 5.892 5.893a.59.59 0 1 0 .85-.818l-5.742-5.7c-.107-.103-1.106.519-1 .625z">
+                            </path>
+                        </svg>
+                    </div>
+
+                </mobile-menu>
+            </div>
+
+        </div>
+
+        <div class="flex-1 text-center xl:w-1/3">
+            <a class="inline-block xl:pl-1 2px:pl-2 xl:pb-px" href="/"
+                data-qa="desktop_headerLogo">
+                <picture class="xl:block xl:w-60 xl:h-24">
+                    <source media="(max-width: 1279px)" width="109" height="32"
+                        srcset="https://cdn.onatera.com/build/shop/images/header/logo-onatera-green.684021f7.svg">
+                    <img src="./static/logo-onatera-fr.f74ddf85.svg"
+                        alt="Onatera logo" width="229" height="96" gtm-tracking="true"
+                        gtm-event="clicHeaderLogo">
+                </picture>
+            </a>
+        </div>
+
+
+        <div
+            class="flex relative flex-1 xl:flex-0 justify-end xl:justify-start pt-1 xl:flex-none xl:flex-shrink-0 xl:pr-6 xl:w-[430px] xl:h-9">
+            <div class="hidden whitespace-nowrap xl:flex">
+                <section class="mr-5">
+                    <a href="tel:0465260060" class="flex items-center text-sm text-white group"
+                        gtm-tracking="true" gtm-event="clicHeaderServiceClient">
+                        <svg class="w-6 h-7 text-white" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 31 32">
+                            <path
+                                d="M23.784 26.465l-0.041-0.317c-0.067-1.019-4.249-3.971-4.619-4.128l-0.306-0.075c-0.604-0.087-1.403 0.214-2.979 0.847-0.174 0.080-0.379 0.096-0.575 0.028-0.132-0.045-0.244-0.123-0.329-0.22l0.003 0.003c-1.348-1.669-2.402-3.421-3.206-5.283l-0.009-0.022c-0.719-1.722-1.174-3.585-1.322-5.496l-0.005-0.124c0.001-0.083 0.016-0.173 0.046-0.262 0.080-0.232 0.25-0.407 0.457-0.501l0.001-0c1.805-0.772 2.603-1.158 2.881-1.786 0.156-0.364 0.992-5.427 0.314-6.173l-0.193-0.248c-0.375-0.61-0.961-1.103-1.698-1.357-0.108-0.037-0.216-0.068-0.325-0.093l0.014 0.003c-0.257-0.021-0.494-0.007-0.723 0.037l0.014-0.002c-1.364 0.296-2.603 0.893-3.65 1.747l-0.032 0.028c-0.693 0.698-3.494 8.218-0.028 16.571 3.431 8.278 10.276 10.937 11.374 11.074l0.027 0.009 0.090 0c1.42-0.136 2.725-0.6 3.86-1.34l0.020-0.013c0.396-0.307 0.718-0.74 0.897-1.262 0.191-0.556 0.194-1.131 0.041-1.655l0.003 0.010z">
+                            </path>
+                        </svg>
+                        <div class="relative ml-1">
+                            <p class="mb-0 font-semibold leading-4">
+                                Service client<br>
+                                <span class="text-xs font-normal">04 65 26 00 60</span>
+                            </p>
+                            <span
+                                class="absolute left-0 -bottom-4 text-xs font-semibold opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                                LU-VE 9h à 18h
+                            </span>
+                        </div>
+                    </a>
+                </section>
+                <section class="mr-5">
+                    <a href="https://www.onatera.com/FR/fr/info/boutiques"
+                        class="flex items-center text-sm text-white group" gtm-tracking="true"
+                        gtm-event="clicHeaderBoutique">
+                        <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 18.185 23">
+                            <path id="Icon_boutique" fill="currentColor"
+                                d="M25.656 8.375a9.093 9.093 0 0 0-9.093 9.093v.166a13.387 13.387 0 0 0 .3 2.17c.64 3.01 2.626 6.129 8.788 11.57 6.162-5.442 8.148-8.56 8.788-11.57a13.458 13.458 0 0 0 .3-2.17v-.166a9.092 9.092 0 0 0-9.083-9.093zm0 13.06a3.968 3.968 0 1 1 3.968-3.968 3.968 3.968 0 0 1-3.968 3.968z"
+                                data-name="Icon boutique" transform="translate(-16.563 -8.375)"></path>
+                        </svg>
+                        <div class="ml-1">
+                            <p class="mb-0 font-semibold leading-4">
+                                Boutique<br>
+                                <span class="text-xs font-normal">Venez nous voir</span>
+                            </p>
+                        </div>
+                    </a>
+                </section>
+            </div>
+
+            <section class="mr-2 xl:w-[136px] relative" data-qa="responsive_headerAccount">
+
+                
+
+                <div class="relative">
+                    <div>
+                        <a href="/login"
+                            class="flex items-center text-sm text-white cursor-pointer"
+                            aria-label="Mon compte">
+                            <svg class="w-8 h-8 text-black xl:hidden mr-2"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="Compte" transform="translate(4.185 3.063)">
+                                    <path id="Rectangle_522" fill="none" data-name="Rectangle 522"
+                                        transform="translate(-4.185 -3.063)" d="M0 0h28v28H0z"></path>
+                                    <path id="Tracé_153" fill="none" stroke="currentColor"
+                                        data-name="Tracé 153"
+                                        d="M10.462 10.623a5.311 5.311 0 1 1 5.311-5.33V5.3a5.32 5.32 0 0 1-5.311 5.32z"
+                                        transform="translate(-1.271 -.001)"></path>
+                                    <path id="Tracé_154" fill="none" stroke="currentColor"
+                                        data-name="Tracé 154"
+                                        d="M0 26.826c0-5.982 4.321-10.851 9.627-10.851s9.627 4.869 9.627 10.851H0z"
+                                        transform="translate(-.001 -3.937)"></path>
+                                </g>
+                            </svg>
+                            <svg class="hidden w-6 h-6 text-white xl:flex" fill="currentColor"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.369 23">
+                                <g id="Icon_user" data-name="Icon user" transform="translate(-.001 -.001)">
+                                    <path id="Tracé_153"
+                                        d="M10.445 10.589a5.294 5.294 0 1 1 5.294-5.312v.009a5.3 5.3 0 0 1-5.294 5.3z"
+                                        data-name="Tracé 153" transform="translate(-1.448)"></path>
+                                    <path id="Tracé_154"
+                                        d="M0 27.493c0-6.35 4.123-11.518 9.184-11.518s9.184 5.169 9.184 11.518H0z"
+                                        data-name="Tracé 154" transform="translate(0 -4.492)"></path>
+                                </g>
+                            </svg>
+
+                            <div class="hidden ml-1 xl:flex">
+                                <p class="mb-0 font-semibold leading-4">Mon compte<br>
+                                    <span class="text-xs font-normal">Se connecter</span>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="absolute top-0 left-0 z-auto">
+                       
+                            <div
+                                data-action="mouseenter:header-widget#display mouseleave:header-widget#hide">
+                                <a href="/login"
+                                    class="flex items-center text-sm text-white cursor-pointer"
+                                    aria-label="Mon compte" gtm-tracking="true"
+                                    gtm-event="clicHeaderCompte">
+                                    <svg class="w-8 h-8 text-black xl:hidden mr-2"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g id="Compte" transform="translate(4.185 3.063)">
+                                            <path id="Rectangle_522" fill="none" data-name="Rectangle 522"
+                                                transform="translate(-4.185 -3.063)" d="M0 0h28v28H0z">
+                                            </path>
+                                            <path id="Tracé_153" fill="none" stroke="currentColor"
+                                                data-name="Tracé 153"
+                                                d="M10.462 10.623a5.311 5.311 0 1 1 5.311-5.33V5.3a5.32 5.32 0 0 1-5.311 5.32z"
+                                                transform="translate(-1.271 -.001)"></path>
+                                            <path id="Tracé_154" fill="none" stroke="currentColor"
+                                                data-name="Tracé 154"
+                                                d="M0 26.826c0-5.982 4.321-10.851 9.627-10.851s9.627 4.869 9.627 10.851H0z"
+                                                transform="translate(-.001 -3.937)"></path>
+                                        </g>
+                                    </svg>
+                                    <svg class="hidden w-6 h-6 text-white xl:flex" fill="currentColor"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.369 23">
+                                        <g id="Icon_user" data-name="Icon user"
+                                            transform="translate(-.001 -.001)">
+                                            <path id="Tracé_153"
+                                                d="M10.445 10.589a5.294 5.294 0 1 1 5.294-5.312v.009a5.3 5.3 0 0 1-5.294 5.3z"
+                                                data-name="Tracé 153" transform="translate(-1.448)"></path>
+                                            <path id="Tracé_154"
+                                                d="M0 27.493c0-6.35 4.123-11.518 9.184-11.518s9.184 5.169 9.184 11.518H0z"
+                                                data-name="Tracé 154" transform="translate(0 -4.492)">
+                                            </path>
+                                        </g>
+                                    </svg>
+
+                                    <div class="hidden ml-1 xl:flex">
+                                        <p class="mb-0 font-semibold leading-4">Mon compte<br>
+                                            <span class="text-xs font-normal">Se connecter</span>
+                                        </p>
+                                    </div>
+                                </a>
+                                 
+                                        <div class="hidden absolute -right-1/2 z-30 z-40 pt-4 w-104"
+                                            data-target="header-widget.container"
+                                            data-qa="responsive_headerAccountWidgetNotLogged">
+                                            <span class="flex justify-end pr-20">
+                                                <svg class="fill-current relative z-10 text-gray-100"
+                                                    xmlns="http://www.w3.org/2000/svg" width="40.812"
+                                                    height="12.43" viewBox="0 0 40.812 12.43">
+                                                    <path id="Languette"
+                                                        d="M363.223-1c9.647,0,11.558-12.43,19.938-12.43S393.764-1,402.092-1Z"
+                                                        transform="translate(-362.116 13.43)"></path>
+                                                </svg>
+                                            </span>
+
+                                            <div class="overflow-hidden bg-white rounded-2xl shadow-md">
+                                                <h3
+                                                    class="py-4 mt-0 mb-5 font-sans text-xl font-bold text-center text-gray-600 bg-gray-100">
+                                                    Connexion
+                                                </h3>
+
+                                                <form class="px-8 pb-8" method="POST"
+                                                    action="https://www.onatera.com/FR/fr/login-check"
+                                                    data-action="submit:ajax-navigation-login#intercept">
+                                                    <div class="mb-6">
+                                                        <div class="mb-8 p-2 items-center bg-red-50 rounded-xl hidden"
+                                                            data-target="ajax-navigation-login.errorContainer">
+                                                            <svg class="fill-current h-8 w-8 mr-2 flex-shrink-0 text-red-200"
+                                                                data-name="Icon - Warning"
+                                                                xmlns="http://www.w3.org/2000/svg"
+                                                                width="32" height="32">
+                                                                <g id="Icon_Pourcentage"
+                                                                    data-name="Icon Pourcentage"
+                                                                    transform="translate(-26.279 -3286.745)">
+                                                                    <path id="Tracé_8522"
+                                                                        data-name="Tracé 8522"
+                                                                        d="M9.246.748c6.875 3.743 9.012 4.718 9.012 9.806a8.824 8.824 0 0 1-9.012 8.988 8.824 8.824 0 0 1-9.012-8.989C.234 5.465 2.37-3 9.246.748z"
+                                                                        transform="translate(38.17 3289.907)">
+                                                                    </path>
+                                                                    <path id="Ligne_206"
+                                                                        data-name="Ligne 206"
+                                                                        class="text-red-600 stroke-current"
+                                                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                                                        transform="translate(41.84 3299.14)"
+                                                                        d="M0 0v5.71"></path>
+                                                                    <g id="Ellipse_85"
+                                                                        data-name="Ellipse 85"
+                                                                        class="text-red-600 stroke-current"
+                                                                        transform="translate(41.126 3306.707)"
+                                                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round">
+                                                                        <circle cx=".714" cy=".714"
+                                                                            style="stroke:none" r=".714">
+                                                                        </circle>
+                                                                        <circle style="fill:none" cx=".714"
+                                                                            cy=".714" r=".214"></circle>
+                                                                    </g>
+                                                                    <path id="Tracé_8072"
+                                                                        data-name="Tracé 8072"
+                                                                        class="text-red-600 stroke-current"
+                                                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                                                        d="m-3565.629 2633.38-6.695 12.773a1.634 1.634 0 0 0 1.448 2.392h14.021a1.634 1.634 0 0 0 1.417-2.447l-7.327-12.773a1.634 1.634 0 0 0-2.864.055z"
+                                                                        transform="translate(3605.791 662.24)">
+                                                                    </path>
+                                                                    <path id="Rectangle_370"
+                                                                        data-name="Rectangle 370"
+                                                                        style="fill:none"
+                                                                        transform="translate(26.279 3286.745)"
+                                                                        d="M0 0h32v32H0z"></path>
+                                                                </g>
+                                                            </svg>
+                                                            <div class="text-xs sm:text-sm text-red-600">
+                                                                <p class="leading-tight"
+                                                                    data-target="ajax-navigation-login.errorMessage"
+                                                                    data-error-message="widget_login">
+
+                                                                </p>
+                                                            </div>
+
+                                                            <span class="hidden"
+                                                                data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"widget_login","form_field_label":"widget_login","form_error_type":""}</span>
+                                                        </div>
+                                                        <label class="flex items-center text-gray-800"
+                                                            for="widget_username">
+                                                            Adresse email*
+                                                        </label>
+                                                        <input
+                                                            class="pr-20 mt-2 w-full h-12 text-base rounded-lg border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700"
+                                                            id="widget_username" name="_username"
+                                                            type="text"
+                                                            data-targets="header-widget.focusable"
+                                                            data-qa="responsive_email">
+                                                    </div>
+
+                                                    <div class="mb-4">
+                                                        <label class="flex items-center text-gray-800"
+                                                            for="widget_password">
+                                                            Mot de passe*
+                                                        </label>
+
+                                                        <password-input class="block relative"
+                                                            data-catalyst="">
+                                                            <input
+                                                                class="pr-20 mt-2 w-full h-12 text-base rounded-lg border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700"
+                                                                id="widget_password" name="_password"
+                                                                type="password"
+                                                                data-target="password-input.input"
+                                                                data-targets="header-widget.focusable"
+                                                                data-qa="responsive_password">
+
+                                                            <button type="button"
+                                                                data-target="password-input.toggleButton"
+                                                                data-targets="header-widget.focusable"
+                                                                data-action="click:password-input#doToggle"
+                                                                class="flex absolute top-0 right-0 items-center px-4 pt-2 h-full text-xs leading-none text-gray-800 bg-transparent border-none outline-none">
+                                                                <span class="flex items-center"
+                                                                    data-target="password-input.onIcon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="h-4 w-4" fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor">
+                                                                        <path stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z">
+                                                                        </path>
+                                                                        <path stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                                                        </path>
+                                                                    </svg>
+                                                                    <span class="ml-1">Afficher</span>
+                                                                </span>
+
+                                                                <span class="flex hidden items-center"
+                                                                    data-target="password-input.offIcon">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                                        class="h-4 w-4" fill="none"
+                                                                        viewBox="0 0 24 24"
+                                                                        stroke="currentColor">
+                                                                        <path stroke-linecap="round"
+                                                                            stroke-linejoin="round"
+                                                                            stroke-width="2"
+                                                                            d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
+                                                                        </path>
+                                                                    </svg>
+                                                                    <span class="ml-1">Masquer</span>
+                                                                </span>
+                                                            </button>
+                                                        </password-input>
+                                                    </div>
+
+                                                    <div class="mb-6 text-right">
+                                                        <a href="https://www.onatera.com/FR/fr/forgotten-password"
+                                                            class="text-sm text-gray-600 underline"
+                                                            data-qa="responsive_lnkForgotPassword">
+                                                            Mot de passe oublié ?
+                                                        </a>
+                                                    </div>
+
+                                                    <input type="hidden"
+                                                        id="original_csrf_token[login-form]"
+                                                        name="_csrf_shop_security_token"
+                                                        value="b8c9533ede24fc20.71Um4ABHkYqk9tjx4ndl1kUaRxMnx1h_qhMjr7UnU1s.1wBvhm8w1cvDopaX0C8v4SltCiJkgS8dyXdS6cNDFC-fD07WazXH-MeygQ">
+
+
+
+
+                                                    <button type="submit"
+                                                        class="leading-none flex items-center justify-center space-x-1 rounded-lg border-none outline-none transition disabled:ring-gray-200 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed xl:disabled:hover:ring-1 text-white bg-gray-900 ring-gray-900 xl:hover:bg-gray-700 xl:hover:ring-gray-700 mb-4 w-full py-4 px-8 flex justify-center items-center flex relative"
+                                                        data-qa="responsive_btnConnexion"
+                                                        data-targets="header-widget.focusable"
+                                                        data-target="ajax-navigation-login.loginButton">
+                                                        <div class="pt-1 hidden flex justify-center h-full absolute w-full bg-gray-700 rounded-lg"
+                                                            data-target="ajax-navigation-login.load">
+                                                            <p class="loader"></p>
+                                                        </div>
+
+
+
+                                                        <span class="font-semibold">Se connecter</span>
+
+                                                    </button>
+
+                                                    <a href="https://www.onatera.com/FR/fr/register"
+                                                        class="w-full"
+                                                        data-targets="header-widget.focusable"
+                                                        data-qa="responsive_btnCreateAccount">
+                                                        <button type="button"
+                                                            class="leading-none bg-transparent space-x-1 rounded-lg border-none outline-none border ring-1 transition py-4 px-8 text-brand-600 ring-brand-600 active:bg-brand-100 w-full xl:hover:ring-2 disabled:ring-gray-400 disabled:active:bg-transparent disabled:text-gray-400 xl:disabled:hover:ring-1">
+                                                            <span
+                                                                class="flex flex-row justify-center items-center">
+
+                                                                <span class="font-semibold">Créer un
+                                                                    compte</span>
+
+                                                            </span>
+                                                        </button>
+                                                    </a>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </ajax-navigation-login>
+
+
+                                    <span class="hidden"
+                                        data-target="analytics-datalayer.datalayer">{"event":"connexion","tunnel":false}</span>
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="xl:absolute xl:top-0 xl:right-0 xl:z-auto xl:pt-1.5">
+                <a href="https://www.onatera.com/FR/fr/cart-widget"
+                    data-target="ajax-refresh-cart-widget.cartWidgetLink" class="hidden"></a>
+                <div class="relative xl:w-6 xl:h-7">
+                    <section class="self-center xl:h-7 xl:w-6"
+                        data-target="ajax-refresh-cart-widget.cartWidget">
+                      
+                            <div class="relative z-40">
+
+
+                                <a href="https://www.onatera.com/FR/fr/cart"
+                                    class="block relative w-8 h-8 cursor-pointer xl:w-6 xl:h-7"
+                                    aria-label="Mon panier" gtm-tracking="true"
+                                    gtm-event="clicHeaderMonPanier"
+                                    data-targets="ajax-refresh-cart-widget.frames" id="cart_link">
+                                    <svg class="block w-8 h-8 text-black xl:hidden"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path data-name="Rectangle 521" fill="none" d="M0 0h28v28H0z">
+                                        </path>
+                                        <path data-name="Tracé 268" fill="none" stroke="currentColor"
+                                            d="M141.094 14.214c-4.741.049-10.431.046-17.124 0l-1.691 17.614a.465.465 0 0 0 .462.511h19.071a.466.466 0 0 0 .464-.5z"
+                                            transform="translate(-118.514 -6.268)"></path>
+                                        <path data-name="Tracé 269"
+                                            d="M9.914 11.722V6.97a3.846 3.846 0 0 1 7.691 0v4.751h1.055V6.97a4.9 4.9 0 0 0-9.8 0v4.751h1.05z">
+                                        </path>
+                                    </svg>
+                                    <svg class="hidden w-6 h-7 text-white xl:block" version="1.1"
+                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                        viewBox="0 0 27 32">
+                                        <path
+                                            d="M25.088 7.834h-4.157v5.093c0 0 0 0.001 0 0.001 0 0.557-0.452 1.009-1.009 1.010h-1.419c-0.558-0.001-1.009-0.453-1.009-1.011 0-0 0-0.001 0-0.001v0-5.092h-8.327v5.094c0 0 0 0.001 0 0.001 0 0.558-0.451 1.010-1.009 1.011h-1.415c-0.558-0.001-1.009-0.453-1.009-1.011 0-0 0-0.001 0-0.001v0-5.094h-3.476l-2.255 23.486c-0.002 0.018-0.003 0.040-0.003 0.061 0 0.342 0.277 0.619 0.619 0.62h25.425c0.342-0.001 0.619-0.279 0.619-0.621 0-0.015-0.001-0.029-0.002-0.044l0 0.002z">
+                                        </path>
+                                        <path
+                                            d="M8.201 12.869v-6.335c0-2.832 2.295-5.127 5.127-5.127s5.127 2.295 5.127 5.127v0 6.334h1.407v-6.334c0-3.608-2.924-6.532-6.532-6.532s-6.532 2.924-6.532 6.532v6.335h1.4z">
+                                        </path>
+                                    </svg>
+
+
+                                </a>
+
+
+
+
+                                <div class="hidden absolute -right-full z-30 pt-4 w-104"
+                                    data-target="header-widget.container">
+                                    <span class="flex justify-end pr-4">
+                                        <svg class="fill-current relative z-10 text-white"
+                                            xmlns="http://www.w3.org/2000/svg" width="40.812" height="12.43"
+                                            viewBox="0 0 40.812 12.43">
+                                            <path id="Languette"
+                                                d="M363.223-1c9.647,0,11.558-12.43,19.938-12.43S393.764-1,402.092-1Z"
+                                                transform="translate(-362.116 13.43)"></path>
+                                        </svg>
+                                    </span>
+
+                                    <div class="overflow-hidden bg-white rounded-2xl shadow-md">
+
+
+
+                                        <div id="cart_widget_popup"
+                                            data-targets="ajax-refresh-cart-widget.frames">
+                                            <div class="flex flex-col items-center pt-8 pb-10">
+                                                <img class="mb-4 w-20"
+                                                    src="./static/empty-cart-onatera.98e66db9.svg"
+                                                    alt="Image décorative" loading="lazy">
+                                                <span class="text-2xl font-semibold text-gray-800">Votre
+                                                    panier est vide</span>
+                                            </div>
+
+                                            <div class="relative pt-8 pb-6 bg-brand-50">
+                                                <img class="absolute right-0 bottom-0 w-5/6"
+                                                    src="./static/brand-bubble-onatera.7e47a242.svg"
+                                                    alt="Image décorative" loading="lazy">
+
+                                                <div class="flex relative flex-col items-center">
+                                                    <p
+                                                        class="text-center mb-6 text-gray-800 text-lg font-semibold">
+                                                        Mettez du bonheur dans votre lundi&nbsp;!
+                                                    </p>
+
+
+
+
+                                                    <a href="https://www.onatera.com/FR/fr/conseils/moral/article-blue-monday"
+                                                        class="appearance-none flex leading-none bg-transparent items-center justify-center py-4 space-x-1 rounded-lg border-none outline-none border transition text-gray-700 xl:hover:text-gray-500 underline py-0">
+
+                                                        <span class="font-semibold ">Je découvre</span>
+
+                                                        <span> <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="h-4 w-4 mr-1" fill="none"
+                                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                                <path stroke-linecap="round"
+                                                                    stroke-linejoin="round" stroke-width="2"
+                                                                    d="M9 5l7 7-7 7"></path>
+                                                            </svg>
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

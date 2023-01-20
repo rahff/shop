@@ -1,3 +1,5 @@
+import { IStrapiResponse } from "./IStrapiResponse";
+
 export interface IHttpService {
-    get<TResponse>(url: string): Promise<TResponse>
+    getMany<T>(url: string): Promise<IStrapiResponse<T>>;
 }

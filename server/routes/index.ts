@@ -1,14 +1,16 @@
 import { Router, Request, Response } from "express";
-import { ServiceContainer } from "../services/ServiceContainer";
+import { ServiceContainer } from "../containers/ServiceContainer";
+import { ShopPageViewPresenter } from "../services/ShopPageViewPresenter";
 
 const router = Router();
 
 /* GET home page. */
 router.get('', async (req: Request, res: Response) => {
   const service = ServiceContainer.ProductService();
-  const productPage = await service.getPage();
-  console.log(productPage);
-  res.render("index");
+  const apiResult = await service.getPage();  
+  const productPage = ShopPageViewPresenter.productPageModel(apiResult);
+  
+  res.render("index", {productPage});
 });
 
 router.get("/login", async (req: Request, res: Response) => {

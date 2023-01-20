@@ -1,5 +1,5 @@
 import { GetProduct } from "../core/GetProduct";
-import { HttpService } from "./HttpService";
+import { HttpService } from "../services/HttpService";
 import axios, { AxiosInstance } from "axios"
 
 

@@ -46,7 +46,7 @@
             <%-include("partials/banner")%>
             <!-- banner promo -->
             <!-- shop component -->
-            <%-include("partials/shop")%>
+            <%-include("partials/shop", {listProduct: productPage.listProduct, pagination: productPage.pagination})%>
             <!-- footer_component -->
             <%-include("partials/footer")%>
 

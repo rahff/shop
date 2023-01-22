@@ -1,36 +1,20 @@
-import { Router, Request, Response } from "express";
-import { ServiceContainer } from "../containers/ServiceContainer";
-import { ShopPageViewPresenter } from "../services/ShopPageViewPresenter";
+import { Router } from "express";
+import { getCartViewController } from "../controllers/CartController";
+import { getProductPageController, shopPageController } from "../controllers/ShopController";
+import { getLoginViewController, getRegisterViewController, getForgotPasswordViewController } from "../controllers/UserConnexionController";
 
 const router = Router();
 
-/* GET home page. */
-router.get('', async (req: Request, res: Response) => {
-  const service = ServiceContainer.ProductService();
-  const apiResult = await service.getPage();  
-  const productPage = ShopPageViewPresenter.productPageModel(apiResult);
-  
-  res.render("index", {productPage});
-});
+router.get('', shopPageController);
 
-router.get("/login", async (req: Request, res: Response) => {
-  res.render("login");
-});
+router.get("/login",getLoginViewController);
 
-router.get('/register', async (req: Request, res: Response) => {
-  res.render("register");
-});
+router.get('/register', getRegisterViewController);
 
-router.get('/forgot_password', async (req: Request, res: Response) => {
-  res.render("forgot");
-});
+router.get('/forgot_password', getForgotPasswordViewController);
 
-router.get('/cart', async (req: Request, res: Response) => {
-  res.render("cart");
-});
+router.get('/cart', getCartViewController);
 
-router.get('/product', async (req: Request, res: Response) => {
-  res.render("product_page");
-});
+router.get('/product/:id', getProductPageController);
 
 export default router;

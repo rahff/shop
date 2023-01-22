@@ -1,0 +1,293 @@
+<div class="xl:pointer-events-auto flex xl:relative flex-col px-4 pt-4 pb-8 m-auto overflow-y-auto w-full h-full md:max-h-screen-9/10 md:max-h-screen lg:w-10/12 xl:w-8/12 text-gray-800 bg-white rounded-t-3xl md:pt-6 md:pb-10 xl:pb-12 md:px-6 xl:px-10 md:rounded-b-3xl"
+    gtm-tracking="true" gtm-event="popinDisplay" gtm-data="Identification">
+    <button class="flex items-center self-end" data-action="click:popup-overlay#toggle">
+        <span class="font-semibold">Fermer</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="ml-1 h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+        </svg>
+    </button>
+
+    <img class="self-center mb-4 w-28" src="https://cdn.onatera.com/build/shop/images/common/cart-onatera.64cf321d.svg"
+        alt="" loading="lazy" data-target="popup-overlay.popupIcon">
+
+    <p class="mb-6 text-2xl font-bold text-center sm:mb-8" data-target="popup-overlay.popupTitle">Connectez-vous pour
+        poursuivre votre commande</p>
+
+    <div class="">
+
+        <login-form data-catalyst="">
+            <div class="w-full flex flex-col md:flex-row" data-targets="popup-overlay.frames" data-frame-name="login">
+
+                <!-- login section -->
+                <analytics-datalayer class="md:flex-1" data-catalyst="" data-variant-quantity-id=""
+                    data-datalayer-type="" data-product-position="">
+                    <ajax-navigation-login data-action="ajax-navigation-login.end:analytics-datalayer#push"
+                        data-catalyst="">
+                        <form class="flex flex-col h-full justify-between md:ml-4 xl:ml-6" method="POST"
+                            action="/FR/fr/login-check" data-action="submit:ajax-navigation-login#intercept">
+                            <p class="mb-4 text-xl font-bold whitespace-nowrap">Vous avez déjà un compte ?</p>
+                            <input type="hidden" name="addToWishlist[productId]">
+                            <div class="mb-6">
+                                <div class="mb-8 p-2 items-center bg-red-50 rounded-xl hidden"
+                                    data-target="ajax-navigation-login.errorContainer">
+                                    <svg class="fill-current h-8 w-8 mr-2 flex-shrink-0 text-red-200"
+                                        data-name="Icon - Warning" xmlns="http://www.w3.org/2000/svg" width="32"
+                                        height="32">
+                                        <g id="Icon_Pourcentage" data-name="Icon Pourcentage"
+                                            transform="translate(-26.279 -3286.745)">
+                                            <path id="Tracé_8522" data-name="Tracé 8522"
+                                                d="M9.246.748c6.875 3.743 9.012 4.718 9.012 9.806a8.824 8.824 0 0 1-9.012 8.988 8.824 8.824 0 0 1-9.012-8.989C.234 5.465 2.37-3 9.246.748z"
+                                                transform="translate(38.17 3289.907)"></path>
+                                            <path id="Ligne_206" data-name="Ligne 206"
+                                                class="text-red-600 stroke-current"
+                                                style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                                transform="translate(41.84 3299.14)" d="M0 0v5.71"></path>
+                                            <g id="Ellipse_85" data-name="Ellipse 85"
+                                                class="text-red-600 stroke-current"
+                                                transform="translate(41.126 3306.707)"
+                                                style="fill:none;stroke-linecap:round;stroke-linejoin:round">
+                                                <circle cx=".714" cy=".714" style="stroke:none" r=".714"></circle>
+                                                <circle style="fill:none" cx=".714" cy=".714" r=".214"></circle>
+                                            </g>
+                                            <path id="Tracé_8072" data-name="Tracé 8072"
+                                                class="text-red-600 stroke-current"
+                                                style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                                d="m-3565.629 2633.38-6.695 12.773a1.634 1.634 0 0 0 1.448 2.392h14.021a1.634 1.634 0 0 0 1.417-2.447l-7.327-12.773a1.634 1.634 0 0 0-2.864.055z"
+                                                transform="translate(3605.791 662.24)"></path>
+                                            <path id="Rectangle_370" data-name="Rectangle 370" style="fill:none"
+                                                transform="translate(26.279 3286.745)" d="M0 0h32v32H0z"></path>
+                                        </g>
+                                    </svg>
+                                    <div class="text-xs sm:text-sm text-red-600">
+                                        <p class="leading-tight" data-target="ajax-navigation-login.errorMessage"
+                                            data-error-message="">
+
+                                        </p>
+                                    </div>
+
+                                    <span class="hidden"
+                                        data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"","form_field_label":"","form_error_type":""}</span>
+                                </div>
+                                <label class="flex items-center" for="modal_username">
+                                    Adresse email*
+                                </label>
+                                <input
+                                    class="pr-20 mt-2 w-full h-12 text-base rounded-lg border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700"
+                                    id="modal_username" name="_username" type="email" data-qa="responsive_email">
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="flex items-center" for="modal_password">
+                                    Mot de passe*
+                                </label>
+
+                                <password-input class="block relative" data-catalyst="">
+                                    <input
+                                        class="pr-20 mt-2 w-full h-12 text-base rounded-lg border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-gray-700"
+                                        id="modal_password" name="_password" type="password"
+                                        data-target="password-input.input" data-qa="responsive_password">
+
+                                    <button type="button" data-target="password-input.toggleButton"
+                                        data-action="click:password-input#doToggle"
+                                        class="flex absolute top-0 right-0 items-center px-4 pt-2 h-full text-xs leading-none bg-transparent border-none outline-none">
+                                        <span class="flex items-center" data-target="password-input.onIcon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z">
+                                                </path>
+                                            </svg>
+                                            <span class="ml-1">Afficher</span>
+                                        </span>
+
+                                        <span class="flex hidden items-center" data-target="password-input.offIcon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none"
+                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21">
+                                                </path>
+                                            </svg>
+                                            <span class="ml-1">Masquer</span>
+                                        </span>
+                                    </button>
+                                </password-input>
+                            </div>
+
+                            <div class="mb-6 text-right">
+                                <a href="/FR/fr/forgotten-password" class="text-sm text-gray-600 underline"
+                                    data-qa="responsive_lnkForgotPassword">
+                                    Mot de passe oublié ?
+                                </a>
+                            </div>
+
+                            <input type="hidden" name="_csrf_shop_security_token"
+                                data-target="login-form.csrfTokenInput"
+                                value="d7cb3d89aff246ad4cae.k9_OQEALnM-M6Wbkf2rSpkDmbBbQIQQoOckkJNOdAAc.0Lr9Ixg_6IXGnTerORi2lyqvIXqZFFJ5WI4SReDPUW2m6YNwGF7J_-CjDQ">
+
+
+
+
+                            <button type="submit"
+                                class="leading-none flex items-center justify-center space-x-1 rounded-lg border-none outline-none transition disabled:ring-gray-200 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed xl:disabled:hover:ring-1 text-white bg-gray-900 ring-gray-900 xl:hover:bg-gray-700 xl:hover:ring-gray-700 w-full py-4 px-8 relative"
+                                data-qa="responsive_btnConnexion" data-target="ajax-navigation-login.loginButton">
+                                <div class="pt-1 hidden flex justify-center h-full absolute w-full bg-gray-700 rounded-lg"
+                                    data-target="ajax-navigation-login.load">
+                                    <p class="loader"></p>
+                                </div>
+
+
+
+                                <span class="font-semibold">Se connecter</span>
+
+                            </button>
+                        </form>
+                    </ajax-navigation-login>
+
+
+                    <span class="hidden"
+                        data-target="analytics-datalayer.datalayer">{"event":"connexion","tunnel":true}</span>
+                </analytics-datalayer>
+
+                <!-- separation -->
+                <div class="my-8 border-t border-gray-200 md:my-0 md:mx-6 xl:mx-10 md:border-t-0 md:border-l"></div>
+
+                <!-- create an account section -->
+                <div class="md:mr-4 xl:mr-6 md:flex-1 flex flex-col justify-between">
+                    <p class="mb-4 text-xl font-bold whitespace-nowrap">Vous êtes un nouveau client ?</p>
+
+                    <p class="mb-4">Créez dès maintenant votre compte pour profiter des avantages membre.</p>
+
+                    <ul class="mb-6">
+                        <li class="flex items-center mb-4">
+                            <svg class="fill-current h-8 w-8 flex-shrink-0 text-brand-100" id="Icon"
+                                xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+                                <path id="Rectangle_370" data-name="Rectangle 370" style="fill:none" d="M0 0h32v32H0z">
+                                </path>
+                                <g id="Groupe_1934" data-name="Groupe 1934" transform="translate(6 6.001)">
+                                    <path id="Tracé_8525" data-name="Tracé 8525"
+                                        d="M8.61.913c6.364 3.5 8.61 3.855 8.61 8.61a8.61 8.61 0 1 1-17.22 0C0 4.768 2.247-2.586 8.61.913z"
+                                        transform="rotate(-149 9.5 9.433)"></path>
+                                    <path id="Tracé_8219" data-name="Tracé 8219" style="fill:none"
+                                        d="M-22800.289-12404.535h13.561v13.824l6.34-4.683-.221-13.88-14.217-.252z"
+                                        transform="translate(22801 12409.626)"></path>
+                                    <path id="Rectangle_460" data-name="Rectangle 460"
+                                        class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        transform="translate(.426 5.195)" d="M0 0h14.148v13.861H0z"></path>
+                                    <path id="Tracé_8217" data-name="Tracé 8217" class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="m13.461 13.7 6.225-5.324" transform="translate(1 -8.374)"></path>
+                                    <path id="Tracé_8218" data-name="Tracé 8218" class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="M13.623 13.431 19.688 7.5V-5.626H6.469L-.574-.476"
+                                        transform="translate(1 5.626)"></path>
+                                    <path id="Tracé_8220" data-name="Tracé 8220" class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="M16.342 23.408h4" transform="translate(-13.342 -8.374)"></path>
+                                    <path id="Tracé_8221" data-name="Tracé 8221" class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                        d="M16.342 23.408h4" transform="translate(-13.342 -6.665)"></path>
+                                </g>
+                            </svg>
+                            <span class="ml-2">Suivez vos commandes</span>
+                        </li>
+                        <li class="flex items-center mb-4">
+                            <svg class="fill-current h-8 w-8 flex-shrink-0 text-brand-100" id="Icon_-_Cadeau"
+                                data-name="Icon - Cadeau" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 32 32">
+                                <path id="Rectangle_370" data-name="Rectangle 370" style="fill:none" d="M0 0h32v32H0z">
+                                </path>
+                                <g id="Groupe_1035" data-name="Groupe 1035" transform="translate(-6 -2.835)">
+                                    <path id="Tracé_8940" data-name="Tracé 8940" class="fill-current"
+                                        d="M9.5.265c7.019 3.859 9.5 4.252 9.5 9.5a9.5 9.5 0 1 1-19-.004C0 4.516 2.478-3.594 9.5.265z"
+                                        transform="translate(19 5.523)"></path>
+                                    <g id="Rectangle_460" data-name="Rectangle 460" class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linejoin:round;stroke-linecap:round">
+                                        <path style="stroke:none" d="M0 0h17.466v4.9H0z"
+                                            transform="translate(13 14.096)"></path>
+                                        <path style="fill:none" d="M.5.5h16.466v3.9H.5z"
+                                            transform="translate(13 14.096)"></path>
+                                    </g>
+                                    <g id="Rectangle_469" data-name="Rectangle 469" class="text-gray-600 stroke-current"
+                                        style="fill:none;stroke-linejoin:round;stroke-linecap:round">
+                                        <path style="stroke:none" d="M0 0h15.81v12H0z" transform="translate(13.828 18)">
+                                        </path>
+                                        <path style="fill:none" d="M.5.5h14.81v11H.5z" transform="translate(13.828 18)">
+                                        </path>
+                                    </g>
+                                    <g id="Tracé_8228" data-name="Tracé 8228" style="fill:none">
+                                        <path style="stroke:none"
+                                            d="M2.911 0c1.608 0 2.911 3.488 2.911 5.1A2.911 2.911 0 0 1 0 5.1C0 3.488 1.3 0 2.911 0z"
+                                            transform="rotate(-150 14.64 4.748)"></path>
+                                        <path class="text-gray-600 fill-current" style="stroke:none"
+                                            d="M2.911 1c-.157 0-.647.339-1.16 1.386C1.257 3.389 1 4.508 1 5.096c0 1.053.857 1.91 1.911 1.91a1.913 1.913 0 0 0 1.911-1.91c0-.588-.258-1.707-.75-2.71C3.558 1.339 3.068 1 2.91 1m0-1c1.608 0 2.911 3.488 2.911 5.095a2.911 2.911 0 0 1-5.822 0C0 3.488 1.303 0 2.911 0z"
+                                            transform="rotate(-150 14.64 4.748)"></path>
+                                    </g>
+                                    <g id="Tracé_8229" data-name="Tracé 8229" style="fill:none">
+                                        <path style="stroke:none"
+                                            d="M2.911 8.007c1.608 0 2.911-3.488 2.911-5.1A2.911 2.911 0 1 0 0 2.911c0 1.608 1.3 5.096 2.911 5.096z"
+                                            transform="rotate(-30 24.877 -23.828)"></path>
+                                        <path class="text-gray-600 fill-current" style="stroke:none"
+                                            d="M2.91 7.007c.157 0 .647-.34 1.161-1.386.493-1.003.75-2.123.75-2.71 0-.51-.198-.99-.559-1.351-.36-.361-.84-.56-1.35-.56A1.913 1.913 0 0 0 1 2.911c0 .588.258 1.707.75 2.71.514 1.047 1.004 1.386 1.16 1.386m0 1C1.304 8.007 0 4.519 0 2.91a2.911 2.911 0 0 1 5.822 0c0 1.608-1.304 5.095-2.911 5.096z"
+                                            transform="rotate(-30 24.877 -23.828)"></path>
+                                    </g>
+                                    <g id="Tracé_8632" data-name="Tracé 8632" style="stroke-linecap:round;fill:none">
+                                        <path style="stroke:none" d="M0 0h15.81v.981H0z"
+                                            transform="rotate(90 4.087 18.184)"></path>
+                                        <path class="text-gray-600 fill-current" style="stroke:none"
+                                            d="M0 0h15.81v.981H0V0z" transform="rotate(90 4.087 18.184)"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <span class="ml-2">Recevez un cadeau le jour de votre anniversaire</span>
+                        </li>
+                        <li class="flex items-center mb-4">
+                            <svg class="fill-current h-8 w-8 flex-shrink-0 text-brand-100" id="Icon_Étiquette"
+                                data-name="Icon / Étiquette" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                                viewBox="0 0 32 32">
+                                <path id="Tracé_8939" data-name="Tracé 8939"
+                                    d="M9.5.265c7.019 3.859 9.5 4.252 9.5 9.5a9.5 9.5 0 1 1-19-.004C0 4.516 2.478-3.594 9.5.265z"
+                                    transform="translate(13 2.688)"></path>
+                                <path id="Rectangle_537" data-name="Rectangle 537" style="fill:none" d="M0 0h32v32H0z">
+                                </path>
+                                <path id="Tracé_8144" data-name="Tracé 8144" class="text-gray-600 stroke-current"
+                                    style="fill:none"
+                                    d="M5.478.111c.926-.25 13.4 0 13.4 0a2.954 2.954 0 0 1 2.68 3.166v5.278a2.954 2.954 0 0 1-2.68 3.166s-12.306.4-13.4 0S.031 8.415 0 5.972 4.551.361 5.478.111z"
+                                    transform="rotate(144.99 12.015 11.899)"></path>
+                                <circle id="Ellipse_84" data-name="Ellipse 84" class="text-gray-600 stroke-current"
+                                    style="fill:none" cx="1.702" cy="1.702" r="1.702"
+                                    transform="rotate(144.99 9.004 10.518)"></circle>
+                            </svg>
+                            <span class="ml-2">Bénéficiez de réductions et d'avantages fidélités</span>
+                        </li>
+                    </ul>
+
+                    <a data-target="popup-overlay.registerButton" href="/FR/fr/register" class="flex w-full"
+                        data-qa="responsive_btnCreateAccount">
+
+
+
+                        <button type="button"
+                            class="leading-none flex items-center justify-center space-x-1 rounded-lg border-none outline-none transition disabled:ring-gray-200 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed xl:disabled:hover:ring-1 text-white bg-gray-900 ring-gray-900 xl:hover:bg-gray-700 xl:hover:ring-gray-700 w-full py-4 px-8">
+                            <div class="pt-1 hidden flex justify-center h-full absolute w-full bg-gray-700 rounded-lg"
+                                data-target="ajax-navigation-login.load">
+                                <p class="loader"></p>
+                            </div>
+
+
+
+                            <span class="font-semibold">Créer un compte</span>
+
+                        </button>
+                    </a>
+                </div>
+
+            </div>
+        </login-form>
+
+    </div>
+</div>

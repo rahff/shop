@@ -1,10 +1,20 @@
-import { Router, Request, Response } from "express";
+import { Router } from "express";
+import {
+  addCartItemController, 
+  removeCartItemController, 
+  decrementCartItemController, 
+  getCartController 
+} from "../controllers/CartController";
+
 const router = Router();
-const infos = { platform: "node.js", framework: "express", node_version: "16", express_version: "4" };
 
 
-router.get('/infos', function(req: Request, res: Response) {
-  res.status(200).json(infos);
-});
+router.get('/cart/add', addCartItemController);
+
+router.get('/cart/remove-item', removeCartItemController);
+
+router.get('/cart/decrement-item', decrementCartItemController);
+
+router.get("/cart/get/:id", getCartController);
 
 export default router;

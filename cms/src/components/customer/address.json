@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_customer_addresses",
+  "info": {
+    "displayName": "Address"
+  },
+  "options": {},
+  "attributes": {
+    "Numero": {
+      "type": "string"
+    },
+    "street_way": {
+      "type": "string"
+    },
+    "city": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "Zip_code": {
+      "type": "string"
+    },
+    "Country": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    },
+    "cart": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::cart.cart"
+    },
+    "Amount": {
+      "type": "decimal"
+    },
+    "Paid": {
+      "type": "boolean",
+      "default": false
+    },
+    "Shipping_Address": {
+      "displayName": "Address",
+      "type": "component",
+      "repeatable": false,
+      "component": "customer.address"
+    },
+    "payment_ref": {
+      "type": "string"
+    }
+  }
+}

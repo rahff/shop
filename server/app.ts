@@ -1,11 +1,10 @@
+import env from "dotenv";
 import express from 'express';
 import path from 'path';
+env.config();
 import indexRouter from "./routes/index";
 import apiRouter from "./routes/api";
-import env from "dotenv";
 
-
-env.config();
 
 const app = express();
 

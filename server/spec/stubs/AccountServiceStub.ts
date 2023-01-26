@@ -1,4 +1,5 @@
-import { IAccountService } from "../../core/model/interfaces/IAccountService";
+import { IAccountService } from "../../core/interfaces/IAccountService";
+
 
 export class AccountServiceStub implements IAccountService {
 

@@ -8,6 +8,8 @@ import { Cart } from "../core/model/entities/Cart";
 import { AccountServiceStub } from "./stubs/AccountServiceStub";
 import { RemoveCartItemCommand } from "../core/command/RemoveCartItemCommand";
 import { DecrementQuantityItemCommand } from "../core/command/DecrementQuantityItemCommand";
+import { EventBusStub } from "./stubs/EventBusStub";
+import { CartModuleTest } from "./stubs/CartModuleTest";
 
 
 
@@ -16,7 +18,7 @@ describe("CartManager", ()=> {
     let sut: CartManager;
     
     beforeEach(()=> {
-        sut = new CartManager(new CartServiceStub(), new ProductServiceStub(), new AccountServiceStub());
+        sut = new CartModuleTest().CartManger();
     }) 
 
     it("should create a new cart with the corresponding item if the user have not one yet", async ()=> {
@@ -60,12 +62,15 @@ describe("CartManager", ()=> {
         expect(cart.isValidated()).toBeFalse();
     });
 
-    it("authenticated user can validate cart", async ()=>{
+    it("authenticated user can validate cart only once", async ()=>{
         const cart = await addItemInCart(1);
         const command: ValidateCartCommand = {cartId: 7, token: "usertokenjwt"};
         const isValidated = await sut.validateCart(command);
         expect(isValidated).toBeTrue();
         expect(cart.isValidated()).toBeTrue();
+        const isValidated2 = await sut.validateCart(command);
+        expect(isValidated2).toBeFalse();
+      
     });
 
     it("should create a new cart for a particular user ", async ()=> {

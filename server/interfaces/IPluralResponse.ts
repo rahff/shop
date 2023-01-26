@@ -1,4 +1,4 @@
-import { Entity } from "../core/model/interfaces/Entity";
+import { Entity } from "./Entity";
 
 export interface IPluralResponse<T> {
     data: Entity<T>[]

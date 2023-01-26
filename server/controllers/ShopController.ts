@@ -12,7 +12,7 @@ export const shopPageController = async (req: Request, res: Response) => {
       const productPage = ShopPageViewPresenter.productPageModel(apiResult);
       res.render("index", {productPage});
     } catch (error) {
-      res.status(500).render("register");
+      res.status(500).render("error");
     }
 }
 

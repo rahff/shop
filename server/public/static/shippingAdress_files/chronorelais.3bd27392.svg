@@ -1,0 +1,10 @@
+<svg data-name="Logo chronopost" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <linearGradient id="a" x1=".856" y1=".833" x2=".137" y2=".163" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#009be0"/>
+            <stop offset="1" stop-color="#0172b7"/>
+        </linearGradient>
+    </defs>
+    <circle data-name="Ellipse 147" cx="16" cy="16" r="16" style="fill:url(#a)"/>
+    <path data-name="Tracé 9109" d="M9.358 7a.24.24 0 0 1-.224 0l-.365-.217A.242.242 0 0 1 8.69 6.7v-.006a.216.216 0 0 1-.04-.114l-.01-.424a.24.24 0 0 1 .107-.2l4.38-2.552L6.982.056A.531.531 0 0 0 6.736 0a.525.525 0 0 0-.246.056L.341 3.406l6.888 4.01a.239.239 0 0 1 .113.193v5.85a.238.238 0 0 1-.117.193l-.371.206a.24.24 0 0 1-.111.026h-.007a.224.224 0 0 1-.119-.026l-.372-.208a.238.238 0 0 1-.115-.193V8.242a.146.146 0 0 0-.061-.1L0 4.608v6.919a.545.545 0 0 0 .243.424l6.25 3.686a.475.475 0 0 0 .243.057.5.5 0 0 0 .243-.057l6.25-3.686a.548.548 0 0 0 .243-.424V4.608z" transform="translate(9.2 8.1)" style="fill:#fff"/>
+</svg>

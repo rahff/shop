@@ -1,15 +1,28 @@
 import { Cart } from "../core/model/entities/Cart";
-import { Entity } from "../core/model/interfaces/Entity";
+import { Entity } from "../interfaces/Entity";
 import { CartItem } from "../core/model/valueObjects/CartItem";
-import { JsonCart, JsonCartItem } from "../interfaces/JsonCart";
+import { JsonCartOut, JsonCartIn, JsonCartItem } from "../interfaces/JsonCart";
+import { JsonProduct } from "../interfaces/JsonProduct";
+import { Product } from "../core/model/entities/Product";
 
 export class EntityMapper {
-    public static cartToJson(cart: Cart): JsonCart {
+
+    public static cartToJsonOut(cart: Cart): JsonCartOut {
         return {
             amount: cart.getAmount(),
-            customer: cart.getCustomerId() || 0,
+            customer: cart.getCustomerId(),
             validated: cart.isValidated(),
-            items: EntityMapper.cartItemToJson(cart.getItems())
+            items: EntityMapper.cartItemToJson(cart.getItems()),
+            id: cart.getId()
+        }
+    }
+
+    public static cartToJsonWithoutId(cart: Cart): Omit<JsonCartOut, "id"> {
+        return {
+            amount: cart.getAmount(),
+            customer: cart.getCustomerId(),
+            validated: cart.isValidated(),
+            items: EntityMapper.cartItemToJson(cart.getItems()),
         }
     }
 
@@ -32,7 +45,14 @@ export class EntityMapper {
         })
     }
 
-    public static JsonToCart(json: Entity<JsonCart>): Cart {
-        return new Cart(json.id, json.attributes.validated, EntityMapper.jsonToCartItem(json.attributes.items));
+    public static JsonInputToCart(json: Entity<JsonCartIn>): Cart {
+        const customerId = json.attributes.customer.data.id
+       return new Cart(json.id, json.attributes.validated, EntityMapper.jsonToCartItem(json.attributes.items), customerId);
+    }
+
+    public static JsonToProduct(json: Entity<JsonProduct>): Product {
+        const attributes = json.attributes
+        const image = attributes.images.data[0].attributes.formats.thumbnail.url;
+        return new Product(json.id, attributes.name, attributes.price, image, attributes.package);
     }
 }

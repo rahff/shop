@@ -7,10 +7,11 @@ export class Cart {
     private cartItems: CartItem[] = [];
     private customerId: number | null = null;
 
-    constructor(id: number, validated: boolean, items: CartItem[]){
+    constructor(id: number, validated: boolean, items: CartItem[], customerId: number | null= null){
         this.validated = validated;
         this.cartItems = items;
         this.id = id;
+        this.customerId = customerId
     }
 
     public addItem(item: CartItem): void {
@@ -54,7 +55,9 @@ export class Cart {
     }
 
     public toCustomer(customerId: number): void {
-        this.customerId = customerId;
+        if(customerId){
+            this.customerId = customerId;
+        }
     }
 
     public decrementItem(productId: number): void {

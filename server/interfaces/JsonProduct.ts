@@ -1,7 +1,7 @@
 import { Entity } from "./Entity";
 import { Image } from "./Image";
 
-export interface Product {
+export interface JsonProduct {
     name: string;
     short_description: string;
     long_description: string;
@@ -11,4 +11,5 @@ export interface Product {
     brand: string;
     package: string;
     variation: string;
+    id: number
 }

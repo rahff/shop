@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Be2bill">
+    
+    <script type="text/javascript" src="./hosted-fields.internal.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./hosted-field-brand.css">
+    <style>
+        #hosted-fields-select-brand-button {
+        		background-color: white;
+            
+        }
+        
+        #hosted-fields-select-brand-list {
+        		background-color: white;
+            
+        }
+        
+            </style>
+    <script type="text/javascript">
+        var behaviorHandler = new be2bill.brand('brand', "en");
+        behaviorHandler.initialize();
+        document.onfocus = focusElement;
+        window.onfocus = focusElement;
+        function focusElement()
+        {
+            var element = document.getElementById('brand');
+            if (element != null) {
+                element.focus();
+            }
+        }
+    </script>
+</head>
+<body>
+<input id="is-cb-preferred-network" type="hidden" value="yes">
+<div id="hosted-fields-select-brand" class="brand-selector-widget-hide">
+    <div id="hosted-fields-select-brand-button" title="Select a brand" style="display:none" class="brand-selector-widget-dropdown-button-hide">
+        <img id="hosted-fields-select-brand-selected" src="./cb.svg" alt="CB">
+        <span id="hosted-fields-select-brand-button-arrow"><img id="hosted-fields-select-brand-button-caret" src="./caret.svg" alt="▼"></span>
+    </div>
+
+    <div id="hosted-fields-select-brand-list" class="brand-selector-widget-dropdown-hide">
+        <!-- CB -->
+        <label id="hosted-fields-brand-cb" for="hosted-fields-brand-cb-input">
+            <input id="hosted-fields-brand-cb-input" name="SELECTEDBRAND" type="radio" value="cb">
+            <img src="./cb.svg" width="40px" alt="CB">
+        </label>
+
+        <!-- VISA -->
+        <label id="hosted-fields-brand-visa" for="hosted-fields-brand-visa-input">
+            <input id="hosted-fields-brand-visa-input" name="SELECTEDBRAND" type="radio" value="visa">
+            <img src="./visa.svg" width="40px" alt="Visa">
+        </label>
+
+        <!-- ELECTRON -->
+        <label id="hosted-fields-brand-electron" for="hosted-fields-brand-electron-input">
+            <input id="hosted-fields-brand-electron-input" name="SELECTEDBRAND" type="radio" value="electron">
+            <img src="./visa.svg" width="40px" alt="Visa">
+        </label>
+
+        <!-- VPAY -->
+        <label id="hosted-fields-brand-vpay" for="hosted-fields-brand-vpay-input">
+            <input id="hosted-fields-brand-vpay-input" name="SELECTEDBRAND" type="radio" value="vpay">
+            <img src="./visa.svg" width="40px" alt="Visa">
+        </label>
+
+        <!-- MCC -->
+        <label id="hosted-fields-brand-mcc" for="hosted-fields-brand-mcc-input">
+            <input id="hosted-fields-brand-mcc-input" name="SELECTEDBRAND" type="radio" value="mastercard">
+            <img src="./mcc.svg" width="40px" alt="Mastercard">
+        </label>
+
+        <!-- MAESTRO -->
+        <label id="hosted-fields-brand-maestro" for="hosted-fields-brand-maestro-input">
+            <input id="hosted-fields-brand-maestro-input" name="SELECTEDBRAND" type="radio" value="maestro">
+            <img src="./mcc.svg" width="40px" alt="Mastercard">
+        </label>
+    </div>
+</div>
+</body></html>

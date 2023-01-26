@@ -1,4 +1,4 @@
-import { Entity } from "../core/model/interfaces/Entity";
+import { Entity } from "./Entity";
 
 export interface IStrapiSingleResponse<T> {
     data: Entity<T>

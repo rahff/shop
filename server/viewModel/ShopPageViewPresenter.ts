@@ -1,17 +1,17 @@
-import { Entity } from "../core/model/interfaces/Entity";
-import { Image } from "../core/model/interfaces/Image";
+import { Entity } from "../interfaces/Entity";
+import { Image } from "../interfaces/Image";
 import { IPluralResponse } from "../interfaces/IPluralResponse";
-import { Product } from "../core/model/interfaces/Product";
 import { ProductPageModel } from "../interfaces/ProductPageModel";
 import { ImageViewModel } from "../interfaces/ProductViewModel";
+import { JsonProduct } from "../interfaces/JsonProduct";
 
 
 
 export class ShopPageViewPresenter {
 
-    public static productPageModel(input: IPluralResponse<Product>): ProductPageModel {
+    public static productPageModel(input: IPluralResponse<JsonProduct>): ProductPageModel {
         const entities = input.data;
-        const listProduct = entities.map((entity: Entity<Product>)=> {
+        const listProduct = entities.map((entity: Entity<JsonProduct>)=> {
                 return {
                     name: entity.attributes.name,
                     brand: entity.attributes.brand,

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110" height="26" viewBox="0 2 110 26">
+  <defs>
+    <filter id="Languette" x="0" y="0" width="110" height="26" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Languette)">
+    <path id="Languette-2" data-name="Languette" d="M4721.654,1982.135c26.73-.1,23.223,16,46.449,16s16.947-15.993,46.445-16S4694.93,1982.235,4721.654,1982.135Z" transform="translate(-4713.43 -1980.14)" fill="#fff" stroke="rgba(0,0,0,0)" stroke-miterlimit="10" stroke-width="1"/>
+  </g>
+</svg>

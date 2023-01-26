@@ -75,7 +75,10 @@
                         <span class="text-sm" data-targets="ajax-navigation.frames" id="cart-number-items">3
                             articles</span>
                     </div>
-                    <%-include("cart_item")%>
+                    <% cart.forEach(item => { %>
+                        <%-include("cart_item", {item})%>
+                     
+                    <% }) %>
             
                         <div class="mt-6 flex justify-end">
 

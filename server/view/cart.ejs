@@ -46,7 +46,12 @@
             <%-include("partials/banner")%>
             <!-- banner promo -->
             <!-- shop component -->
-            <%-include("partials/cart_main")%>
+            <% if(cart){ %>
+                <%-include("partials/cart_main", {cart})%>
+                <% } else { %>
+                <%-include("partials/empty_cart")%>
+            <% } %>
+             
             <!-- footer_component -->
             <%-include("partials/footer")%>
 

@@ -29,6 +29,9 @@
     "validated": {
       "type": "boolean",
       "default": false
+    },
+    "customerId": {
+      "type": "integer"
     }
   }
 }

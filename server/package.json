@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/bootstrap.ts",
-    "test": "ts-node ./node_modules/.bin/jasmine --config=./spec/jasmine.json"
+    "test": "ts-node ./node_modules/.bin/jasmine --config=./spec/jasmine.json",
+    "test:http": "ts-node ./node_modules/.bin/jasmine --config=./spec/integration.json"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",

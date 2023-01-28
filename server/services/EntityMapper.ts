@@ -4,6 +4,10 @@ import { CartItem } from "../core/model/valueObjects/CartItem";
 import { JsonCartOut, JsonCartIn, JsonCartItem } from "../interfaces/JsonCart";
 import { JsonProduct } from "../interfaces/JsonProduct";
 import { Product } from "../core/model/entities/Product";
+import { Invoice } from "../core/model/entities/Invoice";
+import { JsonInvoiceOut } from "../interfaces/JsonInvoiceOut";
+
+
 
 export class EntityMapper {
 
@@ -46,13 +50,22 @@ export class EntityMapper {
     }
 
     public static JsonInputToCart(json: Entity<JsonCartIn>): Cart {
-        const customerId = json.attributes.customer.data.id
-       return new Cart(json.id, json.attributes.validated, EntityMapper.jsonToCartItem(json.attributes.items), customerId);
+       return new Cart(json.id, json.attributes.validated, EntityMapper.jsonToCartItem(json.attributes.items));
     }
 
     public static JsonToProduct(json: Entity<JsonProduct>): Product {
         const attributes = json.attributes
         const image = attributes.images.data[0].attributes.formats.thumbnail.url;
         return new Product(json.id, attributes.name, attributes.price, image, attributes.package);
+    }
+
+    public static InvoiceToJsonOut(entity: Invoice): JsonInvoiceOut {
+        return {
+            amount: entity.getAmount(),
+            cart: entity.getCartId(),
+            customer: entity.getCustomerId(),
+            paid: entity.isPaid(),
+            payment_ref: entity.getPaymentRef()
+        }
     }
 }

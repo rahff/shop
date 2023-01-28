@@ -19,7 +19,7 @@ export class CartService implements ICartService {
 
     async saveCart(cart: Cart): Promise<Cart> {
         try {
-            const cartJson = EntityMapper.cartToJsonOut(cart)
+            const cartJson = EntityMapper.cartToJsonOut(cart);
             const responseApi = await this.http
             .put<IStrapiSingleResponse<JsonCartIn>, JsonCartOut>(
                 `/api/carts/${cartJson.id}`+this.queryParams,
@@ -32,7 +32,8 @@ export class CartService implements ICartService {
 
     async validateCart(cart: Cart): Promise<Cart> {
         const validatedCart = await this.saveCart(cart);
-        this.eventBus.dispatch(new CartValidatedEvent(validatedCart));
+        const eventData = {customerId: cart.getCustomerId() as number, cartId: cart.getId()};
+        this.eventBus.dispatch(new CartValidatedEvent(eventData));
         return validatedCart;
     }
 
@@ -49,9 +50,9 @@ export class CartService implements ICartService {
 
     private async createNewCart(cart: Omit<JsonCartOut, "id">): Promise<Entity<JsonCartIn>> {
         try {
-            const response = await this.http.post<IStrapiSingleResponse<JsonCartIn>, Omit<JsonCartOut, "id">>(this.cartBaseUrl, cart);
+            const response = await this.http.post<IStrapiSingleResponse<JsonCartIn>, Omit<JsonCartOut, "id">>(this.cartBaseUrl, cart); 
             return response.data;
-        } catch (error) {
+        } catch (error: any) {
             throw error;
         }
     }

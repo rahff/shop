@@ -8,6 +8,6 @@ export class AccountService implements IAccountService {
     constructor(private http: HttpService){}
     
     async isCustomerAuthenticated(token: string): Promise<number> {
-        return 1;
+        return token === "anonymous" ? 0 : 1;
     }
 }

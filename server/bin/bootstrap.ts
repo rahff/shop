@@ -2,6 +2,11 @@
 import app from '../app';
 
 import http from 'http';
+import { CartModule } from '../modules/CartModule';
+import { InvoiceModule } from '../modules/InvoiceModule';
+import { ProductModule } from '../modules/ProductModule';
+import { HttpModule } from '../modules/HttpModule';
+
 
 
 const port = process.env.PORT || 3000
@@ -13,9 +18,6 @@ server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
 
-/**
- * Event listener for HTTP server "error" event.
- */
 
 function onError(error: any) {
   if (error.syscall !== 'listen') {

@@ -1,12 +1,13 @@
+import { JsonCartOut } from "../interfaces/JsonCart";
 import { CartEvent } from "./CartEvent";
 
-export class CartValidatedEvent<T> extends CartEvent {
+export class CartValidatedEvent extends CartEvent {
 
-    constructor(private data: T){
+    constructor(private data: {customerId: number, cartId: number}){
         super(CartValidatedEvent.name);
     }
 
-    getData(): T {
+    getData(): {customerId: number, cartId: number} {
         return this.data;
     }
 }

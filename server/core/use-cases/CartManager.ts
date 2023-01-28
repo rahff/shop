@@ -23,8 +23,9 @@ export class CartManager {
         const cartItem = new CartItem(product.getId(),product.getName(), product.getPrice(), product.getImage());
         cart.addItem(cartItem);
         const customerId = await this.accountService.isCustomerAuthenticated(command.token);
-        cart.toCustomer(customerId);       
-        return await this.service.saveCart(cart);
+        if(customerId) cart.toCustomer(customerId);       
+        await this.service.saveCart(cart);
+        return cart;
     }
 
     async validateCart(command: ValidateCartCommand): Promise<boolean> {

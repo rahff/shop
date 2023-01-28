@@ -22,14 +22,14 @@
       "relation": "oneToOne",
       "target": "api::cart.cart"
     },
-    "Amount": {
+    "amount": {
       "type": "decimal"
     },
-    "Paid": {
+    "paid": {
       "type": "boolean",
       "default": false
     },
-    "Shipping_Address": {
+    "shipping_address": {
       "displayName": "Address",
       "type": "component",
       "repeatable": false,

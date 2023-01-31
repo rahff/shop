@@ -19,4 +19,8 @@ export const shopPageController = async (req: Request, res: Response) => {
 export const getProductPageController = async (req: Request, res: Response) => {
     const _ = Number(req.params.id);
     res.render("product_page");
-  }
+}
+
+export const getInvoicePageController = async (req: Request, res: Response) => {
+    res.render("invoice");
+}

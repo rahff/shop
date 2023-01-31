@@ -5,10 +5,10 @@ import { ShopModule } from "../modules/ShopModule";
 
 
 export const cartValidatedHandler = async (event: CartValidatedEvent) => {
-    const useCase = ShopModule.InvoiceManager();
     try {
+        const useCase = ShopModule.InvoiceManager();
         await useCase.createInvoice(event.getData());
-    } catch (error) {
-        console.log(error);
+    } catch (error: any) {
+        console.log("cartValidatedHandler", error.message);
     }
 }

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "nodemon ./bin/bootstrap.ts",
     "test": "ts-node ./node_modules/.bin/jasmine --config=./spec/jasmine.json",
-    "test:http": "ts-node ./node_modules/.bin/jasmine --config=./spec/integration.json"
+    "test:e2e": "ts-node ./node_modules/.bin/jasmine --config=./spec/e2e.json"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",

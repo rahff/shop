@@ -60,12 +60,18 @@ export const getCartViewController = async (req: Request, res: Response) => {
 }
 
 export const validateCartController = async (req: Request, res: Response) =>{
-    const command = QueryParser.toValidateCartCommand(req.query, req.headers);
-    const service = ShopModule.CartManager();
-    const isValidated = await service.validateCart(command);
-    if(isValidated){ 
-        res.status(200).json({validated: isValidated})
-    } else { res.status(403).json({validated: isValidated}) };
+    try {
+        const command = QueryParser.toValidateCartCommand(req.query, req.headers);
+        const service = ShopModule.CartManager();
+        const isValidated = await service.validateCart(command);
+        if(isValidated){ 
+            res.status(200).json({validated: isValidated})
+        } else { res.status(403).json({validated: isValidated}) };
+    } catch (error: any) {
+        console.log("error message", error.message);
+        
+        res.status(400).end();
+    }
 }
 
 

@@ -1,3 +1,3 @@
 export interface IAccountService {
-    isCustomerAuthenticated(token: string): Promise<number>
+    getUserIdIfAuthenticated(token: string): Promise<number>
 }

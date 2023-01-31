@@ -1,0 +1,1349 @@
+<main>
+    <div class="flex flex-col xl:flex-row">
+        <div class="hidden xl:block flex-1"></div>
+        <div class="flex flex-col xl:flex-row xl:container xl:mx-auto">
+            <section
+                class="flex flex-col items-center pt-6 pb-8 w-full border-t-8 border-gray-200 xl:border-t-0 xl:w-7/12 xl:pb-24 xl:pt-10 xl:pl-5 2xl:pl-10">
+                <div class="w-11/12 sm:w-3/4">
+                    <div class="mb-10 hidden xl:block">
+
+
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                    class="mr-1 w-4 h-4 text-gray-600" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <a class="text-gray-600" href="https://www.onatera.com/FR/fr/cart"
+                                    data-qa="responsive_cart_steps" gtm-tracking="true"
+                                    gtm-event="clicRetourAuCatalogue" gtm-data="Première adresse"
+                                    gtm-action="Panier">Panier</a>
+                            </div>
+                            <div class="hidden xl:block w-8 border-t border-brand-500"></div>
+                            <div class="flex items-center">
+                                <a class="text-brand-500 font-semibold"
+                                    data-qa="responsive_cart_steps_shipping"
+                                    href="https://www.onatera.com/FR/fr/checkout/select-shipping">Livraison</a>
+                            </div>
+
+                            <div class="hidden xl:block w-8 border-t border-gray-400"></div>
+                            <a class="text-gray-400">Paiement</a>
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+                    <checkout-address-form data-catalyst="">
+                        <form name="sylius_checkout_address" method="post"
+                            action="https://www.onatera.com/FR/fr/checkout/address"
+                            id="sylius_checkout_address" novalidate="novalidate"
+                            data-target="checkout-address-form.form"
+                            data-action="submit:checkout-address-form#validateForm ">
+                            <ul class="hidden" data-target="js-validation-form-field.errorList">
+                                <li class="mt-2 flex items-center text-xs text-red-700">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                        </path>
+                                    </svg>
+                                    <span data-target="js-validation-form-field.errorMessage"
+                                        data-error-message="sylius_checkout_address"></span>
+                                </li>
+                            </ul>
+                            <input type="hidden" name="_method" value="PUT">
+
+                            <checkout-default-address-form data-catalyst="">
+
+                                <div id="sylius-shipping-address">
+                                    <div class="hidden ui divider"></div>
+                                    <h3 class="mb-6 text-2xl font-bold ui dividing header">
+                                        Renseigner votre adresse</h3>
+
+                        
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_shippingAddress_firstName">
+                                                    Prénom* </label><input type="text"
+                                                    id="sylius_checkout_address_shippingAddress_firstName"
+                                                    name="sylius_checkout_address[shippingAddress][firstName]"
+                                                    required="required"
+                                                    class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                    data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                    data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_shippingAddress_firstName"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        
+
+                                        <span class="hidden"
+                                            data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_shippingAddress_firstName","form_field_label":"Pr\u00e9nom","form_error_type":""}</span>
+                                    
+                                    
+                    
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_shippingAddress_lastName">
+                                                    Nom* </label><input type="text"
+                                                    id="sylius_checkout_address_shippingAddress_lastName"
+    
+                                                    required="required"
+                                                    class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none">
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_shippingAddress_lastName"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                   
+
+                            
+                                    
+                                    <div class="mb-6"> <label
+                                            class="text-gray-800 flex items-center"
+                                            for="sylius_checkout_address_shippingAddress_company">
+                                            Société </label><input type="text"
+                                            id="sylius_checkout_address_shippingAddress_company"
+                                            name="sylius_checkout_address[shippingAddress][company]"
+                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                            data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                        <ul class="hidden"
+                                            data-target="js-validation-form-field.errorList">
+                                            <li class="mt-2 flex items-center text-xs text-red-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                    </path>
+                                                </svg>
+                                                <span
+                                                    data-target="js-validation-form-field.errorMessage"
+                                                    data-error-message="sylius_checkout_address_shippingAddress_company"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <analytics-datalayer data-catalyst=""
+                                        data-variant-quantity-id="" data-datalayer-type=""
+                                        data-product-position="">
+                                        <js-validation-form-field
+                                            data-targets="checkout-address-form.fields"
+                                            data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                            data-catalyst="">
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_shippingAddress_street">
+                                                    Adresse* </label><input type="text"
+                                                    id="sylius_checkout_address_shippingAddress_street"
+                                                    name="sylius_checkout_address[shippingAddress][street]"
+                                                    required="required"
+                                                    class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                    data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                    data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_shippingAddress_street"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </js-validation-form-field>
+
+                                        <span class="hidden"
+                                            data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_shippingAddress_street","form_field_label":"Adresse","form_error_type":""}</span>
+                                    </analytics-datalayer>
+                                    <div class="mb-6"> <label
+                                            class="text-gray-800 flex items-center"
+                                            for="sylius_checkout_address_shippingAddress_addressLineTwo">
+                                            Complément d'adresse </label><input type="text"
+                                            id="sylius_checkout_address_shippingAddress_addressLineTwo"
+                                            name="sylius_checkout_address[shippingAddress][addressLineTwo]"
+                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                            data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                        <ul class="hidden"
+                                            data-target="js-validation-form-field.errorList">
+                                            <li class="mt-2 flex items-center text-xs text-red-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                    </path>
+                                                </svg>
+                                                <span
+                                                    data-target="js-validation-form-field.errorMessage"
+                                                    data-error-message="sylius_checkout_address_shippingAddress_addressLineTwo"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <city-zip-resolver-form data-catalyst="">
+
+                                        <div class="relative z-auto w-full">
+                                            <analytics-datalayer data-catalyst=""
+                                                data-variant-quantity-id="" data-datalayer-type=""
+                                                data-product-position="">
+                                                <js-validation-form-field
+                                                    data-targets="checkout-address-form.fields"
+                                                    data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                                    data-catalyst="">
+                                                    <div class="mb-6"> <label
+                                                            class="text-gray-800 flex items-center required"
+                                                            for="sylius_checkout_address_shippingAddress_postcode">
+                                                            Code postal* </label><input type="text"
+                                                            id="sylius_checkout_address_shippingAddress_postcode"
+                                                            name="sylius_checkout_address[shippingAddress][postcode]"
+                                                            required="required"
+                                                            data-target="city-zip-resolver-form.zipInput"
+                                                            data-action="keydown:city-zip-resolver-form#searchFromZip input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                            autocomplete="onatera-off"
+                                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                            data-pattern="^(\d{5})$"
+                                                            data-pattern-error-message="Le code postal est invalide (ex: 12345)">
+                                                        <ul class="hidden"
+                                                            data-target="js-validation-form-field.errorList">
+                                                            <li
+                                                                class="mt-2 flex items-center text-xs text-red-700">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-4 w-4 mr-1 text-red-700"
+                                                                    fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                                    </path>
+                                                                </svg>
+                                                                <span
+                                                                    data-target="js-validation-form-field.errorMessage"
+                                                                    data-error-message="sylius_checkout_address_shippingAddress_postcode"></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </js-validation-form-field>
+
+                                                <span class="hidden"
+                                                    data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_shippingAddress_postcode","form_field_label":"Code
+                                                    postal","form_error_type":""}</span>
+                                            </analytics-datalayer>
+
+                                            <div class="flex hidden absolute h-12 right-3 top-8 items-center"
+                                                data-target="city-zip-resolver-form.zipAutocompleteElementLoader">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="animate-spin h-4 w-4 opacity-50"
+                                                    fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="hidden absolute left-0 top-12 z-10 px-3 pt-5 w-full pointer-events-none"
+                                                data-target="city-zip-resolver-form.zipAutocompleteElement">
+                                                <div
+                                                    class="overflow-y-auto overflow-x-hidden max-h-44 bg-white rounded-lg border border-gray-200 shadow-md pointer-events-auto">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="relative z-auto w-full">
+                                           
+                                               
+                                                    <div class="mb-6"> <label
+                                                            class="text-gray-800 flex items-center required"
+                                                            for="sylius_checkout_address_shippingAddress_city">
+                                                            Ville* </label><input type="text"
+                                                            id="sylius_checkout_address_shippingAddress_city"
+                                                            name="sylius_checkout_address[shippingAddress][city]"
+                                                            required="required"
+                                                            data-target="city-zip-resolver-form.cityInput"
+                                                            data-action="keydown:city-zip-resolver-form#searchFromCity input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                            autocomplete="onatera-off"
+                                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                            data-targets="js-validation-form-field.inputs input-button.inputs">
+                                                        <ul class="hidden"
+                                                            data-target="js-validation-form-field.errorList">
+                                                            <li
+                                                                class="mt-2 flex items-center text-xs text-red-700">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-4 w-4 mr-1 text-red-700"
+                                                                    fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                                    </path>
+                                                                </svg>
+                                                                <span
+                                                                    data-target="js-validation-form-field.errorMessage"
+                                                                    data-error-message="sylius_checkout_address_shippingAddress_city"></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                        
+                                               
+                                           
+
+                                            <div class="flex hidden absolute h-12 right-3 top-8 items-center"
+                                                data-target="city-zip-resolver-form.cityAutocompleteElementLoader">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="animate-spin h-4 w-4 opacity-50"
+                                                    fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="hidden absolute left-0 top-12 z-10 px-3 pt-5 w-full pointer-events-none"
+                                                data-target="city-zip-resolver-form.cityAutocompleteElement">
+                                                <div
+                                                    class="overflow-y-auto overflow-x-hidden max-h-44 bg-white rounded-lg border border-gray-200 shadow-md pointer-events-auto">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                      
+                                                <div class="mb-6"> <label
+                                                        class="text-gray-800 flex items-center required"
+                                                        for="sylius_checkout_address_shippingAddress_countryCode">
+                                                        Pays* </label><select
+                                                        id="sylius_checkout_address_shippingAddress_countryCode"
+                                                        name="sylius_checkout_address[shippingAddress][countryCode]"
+                                                        required="required"
+                                                        data-target="city-zip-resolver-form.countryCodeInput"
+                                                        data-action="change:city-zip-resolver-form#changeCountry input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                        class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                        data-targets="js-validation-form-field.inputs input-button.inputs">
+                                                        <option value="">Sélectionner</option>
+                                                        <option value="DE">Allemagne</option>
+                                                        <option value="AD">Andorre</option>
+                                                        <option value="AT">Autriche</option>
+                                                        <option value="BE">Belgique</option>
+                                                        <option value="DK">Danemark</option>
+                                                        <option value="ES">Espagne</option>
+                                                        <option value="FI">Finlande</option>
+                                                        <option value="FR" selected="selected">
+                                                            France</option>
+                                                        <option value="GR">Grèce</option>
+                                                        <option value="GP">Guadeloupe</option>
+                                                        <option value="GY">Guyana</option>
+                                                        <option value="GF">Guyane française</option>
+                                                        <option value="HU">Hongrie</option>
+                                                        <option value="IE">Irlande</option>
+                                                        <option value="IS">Islande</option>
+                                                        <option value="IT">Italie</option>
+                                                        <option value="RE">La Réunion</option>
+                                                        <option value="LU">Luxembourg</option>
+                                                        <option value="MQ">Martinique</option>
+                                                        <option value="YT">Mayotte</option>
+                                                        <option value="MC">Monaco</option>
+                                                        <option value="NO">Norvège</option>
+                                                        <option value="NL">Pays-Bas</option>
+                                                        <option value="PL">Pologne</option>
+                                                        <option value="PT">Portugal</option>
+                                                        <option value="RO">Roumanie</option>
+                                                        <option value="BL">Saint-Barthélemy</option>
+                                                        <option value="MF">Saint-Martin</option>
+                                                        <option value="PM">Saint-Pierre-et-Miquelon
+                                                        </option>
+                                                        <option value="CH">Suisse</option>
+                                                        <option value="SE">Suède</option>
+                                                        <option value="US">États-Unis</option>
+                                                    </select>
+                                                    <ul class="hidden"
+                                                        data-target="js-validation-form-field.errorList">
+                                                        <li
+                                                            class="mt-2 flex items-center text-xs text-red-700">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="h-4 w-4 mr-1 text-red-700"
+                                                                fill="none" viewBox="0 0 24 24"
+                                                                stroke="currentColor">
+                                                                <path stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-width="2"
+                                                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                data-target="js-validation-form-field.errorMessage"
+                                                                data-error-message="sylius_checkout_address_shippingAddress_countryCode"></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                   
+
+                                   
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_shippingAddress_phoneNumber">
+                                                    Téléphone fixe ou mobile* </label>
+                                                <intl-tel-input data-catalyst="">
+                                                    <div
+                                                        class="iti iti--allow-dropdown mt-2 w-full">
+                                                        <div class="iti__flag-container">
+                                                            <div class="iti__selected-flag"
+                                                                role="combobox"
+                                                                aria-controls="iti-0__country-listbox"
+                                                                aria-owns="iti-0__country-listbox"
+                                                                aria-expanded="false" tabindex="0"
+                                                                title="France: +33"
+                                                                aria-activedescendant="iti-0__item-fr-preferred">
+                                                                <div class="iti__flag iti__fr">
+                                                                </div>
+                                                                <div class="iti__arrow"></div>
+                                                            </div>
+                                                            <!-- //country_items -->
+                                                        </div><input type="tel"
+                                                            id="sylius_checkout_address_shippingAddress_phoneNumber"
+                                                            name="sylius_checkout_address[shippingAddress][phoneNumber]"
+                                                            required="required"
+                                                            data-target="intl-tel-input.input"
+                                                            data-default-country="fr"
+                                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                            data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                            autocomplete="off"
+                                                            data-intl-tel-input-id="0"
+                                                            placeholder="06 12 34 56 78"><input
+                                                            type="hidden"
+                                                            name="sylius_checkout_address[shippingAddress][phoneNumber]"
+                                                            value="">
+                                                    </div>
+                                                </intl-tel-input>
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_shippingAddress_phoneNumber"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </js-validation-form-field>
+
+                                        <span class="hidden"
+                                            data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_shippingAddress_phoneNumber","form_field_label":"T\u00e9l\u00e9phone
+                                            fixe ou mobile","form_error_type":""}</span>
+                                    </analytics-datalayer>
+
+                                    <input type="checkbox" class="hidden sr-only peer"
+                                        id="sylius_checkout_address_shippingAddress_defaultAddress"
+                                        name="sylius_checkout_address[shippingAddress][defaultAddress]"
+                                        data-targets="js-validation-form-field.inputs input-button.inputs"
+                                        data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                        value="1" checked="checked">
+                                    <input type="checkbox" class="hidden sr-only peer"
+                                        id="sylius_checkout_address_shippingAddress_defaultBillingAddress"
+                                        name="sylius_checkout_address[shippingAddress][defaultBillingAddress]"
+                                        data-targets="js-validation-form-field.inputs input-button.inputs"
+                                        data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                        value="1" checked="checked">
+
+                                    <input type="checkbox" class="hidden sr-only peer"
+                                        id="sylius_checkout_address_shippingAddress_defaultContactAddress"
+                                        name="sylius_checkout_address[shippingAddress][defaultContactAddress]"
+                                        data-targets="js-validation-form-field.inputs input-button.inputs"
+                                        data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                        value="1" checked="checked">
+
+                                    <div class="mb-6">
+                                        <ul class="hidden"
+                                            data-target="js-validation-form-field.errorList">
+                                            <li class="mt-2 flex items-center text-xs text-red-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                    </path>
+                                                </svg>
+                                                <span
+                                                    data-target="js-validation-form-field.errorMessage"
+                                                    data-error-message="sylius_checkout_address_differentBillingAddress"></span>
+                                            </li>
+                                        </ul> <label data-test-different-billing-address-label=""
+                                            class="text-gray-800 flex items-center cursor-pointer"
+                                            for="sylius_checkout_address_differentBillingAddress">
+                                            <input type="checkbox" class="hidden sr-only peer"
+                                                id="sylius_checkout_address_differentBillingAddress"
+                                                name="sylius_checkout_address[differentBillingAddress]"
+                                                data-toggles="sylius-billing-address"
+                                                data-action="change:checkout-default-address-form#toggleBilling input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                value="1">
+                                            <div
+                                                class="flex flex-shrink-0 justify-start mr-4 w-10 h-5 bg-gray-200 rounded-full transition duration-300 ease-in-out peer-checked:bg-brand-500 peer-checked:justify-end peer-checked:toggle-checked peer-disabled:opacity-60">
+                                                <div
+                                                    class="flex justify-center items-center w-5 h-5 bg-white rounded-full border border-gray-400">
+                                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="w-4 h-4 text-brand-500 opacity-0"
+                                                        fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="2"
+                                                            d="M5 13l4 4L19 7"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            Utiliser une adresse différente pour la facturation ?
+                                        </label>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div data-target="checkout-default-address-form.billingAddress"
+                                    class="hidden" id=" sylius-billing-address">
+                                    <h3 class="mb-6 text-2xl font-bold ui dividing header">Votre
+                                        adresse de facturation</h3>
+
+                                    <analytics-datalayer data-catalyst=""
+                                        data-variant-quantity-id="" data-datalayer-type=""
+                                        data-product-position="">
+                                        <js-validation-form-field
+                                            data-targets="checkout-address-form.fields"
+                                            data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                            data-catalyst="">
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_billingAddress_firstName">
+                                                    Prénom* </label><input type="text"
+                                                    id="sylius_checkout_address_billingAddress_firstName"
+                                                    name="sylius_checkout_address[billingAddress][firstName]"
+                                                    required="required"
+                                                    class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                    data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                    data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_billingAddress_firstName"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </js-validation-form-field>
+
+                                        <span class="hidden"
+                                            data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_billingAddress_firstName","form_field_label":"Pr\u00e9nom","form_error_type":""}</span>
+                                    </analytics-datalayer>
+                                    <analytics-datalayer data-catalyst=""
+                                        data-variant-quantity-id="" data-datalayer-type=""
+                                        data-product-position="">
+                                        <js-validation-form-field
+                                            data-targets="checkout-address-form.fields"
+                                            data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                            data-catalyst="">
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_billingAddress_lastName">
+                                                    Nom* </label><input type="text"
+                                                    id="sylius_checkout_address_billingAddress_lastName"
+                                                    name="sylius_checkout_address[billingAddress][lastName]"
+                                                    required="required"
+                                                    class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                    data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                    data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_billingAddress_lastName"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </js-validation-form-field>
+
+                                        <span class="hidden"
+                                            data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_billingAddress_lastName","form_field_label":"Nom","form_error_type":""}</span>
+                                    </analytics-datalayer>
+                                    <div class="mb-6"> <label
+                                            class="text-gray-800 flex items-center"
+                                            for="sylius_checkout_address_billingAddress_company">
+                                            Société </label><input type="text"
+                                            id="sylius_checkout_address_billingAddress_company"
+                                            name="sylius_checkout_address[billingAddress][company]"
+                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                            data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                        <ul class="hidden"
+                                            data-target="js-validation-form-field.errorList">
+                                            <li class="mt-2 flex items-center text-xs text-red-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                    </path>
+                                                </svg>
+                                                <span
+                                                    data-target="js-validation-form-field.errorMessage"
+                                                    data-error-message="sylius_checkout_address_billingAddress_company"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <analytics-datalayer data-catalyst=""
+                                        data-variant-quantity-id="" data-datalayer-type=""
+                                        data-product-position="">
+                                        <js-validation-form-field
+                                            data-targets="checkout-address-form.fields"
+                                            data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                            data-catalyst="">
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_billingAddress_street">
+                                                    Adresse* </label><input type="text"
+                                                    id="sylius_checkout_address_billingAddress_street"
+                                                    name="sylius_checkout_address[billingAddress][street]"
+                                                    required="required"
+                                                    class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                    data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                    data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_billingAddress_street"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </js-validation-form-field>
+
+                                        <span class="hidden"
+                                            data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_billingAddress_street","form_field_label":"Adresse","form_error_type":""}</span>
+                                    </analytics-datalayer>
+                                    <div class="mb-6"> <label
+                                            class="text-gray-800 flex items-center"
+                                            for="sylius_checkout_address_billingAddress_addressLineTwo">
+                                            Complément d'adresse </label><input type="text"
+                                            id="sylius_checkout_address_billingAddress_addressLineTwo"
+                                            name="sylius_checkout_address[billingAddress][addressLineTwo]"
+                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                            data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm">
+                                        <ul class="hidden"
+                                            data-target="js-validation-form-field.errorList">
+                                            <li class="mt-2 flex items-center text-xs text-red-700">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="h-4 w-4 mr-1 text-red-700" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                    </path>
+                                                </svg>
+                                                <span
+                                                    data-target="js-validation-form-field.errorMessage"
+                                                    data-error-message="sylius_checkout_address_billingAddress_addressLineTwo"></span>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <city-zip-resolver-form data-catalyst="">
+
+                                        <div class="relative z-auto w-full">
+                                            <analytics-datalayer data-catalyst=""
+                                                data-variant-quantity-id="" data-datalayer-type=""
+                                                data-product-position="">
+                                                <js-validation-form-field
+                                                    data-targets="checkout-address-form.fields"
+                                                    data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                                    data-catalyst="">
+                                                    <div class="mb-6"> <label
+                                                            class="text-gray-800 flex items-center required"
+                                                            for="sylius_checkout_address_billingAddress_postcode">
+                                                            Code postal* </label><input type="text"
+                                                            id="sylius_checkout_address_billingAddress_postcode"
+                                                            name="sylius_checkout_address[billingAddress][postcode]"
+                                                            required="required"
+                                                            data-target="city-zip-resolver-form.zipInput"
+                                                            data-action="keydown:city-zip-resolver-form#searchFromZip input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                            autocomplete="onatera-off"
+                                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                            data-pattern="^(\d{5})$"
+                                                            data-pattern-error-message="Le code postal est invalide (ex: 12345)">
+                                                        <ul class="hidden"
+                                                            data-target="js-validation-form-field.errorList">
+                                                            <li
+                                                                class="mt-2 flex items-center text-xs text-red-700">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-4 w-4 mr-1 text-red-700"
+                                                                    fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                                    </path>
+                                                                </svg>
+                                                                <span
+                                                                    data-target="js-validation-form-field.errorMessage"
+                                                                    data-error-message="sylius_checkout_address_billingAddress_postcode"></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </js-validation-form-field>
+
+                                                <span class="hidden"
+                                                    data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_billingAddress_postcode","form_field_label":"Code
+                                                    postal","form_error_type":""}</span>
+                                            </analytics-datalayer>
+
+                                            <div class="flex hidden absolute h-12 right-3 top-8 items-center"
+                                                data-target="city-zip-resolver-form.zipAutocompleteElementLoader">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="animate-spin h-4 w-4 opacity-50"
+                                                    fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="hidden absolute left-0 top-12 z-10 px-3 pt-5 w-full pointer-events-none"
+                                                data-target="city-zip-resolver-form.zipAutocompleteElement">
+                                                <div
+                                                    class="overflow-y-auto overflow-x-hidden max-h-44 bg-white rounded-lg border border-gray-200 shadow-md pointer-events-auto">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="relative z-auto w-full">
+                                            <analytics-datalayer data-catalyst=""
+                                                data-variant-quantity-id="" data-datalayer-type=""
+                                                data-product-position="">
+                                                <js-validation-form-field
+                                                    data-targets="checkout-address-form.fields"
+                                                    data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                                    data-catalyst="">
+                                                    <div class="mb-6"> <label
+                                                            class="text-gray-800 flex items-center required"
+                                                            for="sylius_checkout_address_billingAddress_city">
+                                                            Ville* </label><input type="text"
+                                                            id="sylius_checkout_address_billingAddress_city"
+                                                            name="sylius_checkout_address[billingAddress][city]"
+                                                            required="required"
+                                                            data-target="city-zip-resolver-form.cityInput"
+                                                            data-action="keydown:city-zip-resolver-form#searchFromCity input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                            autocomplete="onatera-off"
+                                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                            data-targets="js-validation-form-field.inputs input-button.inputs">
+                                                        <ul class="hidden"
+                                                            data-target="js-validation-form-field.errorList">
+                                                            <li
+                                                                class="mt-2 flex items-center text-xs text-red-700">
+                                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                                    class="h-4 w-4 mr-1 text-red-700"
+                                                                    fill="none" viewBox="0 0 24 24"
+                                                                    stroke="currentColor">
+                                                                    <path stroke-linecap="round"
+                                                                        stroke-linejoin="round"
+                                                                        stroke-width="2"
+                                                                        d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                                    </path>
+                                                                </svg>
+                                                                <span
+                                                                    data-target="js-validation-form-field.errorMessage"
+                                                                    data-error-message="sylius_checkout_address_billingAddress_city"></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </js-validation-form-field>
+
+                                                <span class="hidden"
+                                                    data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_billingAddress_city","form_field_label":"Ville","form_error_type":""}</span>
+                                            </analytics-datalayer>
+
+                                            <div class="flex hidden absolute h-12 right-3 top-8 items-center"
+                                                data-target="city-zip-resolver-form.cityAutocompleteElementLoader">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                    class="animate-spin h-4 w-4 opacity-50"
+                                                    fill="none" viewBox="0 0 24 24"
+                                                    stroke="currentColor" stroke-width="2">
+                                                    <path stroke-linecap="round"
+                                                        stroke-linejoin="round"
+                                                        d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15">
+                                                    </path>
+                                                </svg>
+                                            </div>
+                                            <div class="hidden absolute left-0 top-12 z-10 px-3 pt-5 w-full pointer-events-none"
+                                                data-target="city-zip-resolver-form.cityAutocompleteElement">
+                                                <div
+                                                    class="overflow-y-auto overflow-x-hidden max-h-44 bg-white rounded-lg border border-gray-200 shadow-md pointer-events-auto">
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <analytics-datalayer data-catalyst=""
+                                            data-variant-quantity-id="" data-datalayer-type=""
+                                            data-product-position="">
+                                            <js-validation-form-field
+                                                data-targets="checkout-address-form.fields"
+                                                data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                                data-catalyst="">
+                                                <div class="mb-6"> <label
+                                                        class="text-gray-800 flex items-center required"
+                                                        for="sylius_checkout_address_billingAddress_countryCode">
+                                                        Pays* </label><select
+                                                        id="sylius_checkout_address_billingAddress_countryCode"
+                                                        name="sylius_checkout_address[billingAddress][countryCode]"
+                                                        required="required"
+                                                        data-target="city-zip-resolver-form.countryCodeInput"
+                                                        data-action="change:city-zip-resolver-form#changeCountry input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                        class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                        data-targets="js-validation-form-field.inputs input-button.inputs">
+                                                        <option value="">Sélectionner</option>
+                                                        <option value="DE">Allemagne</option>
+                                                        <option value="AD">Andorre</option>
+                                                        <option value="AT">Autriche</option>
+                                                        <option value="BE">Belgique</option>
+                                                        <option value="DK">Danemark</option>
+                                                        <option value="ES">Espagne</option>
+                                                        <option value="FI">Finlande</option>
+                                                        <option value="FR" selected="selected">
+                                                            France</option>
+                                                        <option value="GR">Grèce</option>
+                                                        <option value="GP">Guadeloupe</option>
+                                                        <option value="GY">Guyana</option>
+                                                        <option value="GF">Guyane française</option>
+                                                        <option value="HU">Hongrie</option>
+                                                        <option value="IE">Irlande</option>
+                                                        <option value="IS">Islande</option>
+                                                        <option value="IT">Italie</option>
+                                                        <option value="RE">La Réunion</option>
+                                                        <option value="LU">Luxembourg</option>
+                                                        <option value="MQ">Martinique</option>
+                                                        <option value="YT">Mayotte</option>
+                                                        <option value="MC">Monaco</option>
+                                                        <option value="NO">Norvège</option>
+                                                        <option value="NL">Pays-Bas</option>
+                                                        <option value="PL">Pologne</option>
+                                                        <option value="PT">Portugal</option>
+                                                        <option value="RO">Roumanie</option>
+                                                        <option value="BL">Saint-Barthélemy</option>
+                                                        <option value="MF">Saint-Martin</option>
+                                                        <option value="PM">Saint-Pierre-et-Miquelon
+                                                        </option>
+                                                        <option value="CH">Suisse</option>
+                                                        <option value="SE">Suède</option>
+                                                        <option value="US">États-Unis</option>
+                                                    </select>
+                                                    <ul class="hidden"
+                                                        data-target="js-validation-form-field.errorList">
+                                                        <li
+                                                            class="mt-2 flex items-center text-xs text-red-700">
+                                                            <svg xmlns="http://www.w3.org/2000/svg"
+                                                                class="h-4 w-4 mr-1 text-red-700"
+                                                                fill="none" viewBox="0 0 24 24"
+                                                                stroke="currentColor">
+                                                                <path stroke-linecap="round"
+                                                                    stroke-linejoin="round"
+                                                                    stroke-width="2"
+                                                                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                                </path>
+                                                            </svg>
+                                                            <span
+                                                                data-target="js-validation-form-field.errorMessage"
+                                                                data-error-message="sylius_checkout_address_billingAddress_countryCode"></span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </js-validation-form-field>
+
+                                            <span class="hidden"
+                                                data-target="analytics-datalayer.datalayerError">{"event":"trackErrorForm","form_field_id":"sylius_checkout_address_billingAddress_countryCode","form_field_label":"Pays","form_error_type":""}</span>
+                                        </analytics-datalayer>
+                                    </city-zip-resolver-form>
+
+                                    <analytics-datalayer data-catalyst=""
+                                        data-variant-quantity-id="" data-datalayer-type=""
+                                        data-product-position="">
+                                        <js-validation-form-field
+                                            data-targets="checkout-address-form.fields"
+                                            data-action="js-validation-form.display-error:analytics-datalayer#pushError"
+                                            data-catalyst="">
+                                            <div class="mb-6"> <label
+                                                    class="text-gray-800 flex items-center required"
+                                                    for="sylius_checkout_address_billingAddress_phoneNumber">
+                                                    Téléphone fixe ou mobile* </label>
+                                                <intl-tel-input data-catalyst="">
+                                                    <div
+                                                        class="iti iti--allow-dropdown mt-2 w-full">
+                                                        <div class="iti__flag-container">
+                                                            <div class="iti__selected-flag"
+                                                                role="combobox"
+                                                                aria-controls="iti-1__country-listbox"
+                                                                aria-owns="iti-1__country-listbox"
+                                                                aria-expanded="false" tabindex="0"
+                                                                title="France: +33"
+                                                                aria-activedescendant="iti-1__item-fr-preferred">
+                                                                <div class="iti__flag iti__fr">
+                                                                </div>
+                                                                <div class="iti__arrow"></div>
+                                                            </div>
+                                                            
+                                                        </div><input type="tel"
+                                                            id="sylius_checkout_address_billingAddress_phoneNumber"
+                                                            name="sylius_checkout_address[billingAddress][phoneNumber]"
+                                                            required="required"
+                                                            data-target="intl-tel-input.input"
+                                                            data-default-country="fr"
+                                                            class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                                            data-targets="js-validation-form-field.inputs input-button.inputs"
+                                                            data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                                            autocomplete="off"
+                                                            data-intl-tel-input-id="1"
+                                                            placeholder="06 12 34 56 78"><input
+                                                            type="hidden"
+                                                            name="sylius_checkout_address[billingAddress][phoneNumber]"
+                                                            value="">
+                                                    </div>
+                                                </intl-tel-input>
+                                                <ul class="hidden"
+                                                    data-target="js-validation-form-field.errorList">
+                                                    <li
+                                                        class="mt-2 flex items-center text-xs text-red-700">
+                                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                                            class="h-4 w-4 mr-1 text-red-700"
+                                                            fill="none" viewBox="0 0 24 24"
+                                                            stroke="currentColor">
+                                                            <path stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="2"
+                                                                d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z">
+                                                            </path>
+                                                        </svg>
+                                                        <span
+                                                            data-target="js-validation-form-field.errorMessage"
+                                                            data-error-message="sylius_checkout_address_billingAddress_phoneNumber"></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </js-validation-form-field>
+
+                                      
+                                    </analytics-datalayer>
+
+                                    <input type="checkbox" class="hidden sr-only peer"
+                                        id="sylius_checkout_address_billingAddress_defaultAddress"
+                                        name="sylius_checkout_address[billingAddress][defaultAddress]"
+                                        data-targets="js-validation-form-field.inputs input-button.inputs"
+                                        data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                        value="1" checked="checked">
+                                    <input type="checkbox" class="hidden sr-only peer"
+                                        id="sylius_checkout_address_billingAddress_defaultBillingAddress"
+                                        name="sylius_checkout_address[billingAddress][defaultBillingAddress]"
+                                        data-targets="js-validation-form-field.inputs input-button.inputs"
+                                        data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                        value="1" checked="checked">
+
+                                    <input type="checkbox" class="hidden sr-only peer"
+                                        id="sylius_checkout_address_billingAddress_defaultContactAddress"
+                                        name="sylius_checkout_address[billingAddress][defaultContactAddress]"
+                                        data-targets="js-validation-form-field.inputs input-button.inputs"
+                                        data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                        value="1" checked="checked">
+
+
+
+                                </div>
+
+                            </checkout-default-address-form>
+
+                            <throttle-button data-catalyst="">
+
+
+
+                                <button type="submit"
+                                    class="leading-none flex items-center justify-center space-x-1 rounded-lg border-none outline-none transition disabled:ring-gray-200 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-not-allowed xl:disabled:hover:ring-1 text-white bg-gray-900 ring-gray-900 xl:hover:bg-gray-700 xl:hover:ring-gray-700 w-full xl:w-3/4 mt-4 xl:mt-10 py-4 px-8"
+                                    data-action="click:throttle-button#throttle"
+                                    data-target="throttle-button.button"
+                                    form="sylius_checkout_address" gtm-tracking="true"
+                                    gtm-event="premièreAdresse">
+                                    <div class="pt-1 hidden flex justify-center h-full absolute w-full bg-gray-700 rounded-lg"
+                                        data-target="ajax-navigation-login.load">
+                                        <p class="loader"></p>
+                                    </div>
+
+
+
+                                    <span class="font-semibold">Valider mon adresse</span>
+
+                                </button>
+                            </throttle-button>
+
+                            <input type="hidden" id="sylius_checkout_address__token"
+                                name="sylius_checkout_address[_token]"
+                                class="mt-2 w-full h-12 border-gray-300 focus:outline-none focus:ring-0 focus:border-gray-700 text-base rounded-lg appearance-none"
+                                data-targets="js-validation-form-field.inputs input-button.inputs"
+                                data-action="input:js-validation-form-field#validateField input:input-button#checkInputForm"
+                                value="2dc70c0a000fe7.7QCNKTP5elGVgi6OPwKvgiy-uSqgbSSw9QCv5VctS9c.r0LqQ0WdCRjA717bdW7342Dc2GTyXkOGhXXdpjBsAoG0ZtVversYIvLxFg">
+                        </form>
+                    </checkout-address-form>
+                </div>
+            </section>
+
+            <aside
+                class="flex flex-col justify-between items-center pt-6 pb-5 w-full bg-gray-100 border-t-8 border-gray-200 xl:border-gray-300 xl:w-5/12 sm:pt-10 sm:pb-0 xl:pl-10 xl:border-t-0 xl:border-l xl:pr-5 2xl:pr-10">
+                <div class="w-11/12 sm:w-1/2 xl:w-3/4">
+
+
+
+
+
+
+                    <div class="mb-4 hidden xl:block">
+                        <h2 class="mb-5 text-2xl font-bold">Votre commande</h2>
+<!-- 
+                        <content-dropdown data-catalyst="">
+                            <button
+                                class="focus:outline-none mb-4 w-full flex items-center justify-between text-gray-600"
+                                data-action="click:content-dropdown#toggle" type="button">
+                                <span data-qa="responsive_cart_total_articles">1 article</span>
+
+                                <div class="flex items-center">
+                                    <span class="text-sm font-semibold" gtm-tracking="true"
+                                        gtm-event="clicVoirMesArticles" gtm-data="Première adresse"
+                                        data-qa="responsive_shop_checkout_toggle">Voir mes
+                                        articles</span>
+                                    <div class="ml-1 transition duration-500 ease-in-out"
+                                        data-target="content-dropdown.icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4"
+                                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
+
+                            <div class="overflow-hidden max-h-0 transition-height duration-500 ease-in-out"
+                                data-target="content-dropdown.container">
+                                <div class="pb-4 opacity-0 transition duration-500 ease-in-out"
+                                    data-target="content-dropdown.content">
+                                    <div class="px-4 py-5 bg-white rounded-2xl">
+
+
+
+                                        <div class="flex text-gray-600"
+                                            data-qa="cart_sidebar_item_container">
+                                            <div class="mr-2 w-12" style="font-size: 0">
+
+
+
+                                                <analytics-datalayer class="w-full" data-catalyst=""
+                                                    data-variant-quantity-id=""
+                                                    data-datalayer-type="" data-product-position="">
+                                                    <a class="relative w-full square block"
+                                                        href="https://www.onatera.com/FR/fr/produit-passiflore-valeriane-bio-200-gelules-vegetales-orfito"
+                                                        data-action="click:analytics-datalayer#push">
+                                                        <img class="object-contain absolute top-0 right-0 bottom-0 left-0 m-auto w-full h-full "
+                                                            src="./invoice_files/63c919f6d8532038242924.JPG"
+                                                            alt="200 gélules végétales"
+                                                            loading="lazy">
+                                                    </a>
+
+                                                    <span class="hidden"
+                                                        data-target="analytics-datalayer.datalayer">{"event":"productClick","product_click":{"product_category_level_1":"Compl\u00e9ments
+                                                        alimentaires","product_category_level_2":"Stress","product_category_level_3":"Stress
+                                                        &amp;
+                                                        nervosit\u00e9","product_id":"ORFITO-PASSIFLORE-VALERIANE-BIO","product_name":"Passiflore
+                                                        Val\u00e9riane Bio - 200 g\u00e9lules
+                                                        v\u00e9g\u00e9tales","product_brand":"Orfito","product_marketing_label":["Certifi\u00e9
+                                                        Bio","Vegan","Eco-responsable","Made in
+                                                        France"],"product_client_notation":4.3912,"product_client_notation_number":1820,"product_price":9.95,"product_is_in_stock":true,"product_sku":"15970","product_list":"Stress
+                                                        &amp;
+                                                        nervosit\u00e9","product_position":1}}</span>
+                                                </analytics-datalayer>
+                                            </div>
+
+                                            <div class="flex-1">
+                                                <p class="flex items-center text-xs text-gray-500"
+                                                    data-qa="responsive_cart_sidebar_product_brand">
+                                                    <svg class="stroke-current h-4 w-4 text-gray-600"
+                                                        id="marque-Onatera"
+                                                        data-name="Icon / Marque Onatera"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        width="32" height="32" viewBox="0 0 32 32">
+                                                        <g id="Calque_3" data-name="Calque 3"
+                                                            transform="translate(33.004 7)">
+                                                            <path id="Tracé_7751"
+                                                                data-name="Tracé 7751"
+                                                                style="fill:none; stroke-linecap:round; stroke-linejoin:round;"
+                                                                d="M1040-231.151c-3.128 1.227-4.734-2.41-4.734-2.41s4.057-.719 4.734 2.41"
+                                                                transform="translate(-1058.175 235.566)">
+                                                            </path>
+                                                            <path id="Tracé_7752"
+                                                                data-name="Tracé 7752"
+                                                                style="fill:none; stroke-linecap:round; stroke-linejoin:round;"
+                                                                d="M1064.935-262.858c3.678-3.086 0-7.444 0-7.444s-3.677 4.565 0 7.444"
+                                                                transform="translate(-1081.672 266.302)">
+                                                            </path>
+                                                        </g>
+                                                        <path id="Tracé_8416" data-name="Tracé 8416"
+                                                            style="fill:none; stroke-linecap:round; stroke-linejoin:round;"
+                                                            d="M-7479.923-7860.688a2.833 2.833 0 0 0-.78.867c-2.241 3.425-.9 10.727-.9 10.727"
+                                                            transform="translate(7496.001 7876.973)">
+                                                        </path>
+                                                        <path id="Tracé_8415" data-name="Tracé 8415"
+                                                            style="fill:none; stroke-linecap:round; stroke-linejoin:round;"
+                                                            d="M-7482-7862.645s6.828-.6 9.069 2.823.9 10.727.9 10.727"
+                                                            transform="translate(7490.001 7876.973)">
+                                                        </path>
+                                                        <path id="Tracé_8418" data-name="Tracé 8418"
+                                                            style="fill:none; stroke-linecap:round; stroke-linejoin:round;"
+                                                            d="M-7471.634-7862.645a18.576 18.576 0 0 0-5.151.408"
+                                                            transform="translate(7494.687 7876.973)">
+                                                        </path>
+                                                    </svg>
+                                                    Orfito
+                                                </p>
+
+                                                <div
+                                                    class="flex justify-between text-sm text-right">
+                                                    <analytics-datalayer data-catalyst=""
+                                                        data-variant-quantity-id=""
+                                                        data-datalayer-type=""
+                                                        data-product-position="">
+                                                        <a class="flex flex-col pr-2"
+                                                            href="https://www.onatera.com/FR/fr/produit-passiflore-valeriane-bio-200-gelules-vegetales-orfito"
+                                                            data-action="click:analytics-datalayer#push">
+                                                            <span
+                                                                class="font-semibold text-left text-gray-800"
+                                                                data-qa="responsive_cart_sidebar_product_name">
+                                                                Passiflore Valériane Bio
+                                                            </span>
+                                                            <span class="text-left"
+                                                                data-qa="responsive_cart_sidebar_product_variant_name">200
+                                                                gélules végétales</span>
+                                                        </a>
+
+
+                                                        <span class="hidden"
+                                                            data-target="analytics-datalayer.datalayer">{"event":"productClick","product_click":{"product_category_level_1":"Compl\u00e9ments
+                                                            alimentaires","product_category_level_2":"Stress","product_category_level_3":"Stress
+                                                            &amp;
+                                                            nervosit\u00e9","product_id":"ORFITO-PASSIFLORE-VALERIANE-BIO","product_name":"Passiflore
+                                                            Val\u00e9riane Bio - 200 g\u00e9lules
+                                                            v\u00e9g\u00e9tales","product_brand":"Orfito","product_marketing_label":["Certifi\u00e9
+                                                            Bio","Vegan","Eco-responsable","Made in
+                                                            France"],"product_client_notation":4.3912,"product_client_notation_number":1820,"product_price":9.95,"product_is_in_stock":true,"product_sku":"15970","product_list":"Stress
+                                                            &amp;
+                                                            nervosit\u00e9","product_position":1}}</span>
+                                                    </analytics-datalayer>
+                                                    <div>
+
+
+
+                                                        <p class="font-bold text-gray-800"
+                                                            data-qa="responsive_product_sub_price">
+                                                            9,95&nbsp;€</p>
+
+                                                        <span class="whitespace-nowrap"
+                                                            data-qa="responsive_cart_recap_quantity">Quantité
+                                                            : 1</span>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </content-dropdown> -->
+
+                        <div class="mb-4 border-t border-gray-300"></div>
+
+
+                        <div class="text-gray-600">
+
+
+                            <div class="mb-2 flex items-center justify-between">
+                                <span data-qa="cart_sidebar_total_items">Total de votre
+                                    article</span>
+                                <span data-qa="cart_sidebar_total_price"
+                                    class="font-semibold">9,95&nbsp;€</span>
+                            </div>
+
+                            <div class="flex justify-between mb-2">
+                                <div>
+                                    <span data-qa="cart_sidebar_shipping_method">Livraison à
+                                        domicile</span>
+                                    <p class="text-sm">
+                                        <span>À partir du</span>
+                                        <span class="text-brand-500"
+                                            data-qa="cart_sidebar_expected_delivery_date">26/01/2023</span>
+                                    </p>
+                                </div>
+                                <span class="font-semibold"
+                                    data-qa="cart_sidebar_shipping_total">3,99&nbsp;€</span>
+                            </div>
+
+
+                        </div>
+
+                        <div class="my-4 border-t border-gray-300"></div>
+
+
+                        <div
+                            class="uppercase mb-3 flex items-center justify-between text-lg font-bold text-gray-800">
+                            <span>Total TTC</span>
+                            <span data-qa="cart_sidebar_order_total">13,94&nbsp;€</span>
+                        </div>
+
+                    </div>
+
+                    <div class="ui divider"></div>
+
+                    <div class="ui center aligned basic segment">
+                        <i class="huge cc mastercard icon"></i>
+                        <i class="huge cc visa icon"></i>
+                        <i class="huge cc paypal card icon"></i>
+                    </div>
+
+
+
+
+
+                    <div class="items-end justify-center text-brand-500 pt-4 hidden xl:flex ">
+                        <div class="flex flex-row justify-center">Cette commande vous rapportera
+                            <div class="flex items-center ml-1 inline">
+                                <span class="font-bold"
+                                    data-qa="cart_sidebar_expected_loyalty_amount">9</span>
+                                <img class="-mt-1 ml-1 h-4"
+                                    src="./invoice_files/brand-clover-onatera.abc4ea6f.svg"
+                                    alt="Image décorative" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <img class="hidden sm:block self-end mt-16 mr-32 xl:self-center xl:mt-0 xl:mr-0"
+                    src="./invoice_files/bush-onatera.e7c4feed.svg" loading="lazy"
+                    alt="Image décorative">
+            </aside>
+        </div>
+        <div class="hidden xl:block flex-1 bg-gray-100"></div>
+    </div>
+
+</main>

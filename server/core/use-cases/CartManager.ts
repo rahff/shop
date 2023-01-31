@@ -17,21 +17,26 @@ export class CartManager {
                 private accountService: IAccountService){}
 
     async addCartItem(command: AddProductToCartCommand): Promise<Cart> {
+        console.log("cart");
         const cart = await this.service.getCartOrCreateNewOne(command.cartId);
         if(cart.isValidated()) return cart;
         const product = await this.getProduct.getProductById(command.productId);
         const cartItem = new CartItem(product.getId(),product.getName(), product.getPrice(), product.getImage());
         cart.addItem(cartItem);
-        const customerId = await this.accountService.isCustomerAuthenticated(command.token);
+        
+        const customerId = await this.accountService.getUserIdIfAuthenticated(command.token);
         if(customerId) cart.toCustomer(customerId);       
-        await this.service.saveCart(cart);
+        await this.service.saveCart(cart);     
         return cart;
     }
 
     async validateCart(command: ValidateCartCommand): Promise<boolean> {
-        const isCustomerAuthenticated = await this.accountService.isCustomerAuthenticated(command.token);
+        const isCustomerAuthenticated = await this.accountService.getUserIdIfAuthenticated(command.token);
+        console.log("authId", isCustomerAuthenticated);
+            
         if(isCustomerAuthenticated) {
             const foundedCart = await this.service.getCartOrNothing(command.cartId);
+            
             if(!foundedCart || foundedCart.isValidated()) return false;
             foundedCart.toCustomer(isCustomerAuthenticated);
             foundedCart.validate();

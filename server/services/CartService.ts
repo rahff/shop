@@ -19,38 +19,46 @@ export class CartService implements ICartService {
 
     async saveCart(cart: Cart): Promise<Cart> {
         try {
-            const cartJson = EntityMapper.cartToJsonOut(cart);
-            const responseApi = await this.http
-            .put<IStrapiSingleResponse<JsonCartIn>, JsonCartOut>(
-                `/api/carts/${cartJson.id}`+this.queryParams,
-                 cartJson);         
-            return EntityMapper.JsonInputToCart(responseApi.data);
-        } catch (error) {
-            throw error;
+                const cartJson = EntityMapper.cartToJsonOut(cart);
+                const responseApi = await this.http
+                .put<IStrapiSingleResponse<JsonCartIn>, JsonCartOut>
+                 (`/api/carts/${cartJson.id}`+this.queryParams, cartJson);        
+                return cart;
+            } catch (error: any) {
+                throw error;
+            }
         }
-    }
-
-    async validateCart(cart: Cart): Promise<Cart> {
-        const validatedCart = await this.saveCart(cart);
-        const eventData = {customerId: cart.getCustomerId() as number, cartId: cart.getId()};
-        this.eventBus.dispatch(new CartValidatedEvent(eventData));
-        return validatedCart;
+        
+        async validateCart(cart: Cart): Promise<Cart> {
+            try { 
+                await this.saveCart(cart);       
+                const eventData = {customerId: cart.getCustomerId() as number, cartId: cart.getId()};
+                this.eventBus.dispatch(new CartValidatedEvent(eventData));
+                return cart;
+            } catch (error: any) {
+                throw error
+            }
     }
 
     async getCartOrCreateNewOne(cartId: number): Promise<Cart> {
         try {
             const apiResponse = await this.http.get<IStrapiSingleResponse<JsonCartIn>>(`/api/carts/${cartId}`+this.queryParams);
-            return EntityMapper.JsonInputToCart(apiResponse.data, );
+            return EntityMapper.JsonInputToCart(apiResponse.data);
         } catch (error) {
-            const newCart = EntityMapper.cartToJsonWithoutId(new Cart(0, false, []))
-            const apiResponse = await this.createNewCart(newCart);
-            return EntityMapper.JsonInputToCart(apiResponse);
+            const newCart = EntityMapper.cartToJsonWithoutId(new Cart(0, false, [], 0))
+            try {
+                const apiResponse = await this.createNewCart(newCart);
+                return EntityMapper.JsonInputToCart(apiResponse);
+            } catch (error: any) {
+                console.log("create new level", error.message);
+                throw error;
+            }
         }
     }
 
     private async createNewCart(cart: Omit<JsonCartOut, "id">): Promise<Entity<JsonCartIn>> {
         try {
-            const response = await this.http.post<IStrapiSingleResponse<JsonCartIn>, Omit<JsonCartOut, "id">>(this.cartBaseUrl, cart); 
+            const response = await this.http.post<IStrapiSingleResponse<JsonCartIn>, Omit<JsonCartOut, "id">>(this.cartBaseUrl+this.queryParams, cart); 
             return response.data;
         } catch (error: any) {
             throw error;

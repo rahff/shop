@@ -50,7 +50,9 @@ export class EntityMapper {
     }
 
     public static JsonInputToCart(json: Entity<JsonCartIn>): Cart {
-       return new Cart(json.id, json.attributes.validated, EntityMapper.jsonToCartItem(json.attributes.items));
+        
+        
+       return new Cart(json.id, json.attributes.validated, json.attributes.items ? EntityMapper.jsonToCartItem(json.attributes.items): [], json.attributes.amount);
     }
 
     public static JsonToProduct(json: Entity<JsonProduct>): Product {

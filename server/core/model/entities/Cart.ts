@@ -7,7 +7,7 @@ export class Cart {
     private cartItems: CartItem[] = [];
     private customerId: number | null = null;
 
-    constructor(id: number, validated: boolean, items: CartItem[], customerId: number | null= null){
+    constructor(id: number, validated: boolean, items: CartItem[], amount: number, customerId: number | null= null){
         this.validated = validated;
         this.cartItems = items;
         this.id = id;

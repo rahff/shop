@@ -8,7 +8,7 @@ import { IEventBus } from "../../interfaces/IEventBus";
 
 export class CartServiceStub implements ICartService {
     
-    private data: Cart[] = [new Cart(7, false, []), new Cart(5, false, [new CartItem(1, "", 10,"", 1), new CartItem(2,"", 15.99, "", 1)])];
+    private data: Cart[] = [new Cart(7, false, [], 0), new Cart(5, false, [new CartItem(1, "", 10,"", 1), new CartItem(2,"", 15.99, "", 1)], 0)];
 
     constructor(private eventBus: IEventBus){}
 
@@ -17,7 +17,6 @@ export class CartServiceStub implements ICartService {
         this.eventBus.dispatch(savedCart.getId());
         return savedCart;
     }
-    
 
     async saveCart(cart: Cart): Promise<Cart> {
         this.data.push(cart);
@@ -26,9 +25,8 @@ export class CartServiceStub implements ICartService {
 
     async getCartOrCreateNewOne(cartId: number): Promise<Cart> {
         const foundedCart = this.data.find((cart: Cart)=> cart.getId() === cartId );
-        if(!foundedCart) return new Cart(147, false, []);
+        if(!foundedCart) return new Cart(147, false, [], 0);
         return foundedCart;
-        
     }
 
     async getCartOrNothing(cartId: number): Promise<Cart | null> {

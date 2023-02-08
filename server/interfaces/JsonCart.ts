@@ -2,11 +2,22 @@
 import { IStrapiSingleResponse } from "./IStrapiSingleResponse";
 
 export type JsonCartOut = {
-    customer: number | null;
-    items: JsonCartItem[];
-    amount: number;
-    validated: boolean;
-    id: number;
+    data: {
+        customerId: number | null;
+        items: JsonCartItem[];
+        amount: number;
+        validated: boolean;
+        id: number;
+    }
+}
+
+export type JsonNewCartOut = {
+    data: {
+        customerId: number | null;
+        items: JsonCartItem[];
+        amount: number;
+        validated: boolean;
+    }
 }
 
 export type JsonCartIn = {

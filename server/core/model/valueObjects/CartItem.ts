@@ -19,7 +19,7 @@ export class CartItem {
     }
 
     public getImageUrl(): string {
-        return this.imageUrl;;
+        return this.imageUrl;
     }
 
     public getQuantity(): number {

@@ -1,0 +1,25 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "amount": 1499,
+      "createdAt": "2023-02-04T13:52:43.860Z",
+      "updatedAt": "2023-02-04T13:52:43.998Z",
+      "publishedAt": "2023-02-04T13:52:43.859Z",
+      "validated": false,
+      "customerId": 30,
+      "items": [
+        {
+          "id": 348,
+          "product_name": "Lotus bleu 500g",
+          "product_price": 1499,
+          "quantity": 1,
+          "image_url": "/uploads/thumbnail_lotus_bleu_fleurs2_7dd0265400.jpg",
+          "amount": 1499,
+          "product_id": 1
+        }
+      ]
+    }
+  },
+  "meta": {}
+}

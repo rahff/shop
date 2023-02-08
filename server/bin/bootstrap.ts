@@ -2,11 +2,6 @@
 import app from '../app';
 
 import http from 'http';
-import { CartModule } from '../modules/CartModule';
-import { InvoiceModule } from '../modules/InvoiceModule';
-import { ProductModule } from '../modules/ProductModule';
-import { HttpModule } from '../modules/HttpModule';
-
 
 
 const port = process.env.PORT || 3000

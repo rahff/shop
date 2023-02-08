@@ -1,0 +1,24 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "amount": 1999,
+      "paid": false,
+      "customerId" : 1,
+      "createdAt": "2023-02-03T04:58:34.972Z",
+      "updatedAt": "2023-02-08T13:03:05.720Z",
+      "publishedAt": "2023-02-03T04:58:34.966Z",
+      "payment_ref": null,
+      "shipping_address": {
+        "id": 1,
+        "numero": "12b",
+        "street_way": "Brandon street",
+        "city": "New York",
+        "name": "Davidson Henry",
+        "zip_code": null,
+        "country": "USA"
+      }
+    }
+  },
+  "meta": {}
+}

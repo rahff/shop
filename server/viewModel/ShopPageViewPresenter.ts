@@ -1,9 +1,11 @@
 import { Entity } from "../interfaces/Entity";
 import { Image } from "../interfaces/Image";
 import { IPluralResponse } from "../interfaces/IPluralResponse";
-import { ProductPageModel } from "../interfaces/ProductPageModel";
-import { ImageViewModel } from "../interfaces/ProductViewModel";
+import { ProductPageModel } from "./ProductPageModel";
+import { ImageViewModel } from "./ProductViewModel";
 import { JsonProduct } from "../interfaces/JsonProduct";
+import { ProductDetailModel } from "./ProductDetailModel";
+import { IStrapiSingleResponse } from "../interfaces/IStrapiSingleResponse";
 
 
 
@@ -29,9 +31,26 @@ export class ShopPageViewPresenter {
     private static mapImages(input: Entity<Image>[]): ImageViewModel[] {
         return input.map((entity: Entity<Image>) => {
             return {
-                small: entity.attributes.formats.small.url
+                small: entity.attributes.formats.small.url,
+                thumbnail: entity.attributes.formats.thumbnail.url,
+                medium: entity.attributes.formats.medium.url,
             }
         })
         
+    }
+
+    public static productDetailModel(product: IStrapiSingleResponse<JsonProduct>): ProductDetailModel {
+        const {id, attributes} = product.data;
+        return {
+            productName: attributes.name,
+            brand: attributes.brand,
+            images: ShopPageViewPresenter.mapImages(attributes.images.data),
+            longDescription: attributes.long_description,
+            shortDescription: attributes.short_description,
+            packaging: attributes.package,
+            price: attributes.price.toFixed(2),
+            promotion: attributes.promotion,
+            id: id
+        }
     }
 }

@@ -19,7 +19,7 @@ export class Cart {
             this.cartItems.push(item);
         }else{
             this.cartItems.forEach((currentItem: CartItem) => {
-                if(currentItem.getProductId() ===  item.getProductId()){
+                if(currentItem.getProductId() === item.getProductId()){
                     currentItem.incrementQty();
                 }
             })

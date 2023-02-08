@@ -82,11 +82,13 @@
     "firstname": {
       "type": "string"
     },
-    "cart": {
+    "invoices": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::cart.cart",
-      "inversedBy": "customer"
+      "relation": "oneToMany",
+      "target": "api::invoice.invoice"
+    },
+    "cartId": {
+      "type": "integer"
     }
   }
 }

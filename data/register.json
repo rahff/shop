@@ -1,0 +1,18 @@
+{
+  "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NDQsImlhdCI6MTY3NTUzMzA4NywiZXhwIjoxNjc4MTI1MDg3fQ.ddGoVDPhXj6pYQbr-rSWplqZSQzUKs6L8yuWO-Hz--8",
+  "user": {
+    "id": 1,
+    "username": "tintindu93@gmail.com",
+    "email": "tintindu93@gmail.com",
+    "provider": "local",
+    "confirmed": true,
+    "blocked": false,
+    "createdAt": "2023-02-04T17:51:27.843Z",
+    "updatedAt": "2023-02-04T17:51:27.843Z",
+    "title": "Mr",
+    "birthday": "1992-05-18",
+    "newsletter_subscription": null,
+    "name": "Milou",
+    "firstname": "tintin"
+  }
+}

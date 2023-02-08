@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
-import { AccountModule } from "../modules/AccountModule";
 import { QueryParser } from "../services/QueryParser";
-
+import { serviceLocator } from "../services/ServiceLocator";
 
 export const getLoginViewController = async (_: Request, res: Response) => {
     res.render("login");
@@ -9,7 +8,7 @@ export const getLoginViewController = async (_: Request, res: Response) => {
 
 export const loginController = async (req: Request, res: Response) => {
   try {
-    const service = AccountModule.AccountSevice();
+    const service = serviceLocator.AccountService();
     const response = await service.loginUser(req.body)
     res.status(200).json(response);
   } catch (error: any) {
@@ -25,7 +24,7 @@ export const getRegisterViewController = async (_: Request, res: Response) => {
 
 export const registerController = async (req: Request, res: Response) => {
   try {
-    const service = AccountModule.AccountSevice();
+    const service = serviceLocator.AccountService();
     const registeredUser = QueryParser.toUserRegistrationCommand(req.body);
     const response = await service.registerUser(registeredUser);
     res.status(201).json(response);

@@ -12,12 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "customer": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user",
-      "inversedBy": "cart"
-    },
     "items": {
       "displayName": "cart_item",
       "type": "component",

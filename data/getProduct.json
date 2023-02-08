@@ -1,0 +1,187 @@
+{
+  "data": {
+    "id": 1,
+    "attributes": {
+      "name": "Lotus bleu 500g",
+      "short_description": "Cette plante aquatique pousse sur les bords des lacs et des fleuves.",
+      "long_description": "Le Lotus Bleu (Nymphea caerulea) a d'abord été mentionné dans le Livre des Morts Egyptien; les lotus bleus et blancs étaient les plantes de rituel les plus populaires dans l'Egypte ancienne. Les fleurs étaient portées dans les cheveux des vivants et des morts, et étaient un élément ornemental important de l'art Egyptien.",
+      "price": 1499,
+      "promotion": 10,
+      "brand": "Zamesia",
+      "createdAt": "2023-01-19T03:46:43.185Z",
+      "updatedAt": "2023-01-20T02:47:59.386Z",
+      "publishedAt": "2023-01-19T03:56:44.888Z",
+      "package": "500g",
+      "images": {
+        "data": [
+          {
+            "id": 1,
+            "attributes": {
+              "name": "lotus-bleu-fleurs2.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 800,
+              "height": 800,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_lotus-bleu-fleurs2.jpg",
+                  "hash": "thumbnail_lotus_bleu_fleurs2_7dd0265400",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 156,
+                  "height": 156,
+                  "size": 5.95,
+                  "url": "/uploads/thumbnail_lotus_bleu_fleurs2_7dd0265400.jpg"
+                },
+                "small": {
+                  "name": "small_lotus-bleu-fleurs2.jpg",
+                  "hash": "small_lotus_bleu_fleurs2_7dd0265400",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 500,
+                  "size": 38.64,
+                  "url": "/uploads/small_lotus_bleu_fleurs2_7dd0265400.jpg"
+                },
+                "medium": {
+                  "name": "medium_lotus-bleu-fleurs2.jpg",
+                  "hash": "medium_lotus_bleu_fleurs2_7dd0265400",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 750,
+                  "size": 71.06,
+                  "url": "/uploads/medium_lotus_bleu_fleurs2_7dd0265400.jpg"
+                }
+              },
+              "hash": "lotus_bleu_fleurs2_7dd0265400",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 80.08,
+              "url": "/uploads/lotus_bleu_fleurs2_7dd0265400.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-01-19T03:46:06.621Z",
+              "updatedAt": "2023-01-19T03:46:06.621Z"
+            }
+          },
+          {
+            "id": 2,
+            "attributes": {
+              "name": "lotus-bleu-fleurs3.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 800,
+              "height": 800,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_lotus-bleu-fleurs3.jpg",
+                  "hash": "thumbnail_lotus_bleu_fleurs3_b6cbc4f66c",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 156,
+                  "height": 156,
+                  "size": 7.55,
+                  "url": "/uploads/thumbnail_lotus_bleu_fleurs3_b6cbc4f66c.jpg"
+                },
+                "small": {
+                  "name": "small_lotus-bleu-fleurs3.jpg",
+                  "hash": "small_lotus_bleu_fleurs3_b6cbc4f66c",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 500,
+                  "size": 46.16,
+                  "url": "/uploads/small_lotus_bleu_fleurs3_b6cbc4f66c.jpg"
+                },
+                "medium": {
+                  "name": "medium_lotus-bleu-fleurs3.jpg",
+                  "hash": "medium_lotus_bleu_fleurs3_b6cbc4f66c",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 750,
+                  "size": 85.37,
+                  "url": "/uploads/medium_lotus_bleu_fleurs3_b6cbc4f66c.jpg"
+                }
+              },
+              "hash": "lotus_bleu_fleurs3_b6cbc4f66c",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 96.27,
+              "url": "/uploads/lotus_bleu_fleurs3_b6cbc4f66c.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-01-19T03:46:06.654Z",
+              "updatedAt": "2023-01-19T03:46:06.654Z"
+            }
+          },
+          {
+            "id": 3,
+            "attributes": {
+              "name": "lotus-bleu-fleurs.jpg",
+              "alternativeText": null,
+              "caption": null,
+              "width": 800,
+              "height": 800,
+              "formats": {
+                "thumbnail": {
+                  "name": "thumbnail_lotus-bleu-fleurs.jpg",
+                  "hash": "thumbnail_lotus_bleu_fleurs_3565f93a3e",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 156,
+                  "height": 156,
+                  "size": 7.2,
+                  "url": "/uploads/thumbnail_lotus_bleu_fleurs_3565f93a3e.jpg"
+                },
+                "small": {
+                  "name": "small_lotus-bleu-fleurs.jpg",
+                  "hash": "small_lotus_bleu_fleurs_3565f93a3e",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 500,
+                  "height": 500,
+                  "size": 48.72,
+                  "url": "/uploads/small_lotus_bleu_fleurs_3565f93a3e.jpg"
+                },
+                "medium": {
+                  "name": "medium_lotus-bleu-fleurs.jpg",
+                  "hash": "medium_lotus_bleu_fleurs_3565f93a3e",
+                  "ext": ".jpg",
+                  "mime": "image/jpeg",
+                  "path": null,
+                  "width": 750,
+                  "height": 750,
+                  "size": 93.7,
+                  "url": "/uploads/medium_lotus_bleu_fleurs_3565f93a3e.jpg"
+                }
+              },
+              "hash": "lotus_bleu_fleurs_3565f93a3e",
+              "ext": ".jpg",
+              "mime": "image/jpeg",
+              "size": 105.23,
+              "url": "/uploads/lotus_bleu_fleurs_3565f93a3e.jpg",
+              "previewUrl": null,
+              "provider": "local",
+              "provider_metadata": null,
+              "createdAt": "2023-01-19T03:46:06.678Z",
+              "updatedAt": "2023-01-19T03:46:06.678Z"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "meta": {}
+}

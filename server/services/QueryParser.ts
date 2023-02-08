@@ -51,12 +51,10 @@ export class QueryParser {
         try {
             if(!headers.authorization) headers.authorization = "anonymous";
             return {
-                cartId: Number(queryParam["cartId"]),
+                cartId: Number(queryParam["cartId"]) || 0,
                 token: headers.authorization.split(" ")[1]
             }
         } catch (error) {
-            console.log("cmd ");
-            
             throw new Error("bad Request");
         }
     }

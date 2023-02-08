@@ -9,5 +9,7 @@ export interface ProductCardViewModel {
 }
 
 export interface ImageViewModel {
-    small: string
+    small: string,
+    thumbnail: string,
+    medium: string
 };

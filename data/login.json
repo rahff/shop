@@ -1,0 +1,18 @@
+{
+  "user": {
+    "id": 1,
+    "username": "tester2test@gmail.com",
+    "email": "tester2test@gmail.com",
+    "provider": "local",
+    "confirmed": true,
+    "blocked": false,
+    "createdAt": "2023-01-31T04:04:17.611Z",
+    "updatedAt": "2023-01-31T04:58:55.893Z",
+    "title": "Mr",
+    "birthday": "1988-11-21",
+    "newsletter_subscription": null,
+    "name": "tester3",
+    "firstname": "test3"
+  },
+  "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MzAsImlhdCI6MTY3NTUwMTcyOCwiZXhwIjoxNjc4MDkzNzI4fQ.5X-Z1BejX4h5NG293Xc2spkMNJAReDLNLEfENJtZggM"
+}

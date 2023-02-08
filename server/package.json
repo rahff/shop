@@ -4,8 +4,10 @@
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/bootstrap.ts",
-    "test": "ts-node ./node_modules/.bin/jasmine --config=./spec/jasmine.json",
-    "test:e2e": "ts-node ./node_modules/.bin/jasmine --config=./spec/e2e.json"
+    "test": "TEST=true ts-node ./node_modules/.bin/jasmine --config=./spec/jasmine.json",
+    "test:integration": "TEST=true ts-node ./node_modules/.bin/jasmine --config=./spec/integration.json",
+    "test:e2e": "ts-node ./node_modules/.bin/jasmine --config=./spec/e2e.json",
+    "script": "ts-node ./scripts/strapi.request.ts"
   },
   "dependencies": {
     "@types/axios": "^0.14.0",

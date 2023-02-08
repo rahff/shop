@@ -1,33 +1,36 @@
 import { Cart } from "../core/model/entities/Cart";
 import { Entity } from "../interfaces/Entity";
 import { CartItem } from "../core/model/valueObjects/CartItem";
-import { JsonCartOut, JsonCartIn, JsonCartItem } from "../interfaces/JsonCart";
+import { JsonCartOut, JsonCartIn, JsonCartItem, JsonNewCartOut } from "../interfaces/JsonCart";
 import { JsonProduct } from "../interfaces/JsonProduct";
 import { Product } from "../core/model/entities/Product";
 import { Invoice } from "../core/model/entities/Invoice";
-import { JsonInvoiceOut } from "../interfaces/JsonInvoiceOut";
+import { JsonConfirmedInvoiceOut, JsonInvoiceOut } from "../interfaces/JsonInvoiceOut";
+import { JsonInvoiceIn } from "../interfaces/JsonInvoiceIn";
+import { ShippingAddress } from "../core/model/valueObjects/ShippingAddress";
+import { ShippingAddressDto } from "../core/command/ConfirmInvoiceCommand";
 
 
 
 export class EntityMapper {
 
     public static cartToJsonOut(cart: Cart): JsonCartOut {
-        return {
+        return {data: {
             amount: cart.getAmount(),
-            customer: cart.getCustomerId(),
+            customerId: cart.getCustomerId(),
             validated: cart.isValidated(),
             items: EntityMapper.cartItemToJson(cart.getItems()),
             id: cart.getId()
-        }
+        }}
     }
 
-    public static cartToJsonWithoutId(cart: Cart): Omit<JsonCartOut, "id"> {
-        return {
+    public static cartToJsonWithoutId(cart: Cart): JsonNewCartOut {
+        return {data : {
             amount: cart.getAmount(),
-            customer: cart.getCustomerId(),
+            customerId: cart.getCustomerId(),
             validated: cart.isValidated(),
             items: EntityMapper.cartItemToJson(cart.getItems()),
-        }
+        }}
     }
 
     private static cartItemToJson(items: CartItem[]): JsonCartItem[] {
@@ -50,8 +53,6 @@ export class EntityMapper {
     }
 
     public static JsonInputToCart(json: Entity<JsonCartIn>): Cart {
-        
-        
        return new Cart(json.id, json.attributes.validated, json.attributes.items ? EntityMapper.jsonToCartItem(json.attributes.items): [], json.attributes.amount);
     }
 
@@ -62,12 +63,46 @@ export class EntityMapper {
     }
 
     public static InvoiceToJsonOut(entity: Invoice): JsonInvoiceOut {
-        return {
+        return {data: {
+            amount: entity.getAmount(),
+            cart: entity.getCartId(),
+            customerId: entity.getCustomerId(),
+            paid: entity.isPaid(),
+            payment_ref: entity.getPaymentRef()
+        }}
+    }
+
+    public static ConfirmedInvoiceToJsonOut(entity: Invoice): JsonConfirmedInvoiceOut {
+       
+        return {data: {
             amount: entity.getAmount(),
             cart: entity.getCartId(),
             customer: entity.getCustomerId(),
             paid: entity.isPaid(),
-            payment_ref: entity.getPaymentRef()
-        }
+            payment_ref: entity.getPaymentRef(),
+            shipping_address: {
+                city: entity.getShippingAddress()!.getCity(),
+                country: entity.getShippingAddress()!.getCountry(),
+                numero: entity.getShippingAddress()!.getNumero(),
+                street: entity.getShippingAddress()!.getStreet(),
+                name: entity.getShippingAddress()!.getName(),
+                zipCode: entity.getShippingAddress()!.getZipCode()
+            }
+        }}
+    }
+
+    public static JsonToInvoice(json: Entity<JsonInvoiceIn>[]): Invoice {
+        
+        const attr = json[0].attributes;
+        const id = json[0].id;
+        const shipping_address = attr.shipping_address ? ShippingAddress.of(attr.shipping_address as ShippingAddressDto) : null;
+        return new Invoice(id, attr.customerId, attr.cart, shipping_address as ShippingAddress)
+    }
+
+    public static SingleJsonToInvoice(json: Entity<JsonInvoiceIn>): Invoice {
+        const attr = json.attributes;
+        const id = json.id;
+        const shipping_address = ShippingAddress.of(attr.shipping_address as ShippingAddressDto);
+        return new Invoice(id, attr.customerId, attr.cart, shipping_address)
     }
 }

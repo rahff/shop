@@ -1,8 +1,9 @@
-import { Invoice } from "../model/entities/Invoice";
+import { InvoiceDto } from "../dto/InvoiceDto";
+
+
 
 export interface IInvoiceService {
-    createInvoice(invoice: Invoice): Promise<Invoice>;
-    save(invoice: Invoice): Promise<Invoice>;
-    getInvoiceByCartId(cartId: number): Promise<Invoice | null>;
+    save(invoice: InvoiceDto): Promise<InvoiceDto>;
+    getInvoiceByCartId(cartId: number): Promise<InvoiceDto | null>;
 
 }

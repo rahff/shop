@@ -40,4 +40,15 @@ export class ShippingAddress {
     public getZipCode(): string {
         return this.zipCode;
     }
+
+    public asDto(): ShippingAddressDto {
+        return {
+            city: this.city,
+            country: this.country,
+            name: this.name,
+            numero: this.numero,
+            street: this.street,
+            zipCode: this.zipCode
+        }
+    }
 }

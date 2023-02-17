@@ -1,3 +1,4 @@
+import { InvoiceDto } from "../../dto/InvoiceDto";
 import { CartItem } from "../valueObjects/CartItem";
 import { ShippingAddress } from "../valueObjects/ShippingAddress";
 
@@ -49,6 +50,18 @@ export class Invoice {
 
     public getId(): number | null {
         return this.id;
+    }
+
+    public asDto(): InvoiceDto {
+        return {
+            amount: this.getAmount(),
+            cart: this.cartId,
+            customerId: this.customerId,
+            id: this.id,
+            paid: this.paid,
+            payment_ref: this.payment_ref,
+            shipping_address: this.shippingAddress?.asDto() || null
+        }
     }
    
 }

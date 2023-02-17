@@ -1,7 +1,7 @@
-import { Product } from "../model/entities/Product";
+import { ProductDto } from "../dto/ProductDto";
 
 
 
 export interface IProductService {
-    getProductById(id: number): Promise<Product>
+    getProductById(id: number): Promise<ProductDto>
 }

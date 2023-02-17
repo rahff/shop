@@ -1,9 +1,10 @@
-import { Cart } from "../model/entities/Cart";
+import { CartDto } from "../dto/CartDto";
+
 
 
 export interface ICartService {
-    saveCart(cart: Cart): Promise<Cart>;
-    validateCart(cart: Cart): Promise<Cart>;
-    getCartOrCreateNewOne(cartId: number): Promise<Cart>;
-    getCartOrNothing(cartId: number): Promise<Cart | null>;
+    saveCart(cart: CartDto): Promise<CartDto>;
+    // validateCart(cart: CartDto): Promise<CartDto>;
+    getCartOrCreateNewOne(cartId: number): Promise<CartDto>;
+    getCartOrNothing(cartId: number): Promise<CartDto | null>;
 }

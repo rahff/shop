@@ -18,7 +18,7 @@
             "id": 1,
             "attributes": {
               "name": "lotus-bleu-fleurs2.jpg",
-              "alternativeText": null,
+              "alternativeText": "null",
               "caption": null,
               "width": 800,
               "height": 800,

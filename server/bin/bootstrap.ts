@@ -1,5 +1,5 @@
 
-import app from '../app';
+import app from '../infra/app';
 
 import http from 'http';
 

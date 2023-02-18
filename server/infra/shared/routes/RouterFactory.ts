@@ -7,16 +7,14 @@ import { CartController } from "../../command/controller/CartController";
 import { UserConnexionController } from "../../command/controller/UserConnexionController";
 import { ServiceLocator } from "../../command/services/ServiceLocator";
 import { CommandRouter } from "./command";
-import { CartEvent } from "../../../core/events/CartEvent";
-import { CartEventHandler } from "../../../core/handlers/CartEventHandler";
 
 
 
 export class RouterFactory {
 
-    private static isTest: string | undefined = process.env.TEST;
-    private static serviceLocator = new ServiceLocator(!!this.isTest);
-    private static queryLocator = new QueryLocator(!!this.isTest)
+    private static isTest: boolean = !!process.env.TEST;
+    private static serviceLocator = new ServiceLocator(this.isTest);
+    private static queryLocator = new QueryLocator(this.isTest);
 
     public static CommandRouter(): CommandRouter {
         return new CommandRouter(

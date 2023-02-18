@@ -9,7 +9,7 @@ export class CartController {
 
     constructor(private cartManager: ICartManager, private eventBus: IEventBus){}
 
-    async addCartItemController(req: Request, res: Response) {
+    async addCartItem(req: Request, res: Response) {
         try {
             const command = QueryParser.toAddProductCartCommand(req.query, req.headers);
             const cart = await this.cartManager.addCartItem(command);
@@ -19,7 +19,7 @@ export class CartController {
         }
     }
 
-    async removeCartItemController(req: Request, res: Response) {
+    async removeCartItem(req: Request, res: Response) {
         try {
             const command = QueryParser.toRemoveItemCartCommand(req.query);
             const cart = await this.cartManager.removeCartItem(command);
@@ -28,7 +28,7 @@ export class CartController {
             res.status(400).json({message: error.message});
         }
     }
-    async decrementCartItemController(req: Request, res: Response) {
+    async decrementCartItem(req: Request, res: Response) {
         try {
             const command = QueryParser.toDecrementItemCartCommand(req.query);
             const cart = await this.cartManager.decrementCartItem(command);
@@ -38,7 +38,7 @@ export class CartController {
         }
     }
 
-    async validateCartController(req: Request, res: Response) {
+    async validateCart(req: Request, res: Response) {
         try {
             const command = QueryParser.toValidateCartCommand(req.query, req.headers);
             const cartValidatedEvent = await this.cartManager.validateCart(command);

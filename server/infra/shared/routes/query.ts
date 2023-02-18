@@ -19,7 +19,7 @@ export class QueryRouter {
     private init(): void {
         this.router.get('', this.queryShopController.shopPage.bind(this.queryShopController));
 
-        this.router.get("/login",this.queryUserController.getLoginView.bind(this.queryUserController));
+        this.router.get("/login", this.queryUserController.getLoginView.bind(this.queryUserController));
 
         this.router.get('/forgot_password', this.queryUserController.getForgotPasswordView.bind(this.queryUserController));
 

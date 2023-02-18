@@ -14,17 +14,18 @@ export class CommandRouter {
     }
 
     private init(): void {
-        this.router.get('/cart/add',this.cartController.addCartItemController.bind(this.cartController));
+        this.router.get('/cart/add',this.cartController.addCartItem.bind(this.cartController));
 
-        this.router.get('/cart/remove-item', this.cartController.removeCartItemController.bind(this.cartController));
+        this.router.get('/cart/remove-item', this.cartController.removeCartItem.bind(this.cartController));
 
-        this.router.get('/cart/decrement-item', this.cartController.decrementCartItemController.bind(this.cartController));
+        this.router.get('/cart/decrement-item', this.cartController.decrementCartItem.bind(this.cartController));
 
-        this.router.get("/cart/validate", this.cartController.validateCartController.bind(this.cartController));
+        this.router.get("/cart/validate", this.cartController.validateCart.bind(this.cartController));
 
-        this.router.post("/auth/local/register", this.userController.registerController.bind(this.userController));
+        this.router.post("/auth/local/register", this.userController.register.bind(this.userController));
 
     }
+
     public getRouterInstance(): Router {
         return this.router;
     }

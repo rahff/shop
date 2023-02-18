@@ -7,7 +7,7 @@ export class UserConnexionController {
 
   constructor(private accountService: IAccountService){}
 
-  async registerController(req: Request, res: Response) {
+  async register(req: Request, res: Response) {
     try {
       const registeredUser = QueryParser.toUserRegistrationCommand(req.body);
       const response = await this.accountService.registerUser(registeredUser);

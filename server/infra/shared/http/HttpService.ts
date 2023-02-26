@@ -1,4 +1,4 @@
-import { AxiosInstance, RawAxiosRequestConfig } from "axios";
+import { AxiosInstance } from "axios";
 import { IHttpService } from "../http/IHttpService";
 import { FindOneResponse, FindResponse, StrapiMapper } from "strapi-adapter";
 
@@ -6,25 +6,21 @@ import { FindOneResponse, FindResponse, StrapiMapper } from "strapi-adapter";
 
 export class HttpService implements IHttpService {
 
-    private apiToken: string = process.env.API_TOKEN || "";
-    private defaultConfig = { headers: {"Authorization": `Bearer ${this.apiToken}`}}
-    private mapper = new StrapiMapper()
+    private mapper = new StrapiMapper();
     
-    constructor(private axios: AxiosInstance, private baseApiUrl: string){}
+    constructor(private axios: AxiosInstance){}
 
-    async find<TResponse>(url: string, config?: RawAxiosRequestConfig<any>): Promise<FindResponse<TResponse> | null> {
+    async find<TResponse>(url: string): Promise<FindResponse<TResponse> | null> {
         try {
-            const requsetConfig = config ? config : this.defaultConfig;
-            const response = await this.axios.get(this.baseApiUrl + url, requsetConfig);
+            const response = await this.axios.get(url);
             return this.mapper.mapResponse(response.data);
         } catch (error) {
             return null;
         }
     }
-    async findOne<TResponse>(url: string, config?: RawAxiosRequestConfig<any>): Promise<FindOneResponse<TResponse> | null> {
+    async findOne<TResponse>(url: string): Promise<FindOneResponse<TResponse> | null> {
         try {
-            const requsetConfig = config ? config : this.defaultConfig;
-            const response = await this.axios.get(this.baseApiUrl + url, requsetConfig);
+            const response = await this.axios.get(url);
             return this.mapper.mapFindOneResponse<TResponse>(response.data);
         } catch (error) {
             return null;
@@ -33,7 +29,7 @@ export class HttpService implements IHttpService {
 
     async put<TData, TResponse>(url: string, data: TData): Promise<FindOneResponse<TResponse>> {
         try {
-            const response = await this.axios.put(this.baseApiUrl + url, data, this.defaultConfig);
+            const response = await this.axios.put(url, data);
             return this.mapper.mapFindOneResponse<TResponse>(response.data);
         } catch (error: any) {
             throw error;
@@ -42,7 +38,7 @@ export class HttpService implements IHttpService {
 
     async post<TData, TResponse>(url: string, data: TData): Promise<FindOneResponse<TResponse>> {
         try {
-            const response = await this.axios.post(this.baseApiUrl + url, data, this.defaultConfig);
+            const response = await this.axios.post(url, data);
             return this.mapper.mapFindOneResponse<TResponse>(response.data)
         } catch (error) {
             throw error;

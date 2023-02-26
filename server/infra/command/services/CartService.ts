@@ -1,6 +1,4 @@
 import { ICartService } from "../../../core/interfaces/ICartService";
-import { CartValidatedEvent } from "../../../core/events/CartValidatedEvent";
-import { IEventBus } from "../../../shared/IEventBus";
 import { IHttpService } from "../../shared/http/IHttpService";
 import { CartDto } from "../../../core/dto/CartDto";
 import { CartFactory } from "../../../core/model/factories/CartFactory";

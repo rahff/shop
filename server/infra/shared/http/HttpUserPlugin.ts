@@ -3,11 +3,11 @@ import { IAuthHttpService } from "./IAuthHttp";
 
 export class HttpUserPlugin implements IAuthHttpService {
 
-    constructor(private http: AxiosInstance, private baseApiUrl: string){}
+    constructor(private http: AxiosInstance){}
     
     async verifyToken<T>(url: string, config: RawAxiosRequestConfig<any>): Promise<T | null> {
         try {
-            const response = await this.http.get(this.baseApiUrl+url, config);
+            const response = await this.http.get(url, config);
             return response.data;
         } catch (error) {
             return null;
@@ -15,7 +15,7 @@ export class HttpUserPlugin implements IAuthHttpService {
     }
 
     async send<T, R>(url: string, body: T): Promise<R> {
-        const response = await this.http.post(this.baseApiUrl+url, body);
+        const response = await this.http.post(url, body);
         return response.data;
     }
 

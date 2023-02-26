@@ -21,6 +21,7 @@ import { IProductService } from "../../../core/interfaces/IProductService";
 import { CartEventHandler } from "../../../core/handlers/CartEventHandler";
 import { ICreateInvoice } from "../../../core/interfaces/ICreateInvoice";
 import { CreateInvoiceService } from "./CreateInvoiceService";
+import { AxiosFactory } from "../../shared/http/AxiosFactory";
 
 
 
@@ -33,7 +34,7 @@ export class ServiceLocator {
 
     private getHttpSevice(testMode: boolean): IHttpService {
         return !testMode 
-        ? new HttpService(axios.create(), this.API_URL) 
+        ? new HttpService(AxiosFactory.getCommandInstance()) 
         : new HttpServiceStub();
     }
 
@@ -51,7 +52,7 @@ export class ServiceLocator {
 
     private getHttpUserPlugin(testMode: boolean): IAuthHttpService {
         return !testMode 
-        ? new HttpUserPlugin(axios.create(), this.API_URL) 
+        ? new HttpUserPlugin(AxiosFactory.getCommandInstance()) 
         : new HttpUserPluginStub();
     }
 
@@ -99,7 +100,7 @@ export class ServiceLocator2 {
 
     private getHttpSevice(testMode: boolean): IHttpService {
         this.httpService = !testMode 
-        ? new HttpService(axios.create(), this.API_URL) 
+        ? new HttpService(AxiosFactory.getCommandInstance()) 
         : new HttpServiceStub();
         return this.httpService;
     }
@@ -118,7 +119,7 @@ export class ServiceLocator2 {
 
     private getHttpUserPlugin(testMode: boolean): IAuthHttpService {
         return !testMode 
-        ? new HttpUserPlugin(axios.create(), this.API_URL) 
+        ? new HttpUserPlugin(AxiosFactory.getCommandInstance()) 
         : new HttpUserPluginStub();
     }
 

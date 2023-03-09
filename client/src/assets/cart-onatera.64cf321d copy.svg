@@ -1,0 +1,37 @@
+<svg id="Illustration_Panier" data-name="Illustration / Panier" xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112">
+    <defs>
+        <style>
+            .cls-1,.cls-4,.cls-7{fill:none}.cls-3{fill:#fff}.cls-3,.cls-4,.cls-7{stroke:#4b5563}.cls-4{stroke-linecap:round}.cls-6{fill:#cce1cc}
+        </style>
+    </defs>
+    <path id="Rectangle_1677" data-name="Rectangle 1677" class="cls-1" d="M0 0h112v112H0z"/>
+    <path id="Rectangle_1722" data-name="Rectangle 1722" class="cls-1" d="M0 0h112v112H0z"/>
+    <path id="Tracé_9102" data-name="Tracé 9102" d="M25 1.863c-18.477 9.985-25 11-25 24.574a24.79 24.79 0 0 0 25 24.575 24.79 24.79 0 0 0 25-24.575c0-13.571-6.523-34.559-25-24.574z" transform="translate(12 48.159)" style="fill:#e5f0e5"/>
+    <g id="Groupe_6876" data-name="Groupe 6876" transform="translate(6 7.965)">
+        <g id="Groupe_1009" data-name="Groupe 1009" transform="translate(14.404 32.09)">
+            <g id="Groupe_1008" data-name="Groupe 1008" transform="translate(3.614)">
+                <path id="Tracé_8204" data-name="Tracé 8204" class="cls-3" d="m55.251.734-6.9 26.9a3.422 3.422 0 0 1-3.385 3.459h-.125L9.387 30.66a3.632 3.632 0 0 1-3.6-3.542L0 0" transform="translate(.28 15.322)"/>
+                <path id="Ligne_208" data-name="Ligne 208" class="cls-4" transform="translate(9.777 23.787)" d="m0 0 4.474 15.482"/>
+                <path id="Ligne_209" data-name="Ligne 209" class="cls-4" transform="translate(42.086 24.235)" d="M4.101 0 0 15.375"/>
+                <path id="Ligne_210" data-name="Ligne 210" class="cls-4" transform="translate(35.6 24.105)" d="M1.132 0 0 15.448"/>
+                <path id="Ligne_211" data-name="Ligne 211" class="cls-4" transform="translate(19.228 23.889)" d="m0 0 1.491 15.482"/>
+                <path id="Ligne_212" data-name="Ligne 212" class="cls-4" transform="translate(28.745 23.999)" d="M0 0v15.482"/>
+                <path id="Tracé_9033" data-name="Tracé 9033" class="cls-3" d="M4.845.413 51.278.95c1.472.018 5.6.132 5.3 2.546s-2.21 2.594-3.682 2.575l-49.16-.726C2.265 5.327.711 5.332.645 2.859s4.2-2.446 4.2-2.446z" transform="translate(-.644 11.441)"/>
+                <path id="Tracé_9034" data-name="Tracé 9034" class="cls-4" d="M1.333 19.2 0 3.015A3.1 3.1 0 0 1 3.338 0 3.723 3.723 0 0 1 7.06 3.1l.34 8.674" transform="translate(24.501)"/>
+                <circle id="Ellipse_125" data-name="Ellipse 125" cx="1.418" cy="1.418" r="1.418" transform="translate(24.345 19.118)" style="fill:#4b5563"/>
+            </g>
+        </g>
+        <g id="Groupe_6877" data-name="Groupe 6877" transform="translate(-9.526 -75.157)">
+            <path id="Tracé_8195" data-name="Tracé 8195" class="cls-6" d="M5.14-.2C1.341 1.891 0 2.1 0 4.943a5.14 5.14 0 1 0 10.279 0C10.279 2.1 8.938-2.286 5.14-.2z" transform="translate(53.709 81.74)"/>
+            <path id="Tracé_8206" data-name="Tracé 8206" class="cls-7" d="M4.791.019C6.52.384 6.842 3.859 7.4 6.155s.084 6.083-2.577 6.083A4.818 4.818 0 0 1 0 7.42C0 4.759 3.061-.347 4.791.019z" transform="rotate(-67 94.023 6.283)"/>
+            <path id="Tracé_8207" data-name="Tracé 8207" class="cls-4" d="M2.268 0A15.087 15.087 0 0 0 .076 5.3 10.454 10.454 0 0 0 .8 10.351" transform="rotate(-89 75.668 16.047)"/>
+        </g>
+        <g id="Groupe_1012" data-name="Groupe 1012" transform="rotate(131 38.064 32.623)">
+            <path id="Tracé_9029" data-name="Tracé 9029" class="cls-6" d="M7.673.071C2 3.189 0 3.507 0 7.745a7.673 7.673 0 1 0 15.346 0c0-4.238-2.002-10.791-7.673-7.674z" transform="rotate(-131 7.123 8.151)"/>
+            <path id="Tracé_8206-2" data-name="Tracé 8206" class="cls-7" d="M6.459.02c2.393.479 5.28 5.337 5.29 9.34s-1.4 8.21-5.081 8.21A6.5 6.5 0 0 1 0 11.256C0 7.768 4.065-.459 6.459.02z" transform="rotate(-67 6.666 6.397)"/>
+            <path id="Tracé_8207-2" data-name="Tracé 8207" class="cls-4" d="M2.814 0a18.736 18.736 0 0 0-2.72 6.571 12.971 12.971 0 0 0 .9 6.273" transform="rotate(-89 9.96 1.325)"/>
+            <path id="Tracé_8208" data-name="Tracé 8208" class="cls-4" d="M2.4 0A4.078 4.078 0 0 1 0 1" transform="translate(9.336 10.17)"/>
+            <path id="Tracé_8209" data-name="Tracé 8209" class="cls-4" d="M2.4 0A4.078 4.078 0 0 1 0 1" transform="scale(-1) rotate(88 -.502 -10.467)"/>
+        </g>
+    </g>
+</svg>

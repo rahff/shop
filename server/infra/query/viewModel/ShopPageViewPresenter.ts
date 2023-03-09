@@ -18,7 +18,7 @@ export class ShopPageViewPresenter {
                     price: entity.price,
                     package: entity.package,
                     promotion: entity.promotion,
-                    images: entity.images,
+                    image: entity.images[0],
                     id: entity.id
                 }
             });

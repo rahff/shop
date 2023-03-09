@@ -12,8 +12,10 @@ export class QueryShopController {
       const page = Number(req.query["page"] || "1");
       const apiResult = await this.queryProduct.getProductPage(page);
       const productPage = ShopPageViewPresenter.productPageModel(apiResult);
-      res.render("index", { productPage });
-    } catch (error) {
+      res.json({data: productPage})
+    } catch (error: any) {
+      console.log(error.message);
+      
       res.status(500).render("error");
     }
   }

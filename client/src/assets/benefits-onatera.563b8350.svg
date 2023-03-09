@@ -1,0 +1,30 @@
+<svg id="Illustration_Compte" data-name="Illustration / Compte" xmlns="http://www.w3.org/2000/svg" width="112" height="112" viewBox="0 0 112 112">
+    <defs>
+        <style>
+            .cls-3{fill:none}.cls-2{fill:#e5f0e5}.cls-3{stroke:#4b5563;stroke-linecap:round}.cls-5{fill:#99c398}
+        </style>
+    </defs>
+    <path id="Rectangle_1677" data-name="Rectangle 1677" style="fill:none" d="M0 0h112v112H0z"/>
+    <path id="Tracé_9028" data-name="Tracé 9028" class="cls-2" d="M25 1.863c-18.477 9.985-25 11-25 24.574a24.79 24.79 0 0 0 25 24.575 24.79 24.79 0 0 0 25-24.575c0-13.571-6.523-34.559-25-24.574z" transform="translate(12 48.159)"/>
+    <g id="Illu" transform="translate(12.644 3.788)">
+        <g id="Groupe_751" data-name="Groupe 751" transform="translate(15.761 13.255)">
+            <ellipse id="Ellipse_26" data-name="Ellipse 26" class="cls-3" cx="6.872" cy="6.761" rx="6.872" ry="6.761" transform="translate(18.324 12.019)"/>
+            <path id="Tracé_8062" data-name="Tracé 8062" class="cls-3" d="M-3557.446 2626.807a9.308 9.308 0 0 1 9.383-9.231 9.306 9.306 0 0 1 9.382 9.231" transform="translate(3573.26 -2589.192)"/>
+            <g id="Groupe_6729" data-name="Groupe 6729" transform="translate(38.199 48.911)">
+                <path id="Tracé_8174" data-name="Tracé 8174" class="cls-3" d="M-9226.4-12128.384c.473-5.2 5.163-11.969 5.163-11.969" transform="translate(9231.777 12152.251)"/>
+                <path id="Tracé_8657" data-name="Tracé 8657" class="cls-2" d="M7.952 7.664c-.7.624-6.1-2.487-7.591-3.919S2.32-1.471 4.784.612 8.655 7.04 7.952 7.664z" transform="rotate(38 4.62 13.419)"/>
+                <path id="Tracé_8656" data-name="Tracé 8656" class="cls-2" d="M7.952 7.664c-.7.624-6.1-2.487-7.591-3.919S2.32-1.471 4.784.612 8.655 7.04 7.952 7.664z" transform="scale(-1) rotate(33 30.976 -34.112)"/>
+                <path id="Tracé_8664" data-name="Tracé 8664" class="cls-2" d="M7.71 7.7C7.007 8.319.838 5.5.119 3.776S2.08-1.44 4.543.643 8.414 7.071 7.71 7.7z" transform="rotate(120 8.487 10.48)"/>
+                <path id="Tracé_8665" data-name="Tracé 8665" class="cls-2" d="M7.445 7.583C6.742 8.207 1.9 5.938.407 4.505S1.814-1.553 4.278.531s3.87 6.428 3.167 7.052z" transform="rotate(-48 13.073 5.82)"/>
+                <path id="Tracé_8650" data-name="Tracé 8650" class="cls-3" d="M7.952 7.664c-.7.624-6.1-2.487-7.591-3.919S2.32-1.471 4.784.612 8.655 7.04 7.952 7.664z" transform="rotate(20 -.24 18.27)"/>
+                <path id="Tracé_8652" data-name="Tracé 8652" d="M7.952 7.664c-.7.624-6.1-2.487-7.591-3.919S2.32-1.471 4.784.612 8.655 7.04 7.952 7.664z" transform="rotate(-160 9.794 9.188)" style="stroke:#4b5563;fill:none"/>
+                <path id="Tracé_8651" data-name="Tracé 8651" class="cls-3" d="M7.71 7.7C7.007 8.319.838 5.5.119 3.776S2.08-1.44 4.543.643 8.414 7.071 7.71 7.7z" transform="rotate(110 8.344 10.678)"/>
+                <path id="Tracé_8653" data-name="Tracé 8653" class="cls-3" d="M7.445 7.583C6.742 8.207 1.9 5.938.407 4.505S1.814-1.553 4.278.531s3.87 6.428 3.167 7.052z" transform="rotate(-58 12.339 6.454)"/>
+            </g>
+            <path id="Tracé_9091" data-name="Tracé 9091" class="cls-5" d="M288.724 379.91h-19.291a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h17.631a18.4 18.4 0 0 1 1.66-5z" transform="translate(-257.744 -326.469)"/>
+            <path id="Tracé_9092" data-name="Tracé 9092" class="cls-5" d="M295.511 372.4h-26.078a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h20.793a19.052 19.052 0 0 1 5.285-5z" transform="translate(-257.744 -326.469)"/>
+            <ellipse id="Ellipse_146" data-name="Ellipse 146" class="cls-3" cx="19.088" cy="18.78" rx="19.088" ry="18.78" transform="translate(29.014 43.569)"/>
+            <path id="Soustraction_15" data-name="Soustraction 15" class="cls-3" d="M280.944 448.008v0h-24.773a5.006 5.006 0 0 1-5-5V385.4a5.006 5.006 0 0 1 5-5h40.393a5.006 5.006 0 0 1 5 5v37.7" transform="translate(-251.076 -379.947)"/>
+        </g>
+    </g>
+</svg>

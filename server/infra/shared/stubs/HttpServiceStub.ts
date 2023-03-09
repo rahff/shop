@@ -7,7 +7,7 @@ import { FindOneResponse, FindResponse, StrapiMapper } from "strapi-adapter";
 
 export class HttpServiceStub implements IHttpService {
 
-    private baseUrl = "../../../../data/";
+    private baseUrl = "../../../data/";
     private mapper: StrapiMapper = new StrapiMapper()
 
     async find<TResponse>(url: string, config?: RawAxiosRequestConfig<any> | undefined): Promise<FindResponse<TResponse> | null> {

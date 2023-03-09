@@ -8,7 +8,6 @@ export class QueryCartController {
 
     async getCart(req: Request, res: Response) {
         try {
-        
             const cart = await this.queryCart.getCartById(Number(req.params.id));
             if(!cart) return res.status(404).json({message: "not found"});
             res.status(200).json({cart});

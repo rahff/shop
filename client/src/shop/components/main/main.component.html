@@ -1,0 +1,34 @@
+<main>   
+    <div class="w-full h-full xl:bg-gradient-gray-50">
+        <div class="flex items-stretch mx-auto bg-white xl:container">
+            <!-- //sidebar -->
+            <div class="pr-0 w-auto bg-white xl:w-3/12 xl:pr-4 2xl:pr-0">
+                <div class="flex overflow-hidden fixed top-0 -left-full z-20 flex-col self-start w-full h-full bg-white transition-all xl:z-0 xl:bg-gray-50 duration-400 xl:transition-none xl:self-stretch xl:duration-none xl:left-0 xl:flex-none xl:pt-6 xl:pr-10 xl:pb-10 xl:block xl:relative xl:pl-5 2xl:pl-10"
+                    data-target="mobile-panel.layer">
+                    <div class="flex overflow-hidden flex-col self-start w-full h-full facets">
+                        <app-sort-product></app-sort-product>
+                        <app-filter-product></app-filter-product>
+                        <app-filter-product></app-filter-product>
+                    </div>
+                </div>
+            </div>
+            <!-- end -->
+                <div *ngIf="productPage$ | async; let page" class="pl-0 mb-16 w-full bg-white xl:mb-20 xl:w-9/12 xl:pl-4 xl:pr-5 2xl:pl-7 2xl:pr-10">
+                    <app-list-nav></app-list-nav>
+                    <app-list-header></app-list-header>
+                    <div>
+                    <app-sorter-product></app-sorter-product>
+                    <div data-target="scroll-up-down.container" *ngIf="page">
+                        <div class="flex flex-wrap text-gray-900 px-4 mt-6 xl:mt-8 sm:px-0 sm:pl-11 sm:pr-7 xl:pl-0 lg:pr-3 xl:pr-0 xl:-mr-8 -mb-4 xl:-mb-8">
+                        <div *ngFor="let product of page.listProduct" class="flex flex-col mb-4 lg:mb-8 sm:pr-4 lg:pr-8 w-full sm:w-1/2 md:w-1/3">
+                           <app-product-card [product]="product"></app-product-card>
+                        </div>
+                        
+                    </div>
+                    <app-paginator></app-paginator>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</main>

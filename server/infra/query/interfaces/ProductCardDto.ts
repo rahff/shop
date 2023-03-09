@@ -1,12 +1,12 @@
-import { Image } from "strapi-adapter";
+import { ImageList } from "strapi-adapter";
 
 
 export interface ProductCardDto {
     name: string,
     brand: string,
-    price: string,
+    price: number,
     package: string,
     promotion: number,
-    images: Image,
+    images: ImageList,
     id: number
 }

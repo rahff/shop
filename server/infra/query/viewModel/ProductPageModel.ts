@@ -1,7 +1,8 @@
-import { ProductCardDto } from "../interfaces/ProductCardDto";
+
+import { ProductCardViewModel } from "./ProductViewModel";
 
 
 export interface ProductPageModel {
-    listProduct: ProductCardDto[];
+    listProduct: ProductCardViewModel[];
     pagination: { page: number, pageSize: number, pageCount?: number, total: number } | {}
 }

@@ -1,0 +1,284 @@
+
+
+    <div data-product-tile-observer="1"
+        class="relative flex-1 h-full rounded-2xl bg-white border hover:border-gray-300 ">
+
+            <!-- added to cart overlay (ahead method only) -->
+            <div data-target="product-tile.added"
+                class="absolute top-0 left-0 z-20 flex hidden h-full w-full flex-col items-center justify-center rounded-2xl bg-white opacity-0 transition-all">
+                <img class="self-center w-26" src="./static/cart-onatera.64cf321d.svg" loading="lazy"
+                    alt="Image décorative">
+
+                <p class="m-0 mt-5 w-full px-5 text-center font-semibold leading-tight">
+                    L'article a bien été ajouté au
+                    panier</p>
+            </div>
+
+            <!-- labels -->
+            <div class="absolute inset-x-0 top-0 m-3 h-12 overflow-hidden">
+                <a href="/product/{{1}}">
+                    <div class="flex w-full flex-wrap pr-7">
+                        <div
+                            class="mx-0.5 mb-1 flex-none text-xs bg-white text-gray-700 border border-gray-300 rounded-tl-md rounded-br-md px-1.5 py-0.5">
+                            Certifié Bio
+                        </div>
+                        <div
+                            class="mx-0.5 mb-1 flex-none text-xs bg-white text-gray-700 border border-gray-300 rounded-tl-md rounded-br-md px-1.5 py-0.5">
+                            Made in France
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- favorite -->
+            <div class="absolute top-0 right-0 m-3">
+
+
+                <span data-link="/FR/fr/wishlist/add/569" class="cursor-pointer"
+                    data-target="add-to-wishlist.addToWishlistButton" data-action="click:add-to-wishlist#updateWishlist"
+                    aria-label="Ajouter aux favoris" data-qa="product_card_addToWishLink">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 transition-colors hover:text-red-400 top-0 right-0 m--1 text-gray-400"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                        </path>
+                    </svg>
+                </span>
+
+
+
+                <span data-link="/FR/fr/wishlist/remove/569" class="hidden cursor-pointer"
+                    data-target="add-to-wishlist.removeFromWishlistButton"
+                    data-action="click:add-to-wishlist#updateWishlist" aria-label="Supprimer des favoris"
+                    data-qa="product_card_removeToWishLink">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                        class="w-5 h-5 transition-colors hover:text-red-400 top-0 right-0 text-red-400"
+                        fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                        </path>
+                    </svg>
+                </span>
+
+
+            </div>
+            <a href="/product/{{product.id}}">
+                <div class="pt-16 pb-2 text-center xl:pt-12">
+                    <figure class="mx-auto flex h-48 w-48 items-center justify-center sm:h-36 sm:w-36 xl:h-48 xl:w-48">
+                        <picture>
+                            <source width="192" height="192" srcset="" media="(max-width: 640px)">
+                            <source width="192" height="192" srcset="" media="(max-width: 1280px)">
+                            <img width="192" height="192"
+                                class="h-48 w-48 object-contain sm:h-36 sm:w-36 xl:h-48 xl:w-48"
+                                [src]="product.image" [alt]="product.name">
+                        </picture>
+                    </figure>
+                </div>
+                <!-- product details -->
+                <div class="px-5 pt-2 pb-24 xl:pb-20">
+                    <div class="flex items-center justify-center">
+                        <svg class="fill-current h-6 w-6 flex-shrink-0 text-transparent" id="Icon_Marque_Onatera"
+                            data-name="Icon / Marque Onatera" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 32 32">
+                            <path id="Tracé_8935" data-name="Tracé 8935"
+                                d="M9.5.265c7.019 3.859 9.5 4.252 9.5 9.5a9.5 9.5 0 1 1-19-.004C0 4.516 2.478-3.594 9.5.265z"
+                                transform="translate(13 2.688)">
+                            </path>
+                            <g id="Calque_3" data-name="Calque 3" transform="translate(33.004 7)">
+                                <path id="Tracé_7751" data-name="Tracé 7751" class="text-gray-600 stroke-current"
+                                    style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                    d="M1040-231.151c-3.128 1.227-4.734-2.41-4.734-2.41s4.057-.719 4.734 2.41"
+                                    transform="translate(-1058.175 235.566)">
+                                </path>
+                                <path id="Tracé_7752" data-name="Tracé 7752" class="text-gray-600 stroke-current"
+                                    style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                    d="M1064.935-262.858c3.678-3.086 0-7.444 0-7.444s-3.677 4.565 0 7.444"
+                                    transform="translate(-1081.672 266.302)">
+                                </path>
+                            </g>
+                            <path id="Tracé_8416" data-name="Tracé 8416" class="text-gray-600 stroke-current"
+                                style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                d="M-7479.923-7860.688a2.833 2.833 0 0 0-.78.867c-2.241 3.425-.9 10.727-.9 10.727"
+                                transform="translate(7496.001 7876.973)">
+                            </path>
+                            <path id="Tracé_8415" data-name="Tracé 8415" class="text-gray-600 stroke-current"
+                                style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                d="M-7482-7862.645s6.828-.6 9.069 2.823.9 10.727.9 10.727"
+                                transform="translate(7490.001 7876.973)">
+                            </path>
+                            <path id="Tracé_8418" data-name="Tracé 8418" class="text-gray-600 stroke-current"
+                                style="fill:none;stroke-linecap:round;stroke-linejoin:round"
+                                d="M-7471.634-7862.645a18.576 18.576 0 0 0-5.151.408"
+                                transform="translate(7494.687 7876.973)">
+                            </path>
+                            <path id="Rectangle_1390" data-name="Rectangle 1390" style="fill:none" d="M0 0h32v32H0z">
+                            </path>
+                        </svg>
+
+                        <div class="ml-1 truncate text-xs text-gray-500" data-qa="brand-name">
+                            {{product.brand}}
+                        </div>
+                    </div>
+
+                    <div class="my-2 text-center line-clamp-2 xl:my-1" data-qa="product-name">
+                        {{product.name}}
+                    </div>
+
+                    <div class="my-2 truncate text-center text-xs text-gray-500 xl:my-1" data-qa="variant-name">
+                        {{product.package}}
+                    </div>
+                    <!-- notation list -->
+                    <div class="mt-4 flex items-center justify-center text-yellow-400 xl:mt-3"
+                        data-qa="product_review_container" data-qa-review-score="4.6124">
+
+                        <ul class="flex">
+                            <li>
+                                <svg class="w-4 h-4 mr-1 text-yellow-300 fill-current" id="Etoile_de_notation_-_1"
+                                    data-name="Etoile de notation - 1" xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" viewBox="0 0 16 16">
+                                    <path id="Tracé_8988" data-name="Tracé 8988"
+                                        d="m.792 0 4.623-.287L7.5-4.586 9.728 0l4.611.223v.85l-3.506 2.974L12 9.076 7.5 6.494 3.33 9.076l.608-5.029-3.146-2.79z"
+                                        transform="translate(.435 5.755)">
+                                    </path>
+                                    <g id="Icon_Outline_star" data-name="Icon/Outline/star">
+                                        <path id="Icon"
+                                            d="M8.247 1.139a1.316 1.316 0 0 1 1.264.909l1.22 3.629 3.723.1a1.333 1.333 0 0 1 .8 2.371l-3.01 2.425 1.067 3.781a1.317 1.317 0 0 1-.215 1.163 1.351 1.351 0 0 1-1.07.536 1.323 1.323 0 0 1-.779-.256l-3-2.171-3 2.171a1.323 1.323 0 0 1-.779.256 1.351 1.351 0 0 1-1.07-.536 1.317 1.317 0 0 1-.215-1.163l1.067-3.782-3.01-2.425a1.333 1.333 0 0 1 .8-2.371l3.723-.1 1.22-3.629a1.316 1.316 0 0 1 1.264-.908zm6.171 5.97-3.723-.1A1.338 1.338 0 0 1 9.467 6.1l-1.22-3.628L7.027 6.1a1.338 1.338 0 0 1-1.227.909l-3.723.1 3.01 2.425a1.331 1.331 0 0 1 .447 1.4l-1.069 3.781 3-2.171a1.333 1.333 0 0 1 1.563 0l3 2.171-1.067-3.781a1.331 1.331 0 0 1 .447-1.4l3.01-2.425z"
+                                            transform="translate(-.247 -.38)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg class="w-4 h-4 mr-1 text-yellow-300 fill-current" id="Etoile_de_notation_-_1"
+                                    data-name="Etoile de notation - 1" xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" viewBox="0 0 16 16">
+                                    <path id="Tracé_8988" data-name="Tracé 8988"
+                                        d="m.792 0 4.623-.287L7.5-4.586 9.728 0l4.611.223v.85l-3.506 2.974L12 9.076 7.5 6.494 3.33 9.076l.608-5.029-3.146-2.79z"
+                                        transform="translate(.435 5.755)">
+                                    </path>
+                                    <g id="Icon_Outline_star" data-name="Icon/Outline/star">
+                                        <path id="Icon"
+                                            d="M8.247 1.139a1.316 1.316 0 0 1 1.264.909l1.22 3.629 3.723.1a1.333 1.333 0 0 1 .8 2.371l-3.01 2.425 1.067 3.781a1.317 1.317 0 0 1-.215 1.163 1.351 1.351 0 0 1-1.07.536 1.323 1.323 0 0 1-.779-.256l-3-2.171-3 2.171a1.323 1.323 0 0 1-.779.256 1.351 1.351 0 0 1-1.07-.536 1.317 1.317 0 0 1-.215-1.163l1.067-3.782-3.01-2.425a1.333 1.333 0 0 1 .8-2.371l3.723-.1 1.22-3.629a1.316 1.316 0 0 1 1.264-.908zm6.171 5.97-3.723-.1A1.338 1.338 0 0 1 9.467 6.1l-1.22-3.628L7.027 6.1a1.338 1.338 0 0 1-1.227.909l-3.723.1 3.01 2.425a1.331 1.331 0 0 1 .447 1.4l-1.069 3.781 3-2.171a1.333 1.333 0 0 1 1.563 0l3 2.171-1.067-3.781a1.331 1.331 0 0 1 .447-1.4l3.01-2.425z"
+                                            transform="translate(-.247 -.38)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg class="w-4 h-4 mr-1 text-yellow-300 fill-current" id="Etoile_de_notation_-_1"
+                                    data-name="Etoile de notation - 1" xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" viewBox="0 0 16 16">
+                                    <path id="Tracé_8988" data-name="Tracé 8988"
+                                        d="m.792 0 4.623-.287L7.5-4.586 9.728 0l4.611.223v.85l-3.506 2.974L12 9.076 7.5 6.494 3.33 9.076l.608-5.029-3.146-2.79z"
+                                        transform="translate(.435 5.755)">
+                                    </path>
+                                    <g id="Icon_Outline_star" data-name="Icon/Outline/star">
+                                        <path id="Icon"
+                                            d="M8.247 1.139a1.316 1.316 0 0 1 1.264.909l1.22 3.629 3.723.1a1.333 1.333 0 0 1 .8 2.371l-3.01 2.425 1.067 3.781a1.317 1.317 0 0 1-.215 1.163 1.351 1.351 0 0 1-1.07.536 1.323 1.323 0 0 1-.779-.256l-3-2.171-3 2.171a1.323 1.323 0 0 1-.779.256 1.351 1.351 0 0 1-1.07-.536 1.317 1.317 0 0 1-.215-1.163l1.067-3.782-3.01-2.425a1.333 1.333 0 0 1 .8-2.371l3.723-.1 1.22-3.629a1.316 1.316 0 0 1 1.264-.908zm6.171 5.97-3.723-.1A1.338 1.338 0 0 1 9.467 6.1l-1.22-3.628L7.027 6.1a1.338 1.338 0 0 1-1.227.909l-3.723.1 3.01 2.425a1.331 1.331 0 0 1 .447 1.4l-1.069 3.781 3-2.171a1.333 1.333 0 0 1 1.563 0l3 2.171-1.067-3.781a1.331 1.331 0 0 1 .447-1.4l3.01-2.425z"
+                                            transform="translate(-.247 -.38)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg class="w-4 h-4 mr-1 text-yellow-300 fill-current" id="Etoile_de_notation_-_1"
+                                    data-name="Etoile de notation - 1" xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" viewBox="0 0 16 16">
+                                    <path id="Tracé_8988" data-name="Tracé 8988"
+                                        d="m.792 0 4.623-.287L7.5-4.586 9.728 0l4.611.223v.85l-3.506 2.974L12 9.076 7.5 6.494 3.33 9.076l.608-5.029-3.146-2.79z"
+                                        transform="translate(.435 5.755)">
+                                    </path>
+                                    <g id="Icon_Outline_star" data-name="Icon/Outline/star">
+                                        <path id="Icon"
+                                            d="M8.247 1.139a1.316 1.316 0 0 1 1.264.909l1.22 3.629 3.723.1a1.333 1.333 0 0 1 .8 2.371l-3.01 2.425 1.067 3.781a1.317 1.317 0 0 1-.215 1.163 1.351 1.351 0 0 1-1.07.536 1.323 1.323 0 0 1-.779-.256l-3-2.171-3 2.171a1.323 1.323 0 0 1-.779.256 1.351 1.351 0 0 1-1.07-.536 1.317 1.317 0 0 1-.215-1.163l1.067-3.782-3.01-2.425a1.333 1.333 0 0 1 .8-2.371l3.723-.1 1.22-3.629a1.316 1.316 0 0 1 1.264-.908zm6.171 5.97-3.723-.1A1.338 1.338 0 0 1 9.467 6.1l-1.22-3.628L7.027 6.1a1.338 1.338 0 0 1-1.227.909l-3.723.1 3.01 2.425a1.331 1.331 0 0 1 .447 1.4l-1.069 3.781 3-2.171a1.333 1.333 0 0 1 1.563 0l3 2.171-1.067-3.781a1.331 1.331 0 0 1 .447-1.4l3.01-2.425z"
+                                            transform="translate(-.247 -.38)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </li>
+                            <li>
+                                <svg class="w-4 h-4 mr-1 text-yellow-300 fill-current" id="Etoile_de_notation_-_6"
+                                    data-name="Etoile de notation - 6" xmlns="http://www.w3.org/2000/svg" width="16"
+                                    height="16" viewBox="0 0 16 16">
+                                    <g id="Icon_Outline_star" data-name="Icon/Outline/star">
+                                        <path id="Icon"
+                                            d="M8.247 1.139a1.316 1.316 0 0 1 1.264.909l1.22 3.629 3.723.1a1.333 1.333 0 0 1 .8 2.371l-3.01 2.425 1.067 3.781a1.317 1.317 0 0 1-.215 1.163 1.351 1.351 0 0 1-1.07.536 1.323 1.323 0 0 1-.779-.256l-3-2.171-3 2.171a1.323 1.323 0 0 1-.779.256 1.351 1.351 0 0 1-1.07-.536 1.317 1.317 0 0 1-.215-1.163l1.067-3.782-3.01-2.425a1.333 1.333 0 0 1 .8-2.371l3.723-.1 1.22-3.629a1.316 1.316 0 0 1 1.264-.908zm6.171 5.97-3.723-.1A1.338 1.338 0 0 1 9.467 6.1l-1.22-3.628L7.027 6.1a1.338 1.338 0 0 1-1.227.909l-3.723.1 3.01 2.425a1.331 1.331 0 0 1 .447 1.4l-1.069 3.781 3-2.171a1.333 1.333 0 0 1 1.563 0l3 2.171-1.067-3.781a1.331 1.331 0 0 1 .447-1.4l3.01-2.425z"
+                                            transform="translate(-.247 -.38)">
+                                        </path>
+                                    </g>
+                                    <g id="Icon_Outline_star-2" data-name="Icon/Outline/star">
+                                        <g id="Groupe_6676" data-name="Groupe 6676"
+                                            transform="translate(-257.773 -1444.245)">
+                                            <path id="Soustraction_7" data-name="Soustraction 7"
+                                                d="m-495.462 16.374.607-5.027L-498 8.555V7.3l4.622-.287 2.081-4.3 1.1 2.253v9.454l-1.1-.628-4.163 2.581z"
+                                                transform="translate(757 1442.702)">
+                                            </path>
+                                        </g>
+                                        <path id="Icon-2" data-name="Icon"
+                                            d="M8.247 1.139a1.316 1.316 0 0 1 1.264.909l1.22 3.629 3.723.1a1.333 1.333 0 0 1 .8 2.371l-3.01 2.425 1.067 3.781a1.317 1.317 0 0 1-.215 1.163 1.351 1.351 0 0 1-1.07.536 1.323 1.323 0 0 1-.779-.256l-3-2.171-3 2.171a1.323 1.323 0 0 1-.779.256 1.351 1.351 0 0 1-1.07-.536 1.317 1.317 0 0 1-.215-1.163l1.067-3.782-3.01-2.425a1.333 1.333 0 0 1 .8-2.371l3.723-.1 1.22-3.629a1.316 1.316 0 0 1 1.264-.908zm6.171 5.97-3.723-.1A1.338 1.338 0 0 1 9.467 6.1l-1.22-3.628L7.027 6.1a1.338 1.338 0 0 1-1.227.909l-3.723.1 3.01 2.425a1.331 1.331 0 0 1 .447 1.4l-1.069 3.781 3-2.171a1.333 1.333 0 0 1 1.563 0l3 2.171-1.067-3.781a1.331 1.331 0 0 1 .447-1.4l3.01-2.425z"
+                                            transform="translate(-.247 -.38)">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </li>
+                        </ul>
+
+                        <div class="ml-1 truncate text-xs text-gray-500">
+                            (129 avis)
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- pricing -->
+                <div class="absolute inset-x-0 bottom-0 m-5">
+                   
+                        <span *ngIf="product.promotion"
+                            class="px-1 py-0.5 text-xs text-white rounded-tl-lg rounded-br-lg  whitespace-nowrap bg-orange-500">
+                            -{{product.promotion}}%
+                
+                        </span>
+        
+                    <div *ngIf="product.promotion; else priceNoPromo">
+                        <span class="mr-1 text-xs text-gray-500">
+                            Dès
+                        </span>
+                        <span class="font-bold" data-qa="priceProduct">
+                            {{ getPriceAfterPromo()}}€
+                        </span>
+                        <span  class="text-sm text-gray-500 line-through">
+                            {{ product.price/100}}€
+                        </span>
+                    </div>
+                    <ng-template #priceNoPromo>
+                        <div>
+                            <span class="mr-1 text-xs text-gray-500">
+                                Dès
+                            </span>
+                            <span class="font-bold" data-qa="priceProduct">
+                                {{ product.price/100 }}€
+                            </span>
+                        </div>
+                    </ng-template>
+                </div>
+            </a>
+
+            <!-- button -->
+
+
+            <!-- add to cart -->
+            <div class="absolute right-0 bottom-0 m-5">
+                <button type="button" data-qa="product_tile_add_to_cart_variant"
+                    class="rounded-full bg-gray-900 p-3 text-gray-50 transition-colors hover:bg-gray-700"
+                    data-action="click:toggle-popup#open" aria-label="Ajouter au panier">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+
+    </div>

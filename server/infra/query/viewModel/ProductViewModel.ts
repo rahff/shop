@@ -1,10 +1,10 @@
-import { ImageList } from "strapi-adapter";
+import { Image } from "strapi-adapter";
 
 export interface ProductCardViewModel {
     name: string;
     price: number;
     promotion: number;
-    images: ImageList;
+    image: Image;
     brand: string;
     package: string;
     id: number;
